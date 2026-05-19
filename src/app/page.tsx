@@ -76,6 +76,7 @@ function Header() {
           <a href="#compliance" className="hover:text-fg transition-colors">Compliance</a>
           <a href="#install" className="hover:text-fg transition-colors">Install</a>
           <a href="#pricing" className="hover:text-fg transition-colors">Pricing</a>
+          <Link href="/changelog" className="hover:text-fg transition-colors">Changelog</Link>
           <a href={GH} className="hover:text-fg transition-colors">GitHub ↗</a>
         </nav>
         <a href="#install" className="md:hidden mono text-[12px] tracking-[0.12em] uppercase text-[var(--color-accent)]">

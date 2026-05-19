@@ -272,3 +272,30 @@ code, pre, kbd, samp, .mono {
 ::-webkit-scrollbar-track { background: var(--color-bg); }
 ::-webkit-scrollbar-thumb { background: var(--color-line-2); border-radius: 5px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--color-fg-4); }
+
+/* ── Changelog prose ──────────────────────────────────────────────────────── */
+/* Styles for marked-rendered CHANGELOG.md content. Scoped to .prose-changelog
+   so we don't leak global typography. */
+
+.prose-changelog { color: var(--color-fg-2); font-size: 14.5px; line-height: 1.7; }
+.prose-changelog h1 { color: var(--color-fg); font-size: 22px; font-weight: 600; margin: 32px 0 12px; letter-spacing: -0.01em; }
+.prose-changelog h2 { color: var(--color-fg); font-size: 18px; font-weight: 600; margin: 48px 0 8px; padding-top: 24px; border-top: 1px solid var(--color-line); letter-spacing: -0.01em; }
+.prose-changelog h2:first-child { border-top: 0; padding-top: 0; margin-top: 0; }
+.prose-changelog h3 { color: var(--color-accent-3); font-size: 13px; font-weight: 600; margin: 24px 0 8px; text-transform: uppercase; letter-spacing: 0.12em; font-family: var(--font-mono); }
+.prose-changelog p { margin: 8px 0; }
+.prose-changelog ul, .prose-changelog ol { margin: 8px 0 16px; padding-left: 22px; }
+.prose-changelog li { margin: 4px 0; }
+.prose-changelog li > p { margin: 4px 0; }
+.prose-changelog code { background: var(--color-bg-3); border: 1px solid var(--color-line); padding: 1px 6px; border-radius: 3px; font-size: 90%; font-family: var(--font-mono); color: var(--color-accent-3); }
+.prose-changelog pre { background: var(--color-bg-3); border: 1px solid var(--color-line); padding: 12px 14px; border-radius: 6px; overflow-x: auto; font-size: 12.5px; line-height: 1.6; margin: 12px 0; }
+.prose-changelog pre code { background: transparent; border: 0; padding: 0; color: var(--color-fg); }
+.prose-changelog a { color: var(--color-accent-3); text-decoration: underline; text-decoration-color: var(--color-line-2); text-underline-offset: 3px; transition: color 0.15s ease; }
+.prose-changelog a:hover { color: var(--color-accent); text-decoration-color: var(--color-accent); }
+.prose-changelog hr { border: 0; border-top: 1px dashed var(--color-line); margin: 32px 0; }
+.prose-changelog blockquote { border-left: 2px solid var(--color-accent); margin: 12px 0; padding: 4px 14px; color: var(--color-fg-3); font-style: italic; }
+.prose-changelog table { border-collapse: collapse; margin: 12px 0; font-size: 13.5px; }
+.prose-changelog th { background: var(--color-bg-3); border: 1px solid var(--color-line); padding: 6px 10px; text-align: left; color: var(--color-fg); }
+.prose-changelog td { border: 1px solid var(--color-line); padding: 6px 10px; }
+.prose-changelog strong { color: var(--color-fg); }
+.prose-changelog em { color: var(--color-fg-2); }
+.prose-changelog .error { color: var(--color-rose); padding: 16px; border: 1px solid var(--color-rose); border-radius: 6px; background: rgba(248,113,113,0.08); }
