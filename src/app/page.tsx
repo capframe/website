@@ -273,11 +273,11 @@ function Modules() {
       tag: "02.3",
       name: "Guard",
       role: "Enforcement",
-      desc: "A deterministic runtime policy layer. Each tool call is evaluated against the token and the policy synthesized from Find's report — before the call reaches the tool. No LLM in the decision path. Single-digit-microsecond evaluation.",
-      code: `$ capframe guard --policy ./policy.toml
-✓ sentry listening on :8783
-✓ policy synced: 14 rules, 3 categories
-✓ watching for tool calls…`,
+      desc: "A deterministic policy evaluator. Synthesize a YAML policy from an observed gap, backtest it against the default corpus, then drop the evaluator into your agent's tool-call boundary. No LLM in the decision path. Single-digit-microsecond evaluation.",
+      code: `$ capframe guard backtest ./policy.yaml
+✓ 247/247 corpus cases pass
+✓ 14 rules, 3 categories
+✓ false-positive rate: 0.0%`,
     },
   ];
   return (
@@ -416,10 +416,10 @@ $ capframe bind --agent shopify-bot \\
   expires:   2026-05-18T08:14:00Z
   revoke:    capframe revoke cf_tok_a91f4e
 
-$ capframe guard --policy ./policy.toml --addr 127.0.0.1:8783
-`}<span className="text-[var(--color-accent)]">✓</span>{` sentry listening on :8783
-`}<span className="text-[var(--color-accent)]">✓</span>{` policy synced: 14 rules, 3 categories
-`}<span className="text-[var(--color-accent)]">✓</span>{` watching for tool calls…
+$ capframe guard backtest ./policy.yaml
+`}<span className="text-[var(--color-accent)]">✓</span>{` 247/247 corpus cases pass
+`}<span className="text-[var(--color-accent)]">✓</span>{` 14 rules, 3 categories
+`}<span className="text-[var(--color-accent)]">✓</span>{` false-positive rate: 0.0%
 
 $ capframe report --format html --out ./report.html
 `}<span className="text-[var(--color-accent)]">✓</span>{` report written
