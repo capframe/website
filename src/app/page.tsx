@@ -156,11 +156,11 @@ function HeroTerminal() {
       <pre className="mono text-[12.5px] sm:text-[13px] leading-[1.7] p-5 sm:p-7 text-fg overflow-x-auto">
 {`$ capframe install
 `}<span className={dim}>{`→`}</span>{` mcp-recon
-  `}<span className={ok}>{`✓`}</span>{` `}<span className={accent3}>{`mcp-recon v0.0.2`}</span>{`   `}<span className={dim}>{`sha256 ok · 4.1 MB`}</span>{`
+  `}<span className={ok}>{`✓`}</span>{` `}<span className={accent3}>{`mcp-recon v0.0.4`}</span>{`   `}<span className={dim}>{`sha256 ok · 1.2 MB`}</span>{`
 `}<span className={dim}>{`→`}</span>{` capnagent
-  `}<span className={ok}>{`✓`}</span>{` `}<span className={accent3}>{`capnagent v0.7.5`}</span>{`   `}<span className={dim}>{`sha256 ok · 6.3 MB`}</span>{`
+  `}<span className={ok}>{`✓`}</span>{` `}<span className={accent3}>{`capnagent v0.7.6`}</span>{`   `}<span className={dim}>{`sha256 ok · 1.2 MB`}</span>{`
 `}<span className={dim}>{`→`}</span>{` mcp-guard
-  `}<span className={ok}>{`✓`}</span>{` `}<span className={accent3}>{`mcp-guard v0.5.3`}</span>{`   `}<span className={dim}>{`sha256 ok · 12.7 MB`}</span>{`
+  `}<span className={ok}>{`✓`}</span>{` `}<span className={accent3}>{`mcp-guard v0.5.4`}</span>{`   `}<span className={dim}>{`sha256 ok · 19.9 MB`}</span>{`
 
 `}<span className={dim}>{`Verify with: `}</span>{`capframe doctor
 `}<span className={dim}>{`Add to PATH: `}</span>{`~/.capframe/bin`}
