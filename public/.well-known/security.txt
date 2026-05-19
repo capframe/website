@@ -1,0 +1,6 @@
+Contact: mailto:security@capframe.ai
+Expires: 2027-05-19T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://capframe.ai/.well-known/security.txt
+Policy: https://github.com/capframe/capframe/blob/main/SECURITY.md
+Acknowledgments: https://github.com/capframe/capframe#security-disclosures

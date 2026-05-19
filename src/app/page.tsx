@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import {
+  CAPFRAME_GITHUB as GH,
+  CAPFRAME_INSTALL as INSTALL,
+  CAPFRAME_VERSION,
+} from "@/lib/version";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
-
-const INSTALL = "curl -fsSL capframe.ai/install | sh";
-const GH = "https://github.com/capframe/capframe";
 
 export default function Home() {
   return (
@@ -36,7 +39,7 @@ function StatusBar() {
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 py-2.5 flex items-center justify-between mono text-[10.5px] tracking-[0.18em] uppercase text-[var(--color-fg-3)]">
         <div className="flex items-center gap-6">
           <span className="inline-flex items-center gap-2">
-            <span className="pulse" /> v0.1.0 · live
+            <span className="pulse" /> {CAPFRAME_VERSION} · live
           </span>
           <span className="hidden sm:inline">MIT</span>
           <span className="hidden sm:inline">Rust 1.78+</span>
@@ -62,12 +65,12 @@ function Header() {
   return (
     <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-[var(--color-bg)]/70 border-b border-[var(--color-line)]/80">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 h-14 flex items-center justify-between">
-        <a href="/" className="flex items-center gap-2.5 group">
+        <Link href="/" className="flex items-center gap-2.5 group">
           <span className="w-7 h-7 rounded border border-[var(--color-accent)]/50 flex items-center justify-center font-mono text-[14px] text-[var(--color-accent)] group-hover:shadow-[0_0_16px_rgba(0,245,160,0.4)] transition-shadow">
             C
           </span>
           <span className="mono text-[13px] tracking-[0.16em] uppercase">capframe</span>
-        </a>
+        </Link>
         <nav className="hidden md:flex items-center gap-7 mono text-[12px] tracking-[0.12em] uppercase text-[var(--color-fg-2)]">
           <a href="#modules" className="hover:text-fg transition-colors">Modules</a>
           <a href="#compliance" className="hover:text-fg transition-colors">Compliance</a>
@@ -92,7 +95,7 @@ function Hero() {
     <section className="max-w-[1440px] mx-auto pt-20 sm:pt-28 lg:pt-32 pb-24 lg:pb-32 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
       <div className="lg:col-span-6 xl:col-span-7">
         <div className="rise rise-1 flex items-center gap-2 mb-7">
-          <span className="badge-ok"><span className="pulse" /> v0.1.0 released</span>
+          <span className="badge-ok"><span className="pulse" /> {CAPFRAME_VERSION} released</span>
           <span className="mono text-[11px] tracking-[0.16em] uppercase text-[var(--color-fg-3)]">
             AI agent security
           </span>
@@ -139,6 +142,7 @@ function Hero() {
 function HeroTerminal() {
   const ok = "text-[var(--color-accent)]";
   const dim = "text-[var(--color-fg-3)]";
+  const accent3 = "text-[var(--color-accent-3)]";
   return (
     <div className="terminal">
       <div className="terminal-header">
@@ -146,21 +150,20 @@ function HeroTerminal() {
         <span className="terminal-dot" />
         <span className="terminal-dot" />
         <span className="ml-3 mono text-[11px] text-[var(--color-fg-3)] tracking-wide">
-          ~/agents — capframe doctor
+          ~/agents — capframe install
         </span>
       </div>
       <pre className="mono text-[12.5px] sm:text-[13px] leading-[1.7] p-5 sm:p-7 text-fg overflow-x-auto">
-{`$ capframe doctor
+{`$ capframe install
+`}<span className={dim}>{`→`}</span>{` mcp-recon
+  `}<span className={ok}>{`✓`}</span>{` `}<span className={accent3}>{`mcp-recon v0.0.2`}</span>{`   `}<span className={dim}>{`sha256 ok · 4.1 MB`}</span>{`
+`}<span className={dim}>{`→`}</span>{` capnagent
+  `}<span className={ok}>{`✓`}</span>{` `}<span className={accent3}>{`capnagent v0.7.5`}</span>{`   `}<span className={dim}>{`sha256 ok · 6.3 MB`}</span>{`
+`}<span className={dim}>{`→`}</span>{` mcp-guard
+  `}<span className={ok}>{`✓`}</span>{` `}<span className={accent3}>{`mcp-guard v0.5.3`}</span>{`   `}<span className={dim}>{`sha256 ok · 12.7 MB`}</span>{`
 
-`}<span className={ok}>{`[`}<span className="glow">ok</span>{`]`}</span>{`   find       discovery       v0.1.0
-`}<span className={ok}>{`[ok]`}</span>{`   bind       authority       v0.1.0
-`}<span className={ok}>{`[ok]`}</span>{`   guard      enforcement     v0.1.0
-`}<span className={ok}>{`[ok]`}</span>{`   report     compliance      v0.1.0
-
-`}<span className={dim}>{`→ all systems ready
-→ 2 MCP servers detected
-→ 14 tools mapped
-→ 0 unbounded agents`}</span>
+`}<span className={dim}>{`Verify with: `}</span>{`capframe doctor
+`}<span className={dim}>{`Add to PATH: `}</span>{`~/.capframe/bin`}
       </pre>
     </div>
   );
@@ -260,10 +263,11 @@ function Modules() {
       desc: "Mints capability tokens — macaroon-style, attenuable, revocable, ed25519 holder-of-key, with signed denial receipts (HMAC-SHA256). Each agent carries a scoped token; every call produces a tamper-evident receipt that doubles as compliance evidence.",
       code: `$ capframe bind --agent shopify-bot \\
                 --tools "order.read, refund.write" \\
-                --max-refund 50.00 --ttl 24h
+                --limit max_refund=50 --limit region=eu \\
+                --ttl 24h
 ✓ token minted: cf_tok_a91f4e…
-  scope:  2 tools, $50 ceiling
-  expires: 2026-05-18T08:14:00Z`,
+  scope:    2 tools, 2 limits
+  expires:  2026-05-18T08:14:00Z`,
     },
     {
       tag: "02.3",
@@ -404,14 +408,15 @@ function Demo() {
 
 $ capframe bind --agent shopify-bot \\
                 --tools "order.read, refund.write" \\
-                --max-refund 50.00 --ttl 24h
+                --limit max_refund=50 --limit region=eu \\
+                --ttl 24h
 `}<span className="text-[var(--color-accent)]">✓</span>{` token minted: `}<span className="text-[var(--color-accent-3)]">cf_tok_a91f4e…</span>{`
   holder:    ed25519 / shopify-bot
-  scope:     2 tools, $50 refund ceiling
+  scope:     2 tools · max_refund≤50 · region=eu
   expires:   2026-05-18T08:14:00Z
   revoke:    capframe revoke cf_tok_a91f4e
 
-$ capframe guard --policy ./policy.toml --port 8783
+$ capframe guard --policy ./policy.toml --addr 127.0.0.1:8783
 `}<span className="text-[var(--color-accent)]">✓</span>{` sentry listening on :8783
 `}<span className="text-[var(--color-accent)]">✓</span>{` policy synced: 14 rules, 3 categories
 `}<span className="text-[var(--color-accent)]">✓</span>{` watching for tool calls…
@@ -441,22 +446,60 @@ $ capframe report --format html --out ./report.html
 function Pricing() {
   const tiers = [
     {
-      name: "Free", price: "$0", cadence: "self-hosted",
-      blurb: "All three modules. Local CLI. Full OWASP / NIST / ATLAS report generator. MIT license.",
-      features: ["All three modules", "Local-first CLI", "Full report generator", "Run anywhere"],
-      cta: "Install", ctaHref: "#install", featured: false,
+      name: "Free",
+      price: "$0",
+      cadence: "self-hosted",
+      status: "available",
+      blurb:
+        "All three modules. Local CLI. Full OWASP / NIST / ATLAS report generator. MIT license.",
+      features: [
+        "All three modules",
+        "Local-first CLI",
+        "Full report generator (HTML + PDF)",
+        "sha256-verified installer",
+        "Run anywhere",
+      ],
+      cta: "Install",
+      ctaHref: "#install",
+      featured: false,
     },
     {
-      name: "Pro", price: "$199", cadence: "per month",
-      blurb: "Hosted dashboard, findings history, scheduled scans, Slack alerts. For AI teams shipping agents at velocity.",
-      features: ["Hosted dashboard", "Findings history + diffing", "Scheduled scans", "Slack / Discord alerts", "Up to 10 agents"],
-      cta: "Start trial", ctaHref: "mailto:hello@capframe.ai?subject=Capframe%20Pro%20trial", featured: true,
+      name: "Pro",
+      price: "$199",
+      cadence: "per month",
+      status: "early access · waitlist open",
+      blurb:
+        "Hosted control plane for AI teams shipping agents at velocity. Currently in private early access — join the waitlist below.",
+      features: [
+        "Hosted dashboard (in build)",
+        "Findings history + cross-scan diffing",
+        "Scheduled scans",
+        "Slack alerts",
+        "Up to 10 agents",
+      ],
+      cta: "Join waitlist",
+      ctaHref:
+        "mailto:hello@capframe.ai?subject=Capframe%20Pro%20waitlist&body=Hi%20—%20I'd%20like%20a%20slot%20in%20the%20Capframe%20Pro%20early-access%20waitlist.%20My%20use%20case%3A%20",
+      featured: true,
     },
     {
-      name: "Enterprise", price: "Talk", cadence: "to us",
-      blurb: "On-prem / VPC. SSO, audit logs, signed compliance reports, SLA. For regulated buyers in fintech, healthcare, defence.",
-      features: ["SSO + audit logs", "On-prem / VPC deploy", "Signed compliance reports", "SLA + Slack channel", "Unlimited agents"],
-      cta: "Contact", ctaHref: "mailto:hello@capframe.ai?subject=Capframe%20Enterprise", featured: false,
+      name: "Enterprise",
+      price: "Talk",
+      cadence: "to us",
+      status: "design partners",
+      blurb:
+        "On-prem / VPC. SSO, audit logs, signed compliance reports, SLA. Taking a small number of design partners in regulated industries.",
+      features: [
+        "SSO + audit logs",
+        "On-prem / VPC deploy",
+        "Signed compliance reports",
+        "SLA + private Slack channel",
+        "Unlimited agents",
+      ],
+      cta: "Contact",
+      ctaHref:
+        "mailto:hello@capframe.ai?subject=Capframe%20Enterprise%20design%20partner",
+      featured: false,
     },
   ];
   return (
@@ -473,11 +516,13 @@ function Pricing() {
         {tiers.map((t) => (
           <div key={t.name}
                className={`card p-7 flex flex-col relative ${t.featured ? "border-[var(--color-accent)]/50 shadow-[0_0_60px_-20px_rgba(0,245,160,0.4)]" : ""}`}>
-            {t.featured && (
-              <div className="absolute -top-3 left-7 px-2 py-0.5 bg-[var(--color-accent)] text-[#04241a] mono text-[10px] tracking-[0.18em] uppercase rounded">
-                Most popular
-              </div>
-            )}
+            <div className={`absolute -top-3 left-7 px-2 py-0.5 mono text-[10px] tracking-[0.18em] uppercase rounded ${
+              t.featured
+                ? "bg-[var(--color-accent)] text-[#04241a]"
+                : "bg-[var(--color-bg-3)] text-[var(--color-fg-2)] border border-[var(--color-line-2)]"
+            }`}>
+              {t.status}
+            </div>
             <div className="flex items-baseline justify-between pb-5 border-b border-[var(--color-line)]">
               <h3 className="text-[1.4rem] font-semibold">{t.name}</h3>
               <div className="text-right">
@@ -607,7 +652,7 @@ function Footer() {
           <div className="flex items-center gap-3">
             <span className="text-fg font-medium">Capframe</span>
             <span className="text-[var(--color-fg-4)]">·</span>
-            <span>v0.1.0</span>
+            <span>{CAPFRAME_VERSION}</span>
             <span className="text-[var(--color-fg-4)]">·</span>
             <span>MIT</span>
             <span className="text-[var(--color-fg-4)]">·</span>
