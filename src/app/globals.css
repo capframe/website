@@ -299,3 +299,27 @@ code, pre, kbd, samp, .mono {
 .prose-changelog strong { color: var(--color-fg); }
 .prose-changelog em { color: var(--color-fg-2); }
 .prose-changelog .error { color: var(--color-rose); padding: 16px; border: 1px solid var(--color-rose); border-radius: 6px; background: rgba(248,113,113,0.08); }
+
+/* ── Blog post prose ──────────────────────────────────────────────────────── */
+/* Long-form reading typography — wider than .prose-changelog because the
+   posts are essays rather than terse log entries. */
+
+.prose-post { color: var(--color-fg-2); font-size: 16px; line-height: 1.75; font-family: var(--font-sans); }
+.prose-post h1, .prose-post h2, .prose-post h3, .prose-post h4 { color: var(--color-fg); font-weight: 600; letter-spacing: -0.01em; }
+.prose-post h1 { font-size: 28px; margin: 48px 0 16px; }
+.prose-post h2 { font-size: 22px; margin: 56px 0 16px; padding-top: 24px; border-top: 1px solid var(--color-line); }
+.prose-post h2:first-child { border-top: 0; padding-top: 0; margin-top: 0; }
+.prose-post h3 { font-size: 17px; margin: 36px 0 10px; color: var(--color-accent-3); }
+.prose-post p { margin: 14px 0; }
+.prose-post ul, .prose-post ol { margin: 14px 0 18px; padding-left: 26px; }
+.prose-post li { margin: 6px 0; }
+.prose-post li > p { margin: 4px 0; }
+.prose-post code { background: var(--color-bg-3); border: 1px solid var(--color-line); padding: 1px 6px; border-radius: 3px; font-size: 88%; font-family: var(--font-mono); color: var(--color-accent-3); }
+.prose-post pre { background: var(--color-bg-3); border: 1px solid var(--color-line); padding: 14px 16px; border-radius: 6px; overflow-x: auto; font-size: 13px; line-height: 1.6; margin: 16px 0; }
+.prose-post pre code { background: transparent; border: 0; padding: 0; color: var(--color-fg); font-size: 100%; }
+.prose-post a { color: var(--color-accent-3); text-decoration: underline; text-decoration-color: var(--color-line-2); text-underline-offset: 3px; transition: color 0.15s ease; }
+.prose-post a:hover { color: var(--color-accent); text-decoration-color: var(--color-accent); }
+.prose-post hr { border: 0; border-top: 1px dashed var(--color-line); margin: 40px 0; }
+.prose-post blockquote { border-left: 2px solid var(--color-accent); margin: 16px 0; padding: 4px 16px; color: var(--color-fg-3); font-style: italic; }
+.prose-post strong { color: var(--color-fg); font-weight: 600; }
+.prose-post em { color: var(--color-fg-2); }
