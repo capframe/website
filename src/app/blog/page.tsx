@@ -117,6 +117,9 @@ function Header() {
           <Link href="/blog" className="hover:text-fg transition-colors text-[var(--color-accent-3)]">Blog</Link>
           <a href={CAPFRAME_GITHUB} className="hover:text-fg transition-colors">GitHub ↗</a>
         </nav>
+        <Link href="/#install" className="md:hidden mono text-[12px] tracking-[0.12em] uppercase text-[var(--color-accent)]">
+          Install ↗
+        </Link>
       </div>
     </header>
   );
