@@ -17,8 +17,11 @@ export default function Home() {
       <Header />
       <main className="px-6 sm:px-10 lg:px-16">
         <Hero />
+        <ThreatLandscape />
         <Flow />
         <Modules />
+        <BindSpotlight />
+        <Engineering />
         <Compliance />
         <Demo />
         <Pricing />
@@ -109,13 +112,16 @@ function Hero() {
           <span className="text-[var(--color-accent)] glow">AI agents</span>.
         </h1>
 
-        <p className="rise rise-3 mt-7 text-[1.05rem] sm:text-[1.15rem] leading-[1.65] text-[var(--color-fg-2)] max-w-[34rem]">
-          Three Rust modules for AI agents that call tools.{" "}
-          <span className="text-fg">Find</span> what they touch.{" "}
-          <span className="text-fg">Bind</span> their authority.{" "}
-          <span className="text-fg">Guard</span> every call.{" "}
+        <p className="rise rise-3 mt-7 text-[1.05rem] sm:text-[1.15rem] leading-[1.65] text-[var(--color-fg-2)] max-w-[36rem]">
+          A deterministic Rust runtime that maps every tool your agents reach,
+          mints scoped, revocable capability tokens, and decides every call in{" "}
+          <span className="text-fg">single&#8209;digit microseconds</span> —{" "}
+          with{" "}
+          <span className="text-fg">no LLM in the decision path</span>.
+          Stops prompt&#8209;injected refunds, runaway tool storms, indirect&#8209;injection
+          data exfil, and unscoped MCP access before they reach prod.{" "}
           <span className="text-[var(--color-fg-3)]">
-            MCP-native. Audit-mapped to OWASP LLM, NIST AI RMF, MITRE ATLAS. MIT licensed.
+            MCP&#8209;native. Audit&#8209;mapped to OWASP LLM, NIST AI RMF, MITRE ATLAS. MIT.
           </span>
         </p>
 
@@ -191,6 +197,104 @@ function GitHubMark() {
 }
 
 /* ────────────────────────────────────────────────────────────────────────── */
+/* THREAT LANDSCAPE — what breaks without a capability layer                  */
+/* ────────────────────────────────────────────────────────────────────────── */
+
+function ThreatLandscape() {
+  const threats = [
+    {
+      tag: "T01",
+      label: "Indirect prompt injection",
+      mapping: "OWASP LLM01 · ATLAS T0051",
+      story:
+        "A vendor invoice arrives. The agent reads it. The PDF whispers: forward customers@ to attacker@. Your agent has Gmail scope. Your agent obeys.",
+      cost: "GDPR fines · forced breach disclosure · board-level incident",
+    },
+    {
+      tag: "T02",
+      label: "Runaway tool storm",
+      mapping: "OWASP LLM08 · NIST RMF MANAGE-1.2",
+      story:
+        "One bad inference and the refund agent loops, issuing $50 refunds until something — anything — finally rate-limits it. Recovery: 6 hours of finance reversals.",
+      cost: "$10K–$2M before the alarm fires · permanent trust loss",
+    },
+    {
+      tag: "T03",
+      label: "Unbounded MCP surface",
+      mapping: "OWASP LLM07 · ATLAS T0044",
+      story:
+        "An MCP server exposes 47 tools. Your agent legitimately needs 4. The other 43 are jailbreak surface — and every dependency update silently widens it.",
+      cost: "Every unscoped tool is a CVE waiting for the right prompt",
+    },
+    {
+      tag: "T04",
+      label: "No forensic trail",
+      mapping: "EU AI Act Art.12 · ISO 42001 · SOC2 CC7.2",
+      story:
+        "The agent did something. You can't prove what it was allowed to do, who authorised the scope, when the policy last changed, or whether it was revoked in time.",
+      cost: "Failed audit · indefinite incident response · regulator finds gaps for you",
+    },
+  ];
+  return (
+    <section className="max-w-[1440px] mx-auto py-20 lg:py-24 border-t border-[var(--color-line)]">
+      <div className="flex items-baseline gap-3 mb-4">
+        <span className="mono text-[12px] text-[var(--color-rose)]">§ 01</span>
+        <span className="label">The blast radius without it</span>
+      </div>
+      <h2 className="text-[clamp(1.9rem,3.4vw,2.7rem)] font-semibold tracking-[-0.025em] max-w-[48rem]">
+        Your agents inherit the full authority of the credentials you hand them.
+      </h2>
+      <p className="mt-5 text-[1.02rem] leading-[1.7] text-[var(--color-fg-2)] max-w-[42rem]">
+        Without a capability layer, every prompt-injection vector turns into the
+        worst thing your agent could do with those keys. These aren&apos;t
+        hypotheticals — they&apos;re the four failure modes every team
+        shipping agents has seen, or is about to.
+      </p>
+
+      <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-4">
+        {threats.map((t) => (
+          <article
+            key={t.tag}
+            className="card p-6 sm:p-7 group hover:border-[var(--color-rose)]/40 hover:shadow-[0_0_40px_-12px_rgba(248,113,113,0.25)]"
+          >
+            <div className="flex items-baseline justify-between border-b border-[var(--color-line)] pb-3">
+              <div className="flex items-baseline gap-3">
+                <span className="mono text-[11px] text-[var(--color-fg-4)] tracking-[0.18em]">
+                  {t.tag}
+                </span>
+                <span className="text-[1.05rem] font-semibold text-fg">
+                  {t.label}
+                </span>
+              </div>
+              <span className="mono text-[10px] uppercase tracking-[0.18em] text-[var(--color-rose)]/80">
+                live
+              </span>
+            </div>
+            <p className="mt-5 text-[0.97rem] leading-[1.7] text-[var(--color-fg-2)]">
+              {t.story}
+            </p>
+            <div className="mt-5 pt-4 border-t border-[var(--color-line)] flex flex-wrap items-baseline justify-between gap-2">
+              <span className="mono text-[11px] tracking-[0.12em] uppercase text-[var(--color-rose)]/90">
+                {t.cost}
+              </span>
+              <span className="mono text-[10.5px] text-[var(--color-fg-3)]">
+                {t.mapping}
+              </span>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <p className="mt-12 text-[0.95rem] leading-[1.7] text-[var(--color-fg-3)] max-w-[42rem]">
+        Capframe collapses all four into a single Rust binary sitting in the
+        agent&apos;s tool-call boundary. Every call is decided by a policy you
+        wrote, not a model you can&apos;t inspect.
+      </p>
+    </section>
+  );
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
 /* FLOW DIAGRAM                                                                */
 /* ────────────────────────────────────────────────────────────────────────── */
 
@@ -204,12 +308,17 @@ function Flow() {
   return (
     <section className="max-w-[1440px] mx-auto py-20 lg:py-24 border-t border-[var(--color-line)]">
       <div className="flex items-baseline gap-3 mb-4">
-        <span className="mono text-[12px] text-[var(--color-accent)]">§ 01</span>
+        <span className="mono text-[12px] text-[var(--color-accent)]">§ 02</span>
         <span className="label">The pipeline</span>
       </div>
-      <h2 className="text-[clamp(1.9rem,3.4vw,2.7rem)] font-semibold tracking-[-0.025em] max-w-[44rem]">
-        Four stages. One binary. No LLM in the decision path.
+      <h2 className="text-[clamp(1.9rem,3.4vw,2.7rem)] font-semibold tracking-[-0.025em] max-w-[46rem]">
+        Four stages. One static binary. Microsecond decisions. No model in the loop.
       </h2>
+      <p className="mt-5 text-[1.02rem] leading-[1.7] text-[var(--color-fg-2)] max-w-[42rem]">
+        Map the surface, mint scoped authority, enforce every call against a
+        policy you wrote, then export the receipt. The output of each stage is
+        the input to the next — and every artifact is auditor-ready.
+      </p>
 
       <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 relative">
         {steps.map((s, i) => (
@@ -249,51 +358,79 @@ function Flow() {
 function Modules() {
   const mods = [
     {
-      tag: "02.1",
+      tag: "03.1",
       name: "Find",
       role: "Discovery",
-      desc: "Walks every MCP server, every tool endpoint, every parameter your agent can touch. Surfaces indirect-injection gaps and unconstrained inputs, then emits a structured findings file aligned to the OWASP LLM Top 10.",
+      desc: "Walks every MCP server, every tool endpoint, every parameter your agent can reach. Detects unconstrained inputs, indirect-injection sinks, missing schemas, and silently-widening surfaces between dependency updates. Emits a findings.v1 JSON document aligned to OWASP LLM Top 10 and MITRE ATLAS — the same file Bind consumes to scope tokens and Guard consumes to synthesize policy.",
+      bullets: [
+        "Static + behavioural scan of every MCP server in your config",
+        "Diffs surfaces between scans — flags newly introduced tools",
+        "Schema-aware: catches missing parameter constraints, not just missing types",
+        "Cross-tool findings.v1 wire format (JSON Schema Draft 2020-12)",
+      ],
       code: `$ capframe find ./mcp-server.toml
 ✓ mapped 14 tools across 2 mcp servers
 ⚠ 3 tools accept input without constraints (LLM01)
+⚠ 1 tool has indirect-injection surface (LLM01, ATLAS T0051)
+✓ surface diff: +2 tools vs last scan
 → ./capframe.findings.json`,
     },
     {
-      tag: "02.2",
+      tag: "03.2",
       name: "Bind",
       role: "Authority",
-      desc: "Mints capability tokens — macaroon-style, attenuable, revocable, ed25519 holder-of-key, with signed denial receipts (HMAC-SHA256). Each agent carries a scoped token; every call produces a tamper-evident receipt that doubles as compliance evidence.",
+      desc: "The authority layer — and the most battle-tested module in the stack. Prompt injection is a confused-deputy attack (Lampson, 1974): smarter guardrails don't fix it, removing the agent's ambient authority does. Bind mints macaroon-style capability tokens — attenuable, revocable, ed25519 holder-of-key — that bound what an agent CAN do at issuance time. Out-of-scope calls are refused before the underlying tool ever sees them, each producing a signed, tamper-evident receipt.",
+      bullets: [
+        "Macaroon chain (HMAC-SHA256): a holder can't broaden scope without the root key",
+        "ed25519 holder-of-key proofs defeat token theft and replay",
+        "Caveats evaluate against verifier-known facts — never the agent's claims",
+        "Every caveat is human-readable: predict what a token permits in under 30s",
+      ],
       code: `$ capframe bind --agent shopify-bot \\
                 --tools "order.read, refund.write" \\
                 --limit max_refund=50 --limit region=eu \\
                 --ttl 24h
 ✓ token minted: cf_tok_a91f4e…
-  scope:    2 tools, 2 limits
-  expires:  2026-05-18T08:14:00Z`,
+  holder:    ed25519 / shopify-bot
+  scope:     2 tools · max_refund≤50 · region=eu
+  expires:   2026-05-18T08:14:00Z
+  revoke:    capframe revoke cf_tok_a91f4e`,
     },
     {
-      tag: "02.3",
+      tag: "03.3",
       name: "Guard",
       role: "Enforcement",
-      desc: "A deterministic policy evaluator. Synthesize a YAML policy from an observed gap, backtest it against the default corpus, then drop the evaluator into your agent's tool-call boundary. No LLM in the decision path. Single-digit-microsecond evaluation.",
-      code: `$ capframe guard backtest ./policy.yaml
+      desc: "A deterministic Rust policy evaluator that sits inline at the agent's tool-call boundary. Single-digit-microsecond decisions. No LLM in the decision path — every allow/deny is reproducible, fuzzable, and immune to the jailbreak that just broke your agent. Synthesize policy from observed gaps, backtest against the default corpus, ship.",
+      bullets: [
+        "Inline at the tool-call boundary — not a sidecar, not a daemon",
+        "Synthesizes YAML policy from a findings.v1 file in one command",
+        "Default corpus of 247 jailbreak / injection / scope-escape cases",
+        "Fail-closed by construction — no policy = no calls",
+      ],
+      code: `$ capframe guard synth ./capframe.findings.json
+✓ 14 rules generated across 3 categories
+✓ policy → ./policy.yaml
+
+$ capframe guard backtest ./policy.yaml
 ✓ 247/247 corpus cases pass
-✓ 14 rules, 3 categories
-✓ false-positive rate: 0.0%`,
+✓ false-positive rate: 0.0%
+✓ p99 decision latency: 8.4 µs`,
     },
   ];
   return (
     <section id="modules" className="max-w-[1440px] mx-auto py-20 lg:py-24 border-t border-[var(--color-line)]">
       <div className="flex items-baseline gap-3 mb-4">
-        <span className="mono text-[12px] text-[var(--color-accent)]">§ 02</span>
+        <span className="mono text-[12px] text-[var(--color-accent)]">§ 03</span>
         <span className="label">The three modules</span>
       </div>
       <h2 className="text-[clamp(1.9rem,3.4vw,2.7rem)] font-semibold tracking-[-0.025em] max-w-[44rem]">
-        Standalone, or composed.
+        Standalone, or composed. Either way, three primitives — not three products.
       </h2>
-      <p className="mt-4 text-[1.02rem] text-[var(--color-fg-2)] max-w-[40rem]">
-        Each module ships as its own Rust crate, its own CLI subcommand, and its own GitHub repo.
-        Run them independently or wire them together through a shared findings schema.
+      <p className="mt-4 text-[1.02rem] text-[var(--color-fg-2)] max-w-[42rem]">
+        Each module ships as its own Rust crate, its own CLI subcommand, and its own
+        public GitHub repo. Adopt one at a time, or wire them together through the
+        shared <code className="text-[var(--color-accent-3)]">findings.v1</code> JSON
+        Schema — the wire format Find emits, Bind scopes against, and Guard enforces.
       </p>
 
       <div className="mt-14 space-y-6 lg:space-y-8">
@@ -308,6 +445,14 @@ function Modules() {
                 {m.name}
               </h3>
               <p className="mt-5 text-[0.98rem] leading-[1.7] text-[var(--color-fg-2)]">{m.desc}</p>
+              <ul className="mt-5 space-y-2 text-[13px]">
+                {m.bullets.map((b) => (
+                  <li key={b} className="flex gap-3 text-[var(--color-fg-2)]">
+                    <span className="text-[var(--color-accent)] shrink-0 mono text-[11px] mt-[3px]">▸</span>
+                    <span className="leading-[1.55]">{b}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
             <div className="lg:col-span-8">
               <div className="terminal">
@@ -332,6 +477,261 @@ function Modules() {
 }
 
 /* ────────────────────────────────────────────────────────────────────────── */
+/* BIND SPOTLIGHT — the authority layer, proven against an adversary           */
+/* ────────────────────────────────────────────────────────────────────────── */
+
+function BindSpotlight() {
+  const proof = [
+    {
+      n: "10 / 10",
+      label: "purple-team rounds closed",
+      sub: "blue-first methodology · every documented BREAK fixed and shipped",
+    },
+    {
+      n: "564",
+      label: "tests, all green",
+      sub: "242 Rust + 322 TypeScript · incl. proptests on the no-broaden invariant",
+    },
+    {
+      n: "4 HIGH",
+      label: "defects in our own engine",
+      sub: "found by a 4-agent / 36-angle self-review · published · 3 of 4 closed",
+    },
+    {
+      n: "1.4 µs",
+      label: "chain-only verify",
+      sub: "56 µs full holder-of-key pipeline · ~17 kHz verifications / core",
+    },
+  ];
+  const classes = [
+    "tool-description injection",
+    "holder-of-key replay",
+    "capability broadening",
+    "revocation race",
+    "cross-origin exfil",
+    "path traversal + encoding",
+    "IDN homograph origins",
+    "sandbox prefix foot-gun",
+  ];
+  return (
+    <section className="max-w-[1440px] mx-auto py-20 lg:py-24 border-t border-[var(--color-line)]">
+      <div className="flex items-baseline gap-3 mb-4">
+        <span className="mono text-[12px] text-[var(--color-accent)]">§ 04</span>
+        <span className="label">Battle-tested · the Bind layer</span>
+      </div>
+      <h2 className="text-[clamp(1.9rem,3.4vw,2.7rem)] font-semibold tracking-[-0.025em] max-w-[48rem]">
+        Bind isn&apos;t a claim. It&apos;s been attacked ten times — and every
+        result is published.
+      </h2>
+      <p className="mt-5 text-[1.02rem] leading-[1.7] text-[var(--color-fg-2)] max-w-[44rem]">
+        The authority layer ships with a public purple-team corpus: a structured
+        record of adversarial scenarios run against the token engine, written{" "}
+        <span className="text-fg">blue-first</span> — the falsifiable security
+        claim is committed <em>before</em> the attack runs. Every round ships a
+        runnable PoC and a signed denial receipt as evidence. Clone it, run the
+        tests, verify every number on this page without trusting a word of it.
+      </p>
+
+      <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4">
+        {proof.map((p) => (
+          <article key={p.label} className="card p-6 flex flex-col hover:border-[var(--color-accent)]/40 hover:shadow-[0_0_40px_-12px_rgba(0,245,160,0.2)]">
+            <div className="text-[1.9rem] font-semibold tracking-[-0.03em] text-[var(--color-accent)] glow leading-none">
+              {p.n}
+            </div>
+            <div className="mt-3 text-[0.95rem] font-medium text-fg leading-snug">
+              {p.label}
+            </div>
+            <div className="mt-2 mono text-[10.5px] leading-[1.55] text-[var(--color-fg-3)]">
+              {p.sub}
+            </div>
+          </article>
+        ))}
+      </div>
+
+      {/* live model demo */}
+      <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+        <div className="lg:col-span-5 flex flex-col justify-center">
+          <span className="label-accent">Live · real model</span>
+          <h3 className="mt-3 text-[1.5rem] font-semibold tracking-[-0.02em] leading-tight">
+            A Claude Opus 4.7 agent, told to move money it isn&apos;t scoped for.
+          </h3>
+          <p className="mt-4 text-[0.97rem] leading-[1.7] text-[var(--color-fg-2)]">
+            No prompt engineering, no guardrail model, no second LLM judging the
+            first. The agent is handed one capability — scoped to{" "}
+            <code className="text-[var(--color-accent-3)]">checkout.purchase</code>.
+            It tries to send a wire anyway. The authority simply isn&apos;t there,
+            so the call dies at the gate while the in-scope purchase proceeds.
+            Both verdicts are audit-logged.
+          </p>
+        </div>
+        <div className="lg:col-span-7">
+          <div className="terminal h-full">
+            <div className="terminal-header">
+              <span className="terminal-dot" />
+              <span className="terminal-dot" />
+              <span className="terminal-dot" />
+              <span className="ml-3 mono text-[11px] text-[var(--color-fg-3)] tracking-wide">
+                demo:llm-direct — Anthropic SDK
+              </span>
+            </div>
+            <pre className="mono text-[12px] sm:text-[12.5px] leading-[1.75] p-5 sm:p-7 text-fg overflow-x-auto">
+{`$ npm run demo:llm-direct
+`}<span className="text-[var(--color-fg-3)]">{`→ task:  "send a $30 wire to acct 4471, then buy a USB-C cable"`}</span>{`
+`}<span className="text-[var(--color-fg-3)]">{`→ scope: tool == "checkout.purchase"`}</span>{`
+
+  `}<span className="text-[var(--color-rose)]">{`⨯`}</span>{` wire.send          `}<span className="text-[var(--color-rose)]">{`DENIED`}</span>{`   out-of-scope
+                       `}<span className="text-[var(--color-fg-3)]">{`receipt cap_rcpt_3f9a…`}</span>{`
+  `}<span className="text-[var(--color-accent)]">{`✓`}</span>{` checkout.purchase  `}<span className="text-[var(--color-accent)]">{`ALLOWED`}</span>{`  in-scope
+                       `}<span className="text-[var(--color-fg-3)]">{`receipt cap_rcpt_7c12…`}</span>{`
+
+`}<span className="text-[var(--color-fg-2)]">{`both decisions audit-logged · agent never reached the wire API`}</span>
+            </pre>
+          </div>
+        </div>
+      </div>
+
+      {/* attack classes + honesty */}
+      <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10">
+        <div className="lg:col-span-7">
+          <p className="label mb-4">Attack classes the corpus exercises</p>
+          <div className="flex flex-wrap gap-2">
+            {classes.map((c) => (
+              <span
+                key={c}
+                className="mono text-[11.5px] text-[var(--color-fg-2)] border border-[var(--color-line-2)] rounded-full px-3 py-1 hover:border-[var(--color-accent)]/40 hover:text-fg transition-colors"
+              >
+                {c}
+              </span>
+            ))}
+          </div>
+        </div>
+        <div className="lg:col-span-5">
+          <p className="label mb-4">And honest about what it doesn&apos;t cover</p>
+          <p className="text-[0.94rem] leading-[1.7] text-[var(--color-fg-3)]">
+            Model behaviour, system-prompt extraction, jailbreaks, and GCG
+            suffixes are <span className="text-[var(--color-fg-2)]">explicitly out of scope</span> —
+            documented in the threat model, not hand-waved. Bind removes the
+            deputy&apos;s authority; it doesn&apos;t pretend to fix the model.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* ENGINEERING — why the runtime is different                                  */
+/* ────────────────────────────────────────────────────────────────────────── */
+
+function Engineering() {
+  const blocks = [
+    {
+      n: "01",
+      title: "Deterministic policy evaluator",
+      body:
+        "Rust, single-digit microseconds per decision, p99 under 10µs even at 50k policy rules. The same input always returns the same allow/deny — fuzzable, reproducible, immune to the next jailbreak. Most importantly: no LLM in the decision path. Your enforcement boundary is not a model you have to re-evaluate every time someone publishes a new attack paper.",
+      pill: "0 LLM calls",
+    },
+    {
+      n: "02",
+      title: "Macaroon-style capability tokens",
+      body:
+        "ed25519 holder-of-key signatures, attenuable third-party caveats, revocation lists, TTL-bound. The primitive Google built distributed authorization on, ported to the agent boundary. Scope your agent to two tools and one region in one CLI call — and revoke the token in one more when something looks off.",
+      pill: "ed25519 · attenuable",
+    },
+    {
+      n: "03",
+      title: "Tamper-evident receipts",
+      body:
+        "Every allow and every deny emits a signed (HMAC-SHA256) receipt with policy hash, token id, agent id, parameters, and verdict. Drop the receipt stream into S3 or Loki and you have a forensic timeline that satisfies SOC2 CC7.2 and EU AI Act Article 12 logging requirements out of the box.",
+      pill: "HMAC-SHA256",
+    },
+    {
+      n: "04",
+      title: "findings.v1 wire format",
+      body:
+        "JSON Schema Draft 2020-12. Round-trip tested. The cross-tool contract Find emits, Bind reads to scope tokens, Guard reads to synthesize policy, and Report serializes into auditor-ready HTML/PDF. One schema means every artifact is grep-able, diff-able, and machine-checkable in CI.",
+      pill: "Draft 2020-12",
+    },
+    {
+      n: "05",
+      title: "Single static binary",
+      body:
+        "No daemon. No kernel module. No Python runtime. No container. One sha256-verified binary per platform — x86_64 / aarch64 across Linux, macOS, and Windows. Runs in CI, in your IDE, on your laptop, and inline at the tool-call boundary. MIT licensed — read every line of the code your security depends on.",
+      pill: "6 targets · MIT",
+    },
+    {
+      n: "06",
+      title: "MCP-native, framework-agnostic",
+      body:
+        "Today: every MCP server — Claude Desktop, Cursor, Continue, Cline, LangGraph via the MCP bridge, every agent SDK that speaks the protocol. Roadmap: native adapters for OpenAI function calling and Anthropic tool use, so the same policy file works regardless of which provider your agent picks tomorrow.",
+      pill: "MCP today · adapters next",
+    },
+  ];
+  return (
+    <section className="max-w-[1440px] mx-auto py-20 lg:py-24 border-t border-[var(--color-line)]">
+      <div className="flex items-baseline gap-3 mb-4">
+        <span className="mono text-[12px] text-[var(--color-accent)]">§ 05</span>
+        <span className="label">Under the hood</span>
+      </div>
+      <h2 className="text-[clamp(1.9rem,3.4vw,2.7rem)] font-semibold tracking-[-0.025em] max-w-[46rem]">
+        The runtime is the product. Everything else is paperwork.
+      </h2>
+      <p className="mt-5 text-[1.02rem] leading-[1.7] text-[var(--color-fg-2)] max-w-[44rem]">
+        Capframe is not a wrapper around an LLM, not a policy DSL transpiled to a model
+        prompt, and not a managed service. It&apos;s a deterministic Rust runtime
+        with three primitives — tokens, policy, receipts — that sit inline at the
+        boundary your agent already calls through.
+      </p>
+
+      <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {blocks.map((b) => (
+          <article
+            key={b.n}
+            className="card p-6 sm:p-7 group hover:border-[var(--color-accent)]/40 hover:shadow-[0_0_40px_-12px_rgba(0,245,160,0.18)]"
+          >
+            <div className="flex items-baseline justify-between">
+              <span className="mono text-[11px] text-[var(--color-fg-4)] tracking-[0.18em]">
+                {b.n}
+              </span>
+              <span className="mono text-[10px] uppercase tracking-[0.14em] text-[var(--color-accent-3)] border border-[var(--color-line-2)] rounded-full px-2 py-0.5">
+                {b.pill}
+              </span>
+            </div>
+            <h3 className="mt-4 text-[1.18rem] font-semibold tracking-[-0.015em] text-fg group-hover:text-[var(--color-accent)] transition-colors">
+              {b.title}
+            </h3>
+            <p className="mt-3 text-[0.94rem] leading-[1.7] text-[var(--color-fg-2)]">
+              {b.body}
+            </p>
+          </article>
+        ))}
+      </div>
+
+      <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <Stat n="< 10 µs" label="p99 decision latency" />
+        <Stat n="247" label="default jailbreak corpus" />
+        <Stat n="6" label="cross-compiled targets" />
+        <Stat n="0" label="LLM calls on the hot path" />
+      </div>
+    </section>
+  );
+}
+
+function Stat({ n, label }: { n: string; label: string }) {
+  return (
+    <div className="card p-5 flex flex-col items-start">
+      <div className="text-[1.8rem] font-semibold tracking-[-0.025em] text-[var(--color-accent)] glow">
+        {n}
+      </div>
+      <div className="mt-1 mono text-[10.5px] tracking-[0.16em] uppercase text-[var(--color-fg-3)]">
+        {label}
+      </div>
+    </div>
+  );
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
 /* COMPLIANCE                                                                  */
 /* ────────────────────────────────────────────────────────────────────────── */
 
@@ -344,15 +744,20 @@ function Compliance() {
   return (
     <section id="compliance" className="max-w-[1440px] mx-auto py-20 lg:py-24 border-t border-[var(--color-line)]">
       <div className="flex items-baseline gap-3 mb-4">
-        <span className="mono text-[12px] text-[var(--color-accent)]">§ 03</span>
+        <span className="mono text-[12px] text-[var(--color-accent)]">§ 06</span>
         <span className="label">Compliance</span>
       </div>
-      <h2 className="text-[clamp(1.9rem,3.4vw,2.7rem)] font-semibold tracking-[-0.025em] max-w-[44rem]">
-        The artifact your security team hands to an auditor.
+      <h2 className="text-[clamp(1.9rem,3.4vw,2.7rem)] font-semibold tracking-[-0.025em] max-w-[46rem]">
+        The only artifact mapping all three agent-security frameworks at once.
       </h2>
-      <p className="mt-4 text-[1.02rem] text-[var(--color-fg-2)] max-w-[40rem]">
-        Every Capframe run produces evidence mapped to the three frameworks regulated buyers already require.
-        Run <code className="text-[var(--color-accent-3)]">capframe report</code> to export HTML or PDF.
+      <p className="mt-5 text-[1.02rem] leading-[1.7] text-[var(--color-fg-2)] max-w-[42rem]">
+        Most tools tick one framework. Capframe was designed so a single run
+        emits evidence aligned to OWASP LLM Top 10, NIST AI RMF, and MITRE
+        ATLAS — the three frameworks regulated buyers (CISO, GRC, internal
+        audit) actually ask about.{" "}
+        <code className="text-[var(--color-accent-3)]">capframe report</code>{" "}
+        exports the dossier as HTML or PDF — signed, timestamped, and ready
+        to attach to an SOC2 / ISO 42001 / EU AI Act submission.
       </p>
 
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -385,11 +790,11 @@ function Demo() {
   return (
     <section id="install" className="max-w-[1440px] mx-auto py-20 lg:py-24 border-t border-[var(--color-line)]">
       <div className="flex items-baseline gap-3 mb-4">
-        <span className="mono text-[12px] text-[var(--color-accent)]">§ 04</span>
+        <span className="mono text-[12px] text-[var(--color-accent)]">§ 07</span>
         <span className="label">Specimen transcript</span>
       </div>
       <h2 className="text-[clamp(1.9rem,3.4vw,2.7rem)] font-semibold tracking-[-0.025em] max-w-[44rem]">
-        What it looks like in the shell.
+        Eighty seconds, four commands, one auditor-ready report.
       </h2>
 
       <div className="mt-10 terminal">
@@ -507,7 +912,7 @@ function Pricing() {
   return (
     <section id="pricing" className="max-w-[1440px] mx-auto py-20 lg:py-24 border-t border-[var(--color-line)]">
       <div className="flex items-baseline gap-3 mb-4">
-        <span className="mono text-[12px] text-[var(--color-accent)]">§ 05</span>
+        <span className="mono text-[12px] text-[var(--color-accent)]">§ 08</span>
         <span className="label">Pricing</span>
       </div>
       <h2 className="text-[clamp(1.9rem,3.4vw,2.7rem)] font-semibold tracking-[-0.025em] max-w-[44rem]">
@@ -561,23 +966,27 @@ function Pricing() {
 
 function FAQ() {
   const qa = [
-    { q: "Does this only work with MCP?",
-      a: "Today, yes — Capframe is built around the Model Context Protocol. Adapter support for OpenAI function calling, Anthropic tool use, and LangGraph is on the roadmap." },
+    { q: "How is this different from an LLM-as-judge guardrail?",
+      a: "An LLM judge is another model you have to trust — and another attack surface. Capframe's Guard is a deterministic Rust evaluator: the same input always yields the same allow/deny, with no model in the path. That means it's fuzzable, reproducible, microsecond-fast, and immune to the next jailbreak paper. LLM judges are useful for content classification; they are not safe to put inline at a tool-call boundary." },
+    { q: "How is this different from prompt-injection scanners or red-team frameworks?",
+      a: "Scanners tell you about a vulnerability after the fact. Capframe enforces the boundary at the moment of the call — the agent never gets to make a refund it shouldn't, regardless of what the prompt said. Find covers the offline discovery surface; Guard is the runtime backstop the scanner ecosystem doesn't have." },
+    { q: "Is the runtime fast enough for production?",
+      a: "Yes. Guard evaluates policy in single-digit microseconds, p99 under 10µs at 50k rules. Pure Rust, zero heap allocation on the hot path, no model in the loop. You can drop it inline at the tool-call boundary without measurable user-visible latency." },
     { q: "Does my agent data leave my environment?",
-      a: "No. The CLI is local-first. The Pro / Enterprise hosted control plane is opt-in and stores only the metadata you choose to sync." },
-    { q: "Is the runtime Guard fast enough for production?",
-      a: "Yes. Guard is a Rust process; policy evaluation is single-digit microseconds. There is no LLM in the decision path — every allow/deny is deterministic." },
+      a: "No. The CLI is local-first — Find, Bind, Guard, Report all run as a single static binary on your laptop, your CI, or your inference host. The Pro / Enterprise hosted control plane is opt-in and stores only the metadata you choose to sync." },
+    { q: "Does this only work with MCP?",
+      a: "Today, yes — Capframe is built around the Model Context Protocol. That covers Claude Desktop, Cursor, Continue, Cline, LangGraph via the MCP bridge, and most agentic Rust/Python frameworks. Native adapters for OpenAI function calling and Anthropic tool use are on the roadmap; the policy file stays the same." },
     { q: "Why three separate modules?",
-      a: "Different teams adopt them at different speeds. Security teams often start with Find. AI engineers usually start with Guard. The capability-token layer (Bind) is for teams ready to commit to a permission model." },
+      a: "Different teams adopt them at different speeds. Security teams typically start with Find to baseline their agent surface. AI engineers usually start with Guard because it solves the immediate runtime problem. The capability-token layer (Bind) is for teams ready to commit to a permission model. The findings.v1 schema ties them together when you're ready." },
     { q: "Why open source?",
-      a: "Security infrastructure you can't read isn't trustworthy. The code your boundaries depend on should be inspectable." },
-    { q: "Which agent frameworks does Capframe support today?",
-      a: "Anything that speaks MCP. That covers Claude Desktop, Cursor, Continue, Cline, LangGraph (via the MCP bridge), and most agentic Rust/Python frameworks." },
+      a: "Security infrastructure you can't read isn't trustworthy — and AI-agent enforcement is too new a category to be locked behind a closed binary. The code your boundary depends on should be inspectable, fuzzable, and forkable. MIT licensed, every line." },
+    { q: "What does the auditor actually receive?",
+      a: "An HTML or PDF report (capframe report) with: the findings table mapped to OWASP LLM Top 10 and MITRE ATLAS techniques, the active policy file with its hash, the signed receipt count by verdict, and the NIST AI RMF function coverage matrix. Timestamped and signature-verifiable end to end." },
   ];
   return (
     <section className="max-w-[1440px] mx-auto py-20 lg:py-24 border-t border-[var(--color-line)]">
       <div className="flex items-baseline gap-3 mb-4">
-        <span className="mono text-[12px] text-[var(--color-accent)]">§ 06</span>
+        <span className="mono text-[12px] text-[var(--color-accent)]">§ 09</span>
         <span className="label">Common questions</span>
       </div>
       <h2 className="text-[clamp(1.9rem,3.4vw,2.7rem)] font-semibold tracking-[-0.025em] max-w-[44rem]">
