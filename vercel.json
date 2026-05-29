@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/leaderboard-refresh",
+      "schedule": "30 7 * * *"
+    }
+  ]
+}
