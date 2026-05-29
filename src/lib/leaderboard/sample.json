@@ -1,7 +1,7 @@
 {
   "schema_version": "capframe.leaderboard.v1",
-  "generated_at": "2026-05-29T21:06:25.0107004Z",
-  "total_scanned": 3,
+  "generated_at": "2026-05-29T21:27:06.1182633Z",
+  "total_scanned": 15,
   "weights": {
     "critical": 10,
     "high": 4,
@@ -12,7 +12,35 @@
   "rows": [
     {
       "score": 100,
-      "handle": "npm:@modelcontextprotocol/server-everything@0.1.0",
+      "handle": "npm:@modelcontextprotocol/server-aws-kb-retrieval@0.6.2",
+      "source": "registry",
+      "name": "server-aws-kb-retrieval",
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-29T21:26:41.5602331Z"
+    },
+    {
+      "score": 100,
+      "handle": "npm:@modelcontextprotocol/server-brave-search@0.6.2",
+      "source": "registry",
+      "name": "server-brave-search",
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-29T21:26:41.2877327Z"
+    },
+    {
+      "score": 100,
+      "handle": "npm:@modelcontextprotocol/server-everything@2026.1.26",
       "source": "registry",
       "name": "server-everything",
       "repo_url": "https://github.com/modelcontextprotocol/servers",
@@ -23,7 +51,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T21:06:10.2832631Z"
+      "last_scanned": "2026-05-29T21:26:38.8063545Z"
     },
     {
       "score": 100,
@@ -38,12 +66,55 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T21:06:10.668772Z"
+      "last_scanned": "2026-05-29T21:26:39.040664Z"
     },
     {
       "score": 100,
-      "handle": "pypi:mcp-server-git@0.6.0",
+      "handle": "npm:@modelcontextprotocol/server-gdrive@2025.1.14",
       "source": "registry",
+      "name": "server-gdrive",
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-29T21:26:41.8811757Z"
+    },
+    {
+      "score": 100,
+      "handle": "npm:@modelcontextprotocol/server-github@2025.4.8",
+      "source": "registry",
+      "name": "server-github",
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-29T21:26:39.5394336Z"
+    },
+    {
+      "score": 100,
+      "handle": "npm:@modelcontextprotocol/server-google-maps@0.6.2",
+      "source": "registry",
+      "name": "server-google-maps",
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-29T21:26:40.6678422Z"
+    },
+    {
+      "score": 100,
+      "handle": "npm:@modelcontextprotocol/server-memory@2026.1.26",
+      "source": "registry",
+      "name": "server-memory",
       "repo_url": "https://github.com/modelcontextprotocol/servers",
       "counts": {
         "info": 0,
@@ -52,7 +123,106 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T21:06:10.7014932Z"
+      "last_scanned": "2026-05-29T21:26:39.2836547Z"
+    },
+    {
+      "score": 100,
+      "handle": "npm:@modelcontextprotocol/server-postgres@0.6.2",
+      "source": "registry",
+      "name": "server-postgres",
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-29T21:26:41.0410153Z"
+    },
+    {
+      "score": 100,
+      "handle": "npm:@modelcontextprotocol/server-puppeteer@2025.5.12",
+      "source": "registry",
+      "name": "server-puppeteer",
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-29T21:26:39.8014241Z"
+    },
+    {
+      "score": 100,
+      "handle": "npm:@modelcontextprotocol/server-sequential-thinking@2025.12.18",
+      "source": "registry",
+      "name": "server-sequential-thinking",
+      "repo_url": "https://github.com/modelcontextprotocol/servers",
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-29T21:26:40.0924591Z"
+    },
+    {
+      "score": 100,
+      "handle": "npm:@modelcontextprotocol/server-slack@2025.4.25",
+      "source": "registry",
+      "name": "server-slack",
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-29T21:26:40.3420929Z"
+    },
+    {
+      "score": 100,
+      "handle": "pypi:mcp-server-git@2026.1.14",
+      "source": "registry",
+      "name": "mcp-server-git",
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-29T21:26:42.0060154Z"
+    },
+    {
+      "score": 100,
+      "handle": "pypi:mcp-server-time@2026.1.26",
+      "source": "registry",
+      "name": "mcp-server-time",
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-29T21:26:42.217978Z"
+    },
+    {
+      "score": 98,
+      "handle": "pypi:mcp-server-fetch@2025.4.7",
+      "source": "registry",
+      "name": "mcp-server-fetch",
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 1,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-29T21:26:42.3430045Z"
     }
   ]
 }
