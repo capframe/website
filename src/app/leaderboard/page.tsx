@@ -103,6 +103,9 @@ function Table({ rows }: { rows: Row[] }) {
             <th className="text-left py-3 px-4">Server</th>
             <th className="text-right py-3 px-4">Score</th>
             <th className="text-right py-3 px-4 hidden sm:table-cell">
+              Tools
+            </th>
+            <th className="text-right py-3 px-4 hidden sm:table-cell">
               Findings
             </th>
             <th className="text-right py-3 px-4 hidden md:table-cell">
@@ -127,6 +130,9 @@ function Table({ rows }: { rows: Row[] }) {
               </td>
               <td className="py-3 px-4 text-right">
                 <ScoreBadge score={row.score} max={100} />
+              </td>
+              <td className="py-3 px-4 text-right hidden sm:table-cell">
+                <ToolsCell count={row.tool_count} />
               </td>
               <td className="py-3 px-4 text-right hidden sm:table-cell">
                 <FindingsCell counts={row.counts} />
@@ -182,6 +188,25 @@ function scoreTier(score: number, max: number): "A" | "B" | "C" | "D" {
   if (pct >= 80) return "B";
   if (pct >= 50) return "C";
   return "D";
+}
+
+function ToolsCell({ count }: { count?: number }) {
+  if (count === undefined) {
+    return (
+      <span className="mono text-[11px] text-[var(--color-fg-3)]">—</span>
+    );
+  }
+  // Tier color shows producer maturity at a glance: 20+ tools = README
+  // was fully parsed; 5-19 = good extraction; 0-4 = sparse / fallback.
+  const color =
+    count >= 20
+      ? "text-[var(--color-accent)]"
+      : count >= 5
+        ? "text-[var(--color-accent-3)]"
+        : "text-[var(--color-fg-3)]";
+  return (
+    <span className={`mono text-[12px] tabular-nums ${color}`}>{count}</span>
+  );
 }
 
 function FindingsCell({ counts }: { counts: SeverityCounts }) {

@@ -25,6 +25,10 @@ export interface Row {
   source: ServerSource;
   name?: string;
   repo_url?: string;
+  /** Number of tools the producer exposed for this server.
+   *  Optional for backward-compat with leaderboards generated before
+   *  the field was added. */
+  tool_count?: number;
   counts: SeverityCounts;
   last_scanned: string;
 }
