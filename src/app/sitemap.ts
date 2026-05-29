@@ -24,6 +24,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       priority: 0.7,
     },
+    {
+      url: "https://capframe.ai/leaderboard",
+      lastModified: now,
+      changeFrequency: "daily",
+      priority: 0.8,
+    },
     ...posts.map((p) => ({
       url: `https://capframe.ai/blog/${p.slug}`,
       lastModified: p.date ? new Date(p.date) : now,

@@ -1,0 +1,35 @@
+{
+  "schema_version": "capframe.leaderboard.v1",
+  "generated_at": "2026-05-29T19:30:00Z",
+  "total_scanned": 3,
+  "weights": { "critical": 10, "high": 4, "medium": 2, "low": 1, "score_max": 100 },
+  "rows": [
+    {
+      "score": 100,
+      "handle": "npm:@modelcontextprotocol/server-everything@0.1.0",
+      "source": "registry",
+      "name": "server-everything",
+      "repo_url": "https://github.com/modelcontextprotocol/servers",
+      "counts": { "info": 0, "low": 0, "medium": 0, "high": 0, "critical": 0 },
+      "last_scanned": "2026-05-29T18:00:00Z"
+    },
+    {
+      "score": 94,
+      "handle": "pypi:mcp-server-git@0.6.0",
+      "source": "registry",
+      "name": "mcp-server-git",
+      "repo_url": "https://github.com/modelcontextprotocol/servers",
+      "counts": { "info": 0, "low": 0, "medium": 1, "high": 1, "critical": 0 },
+      "last_scanned": "2026-05-29T18:00:00Z"
+    },
+    {
+      "score": 88,
+      "handle": "npm:@example/exec-server@2.0.0",
+      "source": "registry",
+      "name": "exec-server",
+      "repo_url": "https://github.com/example/exec-server",
+      "counts": { "info": 0, "low": 0, "medium": 1, "high": 0, "critical": 1 },
+      "last_scanned": "2026-05-29T18:00:00Z"
+    }
+  ]
+}
