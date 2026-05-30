@@ -57,6 +57,16 @@ export default async function LeaderboardPage() {
             <Stat label="Schema" value="findings.v2" />
           </div>
 
+          <div className="mt-8 flex items-center gap-3 mono text-[11px] uppercase tracking-[0.16em] text-[var(--color-fg-3)]">
+            <Link
+              href="/leaderboard/movers"
+              className="rounded border border-[var(--color-line)] hover:border-[var(--color-line-hover)] bg-[var(--color-bg-2)]/30 hover:text-[var(--color-fg)] px-3 py-1.5"
+            >
+              § biggest movers →
+            </Link>
+            <span>diff vs. previous scan</span>
+          </div>
+
           <FilterableTable rows={board.rows} />
 
           <div className="mt-12 rounded-md border border-[var(--color-line)] bg-[var(--color-bg-2)]/40 p-5 text-[0.92rem] text-[var(--color-fg-2)]">
