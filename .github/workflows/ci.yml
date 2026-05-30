@@ -28,31 +28,26 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10
-
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: "22"
-          cache: pnpm
+          cache: npm
 
       - name: Install deps
-        run: pnpm install --frozen-lockfile
+        run: npm ci
 
       - name: Typecheck
-        run: pnpm exec tsc --noEmit
+        run: npx tsc --noEmit
 
       - name: Build
-        run: pnpm build
+        run: npm run build
 
       - name: Start server
         # Background — we curl it from the next step. PORT picks a
         # high port to avoid clashes with the runner.
         run: |
-          pnpm start --port 41788 > /tmp/next.log 2>&1 &
+          npx next start --port 41788 > /tmp/next.log 2>&1 &
           echo $! > /tmp/next.pid
           # Wait for ready signal in the log (max ~30s).
           for _ in $(seq 1 60); do
