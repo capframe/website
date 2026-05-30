@@ -323,3 +323,10 @@ code, pre, kbd, samp, .mono {
 .prose-post blockquote { border-left: 2px solid var(--color-accent); margin: 16px 0; padding: 4px 16px; color: var(--color-fg-3); font-style: italic; }
 .prose-post strong { color: var(--color-fg); font-weight: 600; }
 .prose-post em { color: var(--color-fg-2); }
+
+/* ── Docs / quickstart inline link utility ───────────────────────────────── */
+/* Shared style for inline links inside the docs and quickstart pages. Matches
+   the .prose-post a treatment so blog-post links and reference-page links
+   feel consistent. */
+.link { color: var(--color-accent-3); text-decoration: underline; text-decoration-color: var(--color-line-2); text-underline-offset: 3px; transition: color 0.15s ease; }
+.link:hover { color: var(--color-accent); text-decoration-color: var(--color-accent); }

@@ -33,34 +33,49 @@ export function StatusBar() {
   );
 }
 
-export function Header({ activePage }: { activePage?: "blog" | "leaderboard" }) {
+export type ActivePage =
+  | "blog"
+  | "leaderboard"
+  | "quickstart"
+  | "docs";
+
+export function Header({ activePage }: { activePage?: ActivePage }) {
+  const cls = (p: ActivePage) =>
+    activePage === p
+      ? "text-[var(--color-fg)]"
+      : "hover:text-[var(--color-fg)]";
+  const aria = (p: ActivePage) =>
+    activePage === p ? ("page" as const) : undefined;
   return (
     <header className="border-b border-[var(--color-line)] bg-[var(--color-bg)]/80 backdrop-blur sticky top-0 z-30">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 py-4 flex items-center justify-between">
         <Link href="/" className="mono text-[13px] tracking-[0.18em]">
           CAPFRAME
         </Link>
-        <nav className="flex items-center gap-6 mono text-[11.5px] uppercase tracking-[0.16em] text-[var(--color-fg-3)]">
+        <nav className="flex items-center gap-4 sm:gap-6 mono text-[11.5px] uppercase tracking-[0.16em] text-[var(--color-fg-3)]">
           <Link
-            href="/blog"
-            className={
-              activePage === "blog"
-                ? "text-[var(--color-fg)]"
-                : "hover:text-[var(--color-fg)]"
-            }
+            href="/quickstart"
+            className={cls("quickstart")}
+            aria-current={aria("quickstart")}
           >
-            Blog
+            Quickstart
           </Link>
           <Link
             href="/leaderboard"
-            className={
-              activePage === "leaderboard"
-                ? "text-[var(--color-fg)]"
-                : "hover:text-[var(--color-fg)]"
-            }
-            aria-current={activePage === "leaderboard" ? "page" : undefined}
+            className={cls("leaderboard")}
+            aria-current={aria("leaderboard")}
           >
             Leaderboard
+          </Link>
+          <Link
+            href="/docs/findings-v1"
+            className={cls("docs")}
+            aria-current={aria("docs")}
+          >
+            Schema
+          </Link>
+          <Link href="/blog" className={cls("blog")} aria-current={aria("blog")}>
+            Blog
           </Link>
           <Link href={CAPFRAME_GITHUB} className="hover:text-[var(--color-fg)]">
             GitHub
