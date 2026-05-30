@@ -1,6 +1,6 @@
 {
   "schema_version": "capframe.leaderboard.v1",
-  "generated_at": "2026-05-30T07:54:02.231896623Z",
+  "generated_at": "2026-05-30T08:26:21.64125939Z",
   "total_scanned": 48,
   "weights": {
     "critical": 10,
@@ -24,7 +24,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:38.975874868Z"
+      "last_scanned": "2026-05-30T08:23:57.972755985Z"
     },
     {
       "score": 100,
@@ -40,7 +40,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:43.63275378Z"
+      "last_scanned": "2026-05-30T08:24:03.292845441Z"
     },
     {
       "score": 100,
@@ -55,7 +55,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:38.020638579Z"
+      "last_scanned": "2026-05-30T08:23:57.009061408Z"
     },
     {
       "score": 100,
@@ -71,7 +71,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:41.688111565Z"
+      "last_scanned": "2026-05-30T08:24:01.507794163Z"
     },
     {
       "score": 100,
@@ -87,7 +87,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:39.735819808Z"
+      "last_scanned": "2026-05-30T08:23:59.334847352Z"
     },
     {
       "score": 100,
@@ -103,7 +103,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:36.442544503Z"
+      "last_scanned": "2026-05-30T08:23:55.868017418Z"
     },
     {
       "score": 100,
@@ -119,7 +119,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:42.888489403Z"
+      "last_scanned": "2026-05-30T08:24:02.64728963Z"
     },
     {
       "score": 100,
@@ -135,7 +135,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:42.096372891Z"
+      "last_scanned": "2026-05-30T08:24:01.83860875Z"
     },
     {
       "score": 100,
@@ -150,22 +150,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:35.518445176Z"
-    },
-    {
-      "score": 100,
-      "handle": "npm:@modelcontextprotocol/server-brave-search@0.6.2",
-      "source": "registry",
-      "name": "server-brave-search",
-      "tool_count": 2,
-      "counts": {
-        "info": 0,
-        "low": 0,
-        "medium": 0,
-        "high": 0,
-        "critical": 0
-      },
-      "last_scanned": "2026-05-30T07:51:34.904461092Z"
+      "last_scanned": "2026-05-30T08:23:54.413130111Z"
     },
     {
       "score": 100,
@@ -180,7 +165,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:35.768581596Z"
+      "last_scanned": "2026-05-30T08:23:54.69457593Z"
     },
     {
       "score": 100,
@@ -195,22 +180,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:34.442345966Z"
-    },
-    {
-      "score": 100,
-      "handle": "npm:@modelcontextprotocol/server-postgres@0.6.2",
-      "source": "registry",
-      "name": "server-postgres",
-      "tool_count": 2,
-      "counts": {
-        "info": 0,
-        "low": 0,
-        "medium": 0,
-        "high": 0,
-        "critical": 0
-      },
-      "last_scanned": "2026-05-30T07:51:34.65321848Z"
+      "last_scanned": "2026-05-30T08:23:52.639770521Z"
     },
     {
       "score": 100,
@@ -225,7 +195,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:36.066413525Z"
+      "last_scanned": "2026-05-30T08:23:55.550628506Z"
     },
     {
       "score": 100,
@@ -240,7 +210,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:41.155304825Z"
+      "last_scanned": "2026-05-30T08:24:00.931734943Z"
     },
     {
       "score": 100,
@@ -256,7 +226,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:37.062637596Z"
+      "last_scanned": "2026-05-30T08:23:56.34339315Z"
     },
     {
       "score": 100,
@@ -272,7 +242,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:40.394607042Z"
+      "last_scanned": "2026-05-30T08:24:00.08273256Z"
     },
     {
       "score": 100,
@@ -288,7 +258,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:40.749394105Z"
+      "last_scanned": "2026-05-30T08:24:00.360098219Z"
     },
     {
       "score": 100,
@@ -304,7 +274,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:37.512450476Z"
+      "last_scanned": "2026-05-30T08:23:56.750858489Z"
     },
     {
       "score": 100,
@@ -320,7 +290,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:40.111716247Z"
+      "last_scanned": "2026-05-30T08:23:59.892006523Z"
     },
     {
       "score": 100,
@@ -335,7 +305,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:53:53.257396736Z"
+      "last_scanned": "2026-05-30T08:26:20.481229888Z"
     },
     {
       "score": 100,
@@ -351,7 +321,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:44.058931465Z"
+      "last_scanned": "2026-05-30T08:24:04.015111842Z"
     },
     {
       "score": 100,
@@ -366,7 +336,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:44.09602571Z"
+      "last_scanned": "2026-05-30T08:24:04.193798533Z"
     },
     {
       "score": 100,
@@ -381,7 +351,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:43.984095479Z"
+      "last_scanned": "2026-05-30T08:24:03.670049727Z"
     },
     {
       "score": 100,
@@ -397,7 +367,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:39.059978673Z"
+      "last_scanned": "2026-05-30T08:23:58.324475145Z"
     },
     {
       "score": 100,
@@ -413,7 +383,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:44.077769022Z"
+      "last_scanned": "2026-05-30T08:24:04.095715898Z"
     },
     {
       "score": 100,
@@ -428,7 +398,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:39.042082547Z"
+      "last_scanned": "2026-05-30T08:23:58.234993188Z"
     },
     {
       "score": 100,
@@ -443,7 +413,44 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:38.996884086Z"
+      "last_scanned": "2026-05-30T08:23:58.063531416Z"
+    },
+    {
+      "score": 98,
+      "handle": "npm:@modelcontextprotocol/server-postgres@0.6.2",
+      "source": "sandbox",
+      "name": "server-postgres",
+      "tool_count": 1,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 1,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-30T08:24:53.186251354Z",
+      "findings": [
+        {
+          "id": "f-r1-query",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `query` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `sql`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "query",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        }
+      ]
     },
     {
       "score": 98,
@@ -459,7 +466,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:52:16.449891193Z",
+      "last_scanned": "2026-05-30T08:24:40.675820684Z",
       "findings": [
         {
           "id": "f-r1-sequentialthinking",
@@ -497,7 +504,7 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:42.305188996Z",
+      "last_scanned": "2026-05-30T08:24:02.135285731Z",
       "findings": [
         {
           "id": "f-r3-savepath",
@@ -523,6 +530,63 @@
     },
     {
       "score": 96,
+      "handle": "npm:@modelcontextprotocol/server-brave-search@0.6.2",
+      "source": "sandbox",
+      "name": "server-brave-search",
+      "tool_count": 2,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 2,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-30T08:24:55.689024316Z",
+      "findings": [
+        {
+          "id": "f-r1-brave_web_search",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `brave_web_search` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `query`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "brave_web_search",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-brave_local_search",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `brave_local_search` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `query`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "brave_local_search",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "score": 96,
       "handle": "npm:@modelcontextprotocol/server-slack@2025.4.25",
       "source": "registry",
       "name": "server-slack",
@@ -534,7 +598,7 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:33.984694514Z",
+      "last_scanned": "2026-05-30T08:23:52.237864177Z",
       "findings": [
         {
           "id": "f-r3-slack_post_message",
@@ -572,7 +636,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:52:51.226589337Z",
+      "last_scanned": "2026-05-30T08:25:22.203481981Z",
       "findings": [
         {
           "id": "f-r1-resolve_library_id",
@@ -629,7 +693,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:53:14.989897401Z",
+      "last_scanned": "2026-05-30T08:25:47.967141414Z",
       "findings": [
         {
           "id": "f-r1-fetch",
@@ -686,7 +750,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:53:05.985561603Z",
+      "last_scanned": "2026-05-30T08:25:38.712740004Z",
       "findings": [
         {
           "id": "f-r1-get_current_time",
@@ -744,7 +808,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:39.922688029Z",
+      "last_scanned": "2026-05-30T08:23:59.653083363Z",
       "findings": [
         {
           "id": "f-r6-call",
@@ -821,7 +885,7 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:35.793097978Z",
+      "last_scanned": "2026-05-30T08:23:54.788390175Z",
       "findings": [
         {
           "id": "f-r3-git_create_branch",
@@ -878,7 +942,7 @@
         "high": 2,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:39.478411371Z",
+      "last_scanned": "2026-05-30T08:23:58.713119353Z",
       "findings": [
         {
           "id": "f-r3-set",
@@ -935,7 +999,7 @@
         "high": 2,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:39.076824126Z",
+      "last_scanned": "2026-05-30T08:23:58.405305884Z",
       "findings": [
         {
           "id": "f-r3-set_value",
@@ -992,7 +1056,7 @@
         "high": 0,
         "critical": 1
       },
-      "last_scanned": "2026-05-30T07:51:44.040106506Z",
+      "last_scanned": "2026-05-30T08:24:03.928629423Z",
       "findings": [
         {
           "id": "f-r7-query_execution",
@@ -1030,7 +1094,7 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:52:06.444030699Z",
+      "last_scanned": "2026-05-30T08:24:29.41701026Z",
       "findings": [
         {
           "id": "f-r1-echo",
@@ -1188,7 +1252,7 @@
         "high": 5,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:51:43.965533885Z",
+      "last_scanned": "2026-05-30T08:24:03.580758008Z",
       "findings": [
         {
           "id": "f-r3-create_note",
@@ -1306,7 +1370,7 @@
         "high": 2,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:52:56.731137672Z",
+      "last_scanned": "2026-05-30T08:25:28.207807678Z",
       "findings": [
         {
           "id": "f-r1-tavily_search",
@@ -1484,7 +1548,7 @@
         "high": 5,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:52:11.197129872Z",
+      "last_scanned": "2026-05-30T08:24:34.921892169Z",
       "findings": [
         {
           "id": "f-r3-create_entities",
@@ -1621,7 +1685,7 @@
         "high": 0,
         "critical": 1
       },
-      "last_scanned": "2026-05-30T07:52:45.21760462Z",
+      "last_scanned": "2026-05-30T08:25:15.700179426Z",
       "findings": [
         {
           "id": "f-r1-puppeteer_navigate",
@@ -1799,7 +1863,7 @@
         "high": 3,
         "critical": 2
       },
-      "last_scanned": "2026-05-30T07:51:44.020804542Z",
+      "last_scanned": "2026-05-30T08:24:03.841406346Z",
       "findings": [
         {
           "id": "f-r7-execute_query",
@@ -1917,7 +1981,7 @@
         "high": 3,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:52:22.204285567Z",
+      "last_scanned": "2026-05-30T08:24:46.680987535Z",
       "findings": [
         {
           "id": "f-r1-read_file",
@@ -2234,7 +2298,7 @@
         "high": 2,
         "critical": 2
       },
-      "last_scanned": "2026-05-30T07:53:29.997243265Z",
+      "last_scanned": "2026-05-30T08:25:56.471044919Z",
       "findings": [
         {
           "id": "f-r1-read_query",
@@ -2431,7 +2495,7 @@
         "high": 8,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T07:52:25.706838149Z",
+      "last_scanned": "2026-05-30T08:24:50.433804693Z",
       "findings": [
         {
           "id": "f-r1-create_or_update_file",
