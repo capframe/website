@@ -52,6 +52,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     {
+      url: "https://capframe.ai/quickstart",
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: "https://capframe.ai/docs/findings-v1",
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: "https://capframe.ai/leaderboard/movers",
       lastModified: lastScanned,
       changeFrequency: "daily",
