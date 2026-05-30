@@ -277,7 +277,7 @@ function ServerRow({ row, index }: { row: Row; index: number }) {
         </span>
       </summary>
       <div className="px-4 pb-4 pt-1 border-t border-[var(--color-line)] mt-2">
-        <FindingsList findings={row.findings ?? []} />
+        <FindingsList findings={row.findings ?? []} serverSlug={slug} />
         <Link
           href={detailHref}
           className="inline-flex items-center gap-2 mt-4 mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-accent-3)] hover:text-[var(--color-accent)]"
