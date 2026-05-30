@@ -1,7 +1,7 @@
 {
   "schema_version": "capframe.leaderboard.v1",
-  "generated_at": "2026-05-29T23:49:31.813288982Z",
-  "total_scanned": 29,
+  "generated_at": "2026-05-30T00:09:27.990383485Z",
+  "total_scanned": 48,
   "weights": {
     "critical": 10,
     "high": 4,
@@ -24,7 +24,23 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:31.288491868Z"
+      "last_scanned": "2026-05-30T00:09:22.560951305Z"
+    },
+    {
+      "score": 100,
+      "handle": "npm:@apify/actors-mcp-server@0.10.11",
+      "source": "registry",
+      "name": "actors-mcp-server",
+      "repo_url": "https://github.com/apify/apify-mcp-server",
+      "tool_count": 1,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-30T00:09:26.829403396Z"
     },
     {
       "score": 100,
@@ -39,7 +55,39 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:30.50534149Z"
+      "last_scanned": "2026-05-30T00:09:21.790148667Z"
+    },
+    {
+      "score": 100,
+      "handle": "npm:@e2b/mcp-server@0.2.3",
+      "source": "registry",
+      "name": "mcp-server",
+      "repo_url": "https://github.com/e2b-dev/mcp-server",
+      "tool_count": 1,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-30T00:09:25.200001027Z"
+    },
+    {
+      "score": 100,
+      "handle": "npm:@elastic/mcp-server-elasticsearch@0.3.1",
+      "source": "registry",
+      "name": "mcp-server-elasticsearch",
+      "repo_url": "https://github.com/elastic/mcp-server-elasticsearch",
+      "tool_count": 4,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-30T00:09:23.390577459Z"
     },
     {
       "score": 100,
@@ -55,7 +103,39 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:28.626174539Z"
+      "last_scanned": "2026-05-30T00:09:20.350203409Z"
+    },
+    {
+      "score": 100,
+      "handle": "npm:@gongrzhe/server-calendar-autoauth-mcp@1.0.2",
+      "source": "registry",
+      "name": "server-calendar-autoauth-mcp",
+      "repo_url": "https://github.com/gongrzhe/server-calendar-autoauth-mcp",
+      "tool_count": 1,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-30T00:09:26.297802828Z"
+    },
+    {
+      "score": 100,
+      "handle": "npm:@kazuph/mcp-fetch@1.6.2",
+      "source": "registry",
+      "name": "mcp-fetch",
+      "repo_url": "https://github.com/kazuph/mcp-fetch",
+      "tool_count": 1,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-30T00:09:25.762271557Z"
     },
     {
       "score": 100,
@@ -70,7 +150,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:27.003624456Z"
+      "last_scanned": "2026-05-30T00:09:19.44463114Z"
     },
     {
       "score": 100,
@@ -85,7 +165,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:26.500520274Z"
+      "last_scanned": "2026-05-30T00:09:18.96720002Z"
     },
     {
       "score": 100,
@@ -101,7 +181,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:23.125845813Z"
+      "last_scanned": "2026-05-30T00:09:16.610354447Z"
     },
     {
       "score": 100,
@@ -117,7 +197,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:23.448666439Z"
+      "last_scanned": "2026-05-30T00:09:16.852099025Z"
     },
     {
       "score": 100,
@@ -132,7 +212,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:27.510090761Z"
+      "last_scanned": "2026-05-30T00:09:19.790403513Z"
     },
     {
       "score": 100,
@@ -147,7 +227,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:25.71358998Z"
+      "last_scanned": "2026-05-30T00:09:18.467888227Z"
     },
     {
       "score": 100,
@@ -163,7 +243,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:23.841832632Z"
+      "last_scanned": "2026-05-30T00:09:17.157046742Z"
     },
     {
       "score": 100,
@@ -178,7 +258,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:26.042256722Z"
+      "last_scanned": "2026-05-30T00:09:18.666080255Z"
     },
     {
       "score": 100,
@@ -193,7 +273,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:24.577460557Z"
+      "last_scanned": "2026-05-30T00:09:17.633458687Z"
     },
     {
       "score": 100,
@@ -209,7 +289,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:24.8518787Z"
+      "last_scanned": "2026-05-30T00:09:17.818891253Z"
     },
     {
       "score": 100,
@@ -224,7 +304,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:25.285242886Z"
+      "last_scanned": "2026-05-30T00:09:17.973107731Z"
     },
     {
       "score": 100,
@@ -239,7 +319,22 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:28.262848225Z"
+      "last_scanned": "2026-05-30T00:09:20.129942238Z"
+    },
+    {
+      "score": 100,
+      "handle": "npm:@sentry/mcp-server@0.35.0",
+      "source": "registry",
+      "name": "mcp-server",
+      "tool_count": 1,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-30T00:09:24.708566003Z"
     },
     {
       "score": 100,
@@ -255,7 +350,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:29.315274554Z"
+      "last_scanned": "2026-05-30T00:09:20.996287018Z"
     },
     {
       "score": 100,
@@ -271,7 +366,39 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:28.917934026Z"
+      "last_scanned": "2026-05-30T00:09:20.543226959Z"
+    },
+    {
+      "score": 100,
+      "handle": "npm:exa-mcp-server@3.2.1",
+      "source": "registry",
+      "name": "exa-mcp-server",
+      "repo_url": "https://github.com/exa-labs/exa-mcp-server",
+      "tool_count": 3,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-30T00:09:24.079603309Z"
+    },
+    {
+      "score": 100,
+      "handle": "npm:linear-mcp@1.2.0",
+      "source": "registry",
+      "name": "linear-mcp",
+      "repo_url": "https://github.com/dvcrn/linear-mcp",
+      "tool_count": 1,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-30T00:09:24.260887043Z"
     },
     {
       "score": 100,
@@ -287,7 +414,23 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:29.99378407Z"
+      "last_scanned": "2026-05-30T00:09:21.406148739Z"
+    },
+    {
+      "score": 100,
+      "handle": "npm:perplexity-mcp@0.2.3",
+      "source": "registry",
+      "name": "perplexity-mcp",
+      "repo_url": "https://github.com/DaInfernalCoder/researcher-mcp",
+      "tool_count": 1,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-30T00:09:23.861518737Z"
     },
     {
       "score": 100,
@@ -303,7 +446,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:29.664171551Z"
+      "last_scanned": "2026-05-30T00:09:21.251645134Z"
     },
     {
       "score": 100,
@@ -318,7 +461,53 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:31.468021334Z"
+      "last_scanned": "2026-05-30T00:09:22.613098035Z"
+    },
+    {
+      "score": 100,
+      "handle": "pypi:mcp-azure-devops@0.6.0",
+      "source": "registry",
+      "name": "mcp-azure-devops",
+      "repo_url": "https://github.com/Vortiago/mcp-azure-devops",
+      "tool_count": 1,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-30T00:09:27.722505235Z"
+    },
+    {
+      "score": 100,
+      "handle": "pypi:mcp-llms-txt@0.2.0",
+      "source": "registry",
+      "name": "mcp-llms-txt",
+      "tool_count": 1,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-30T00:09:27.977326731Z"
+    },
+    {
+      "score": 100,
+      "handle": "pypi:mcp-server-bigquery@0.3.2",
+      "source": "registry",
+      "name": "mcp-server-bigquery",
+      "tool_count": 3,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-30T00:09:27.211159429Z"
     },
     {
       "score": 100,
@@ -334,7 +523,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:31.710474654Z"
+      "last_scanned": "2026-05-30T00:09:22.67663601Z"
     },
     {
       "score": 100,
@@ -349,7 +538,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:27.782388791Z"
+      "last_scanned": "2026-05-30T00:09:19.891387073Z"
     },
     {
       "score": 100,
@@ -364,7 +553,23 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:27.606123666Z"
+      "last_scanned": "2026-05-30T00:09:19.827541403Z"
+    },
+    {
+      "score": 100,
+      "handle": "pypi:mcp-server-jira@0.1.1",
+      "source": "registry",
+      "name": "mcp-server-jira",
+      "repo_url": "https://github.com/your-username/mcp-jira-v3",
+      "tool_count": 1,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-30T00:09:27.856843132Z"
     },
     {
       "score": 100,
@@ -379,7 +584,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:31.621076854Z"
+      "last_scanned": "2026-05-30T00:09:22.641049184Z"
     },
     {
       "score": 100,
@@ -394,7 +599,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:31.379371248Z"
+      "last_scanned": "2026-05-30T00:09:22.586906878Z"
     },
     {
       "score": 100,
@@ -409,7 +614,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:27.871805517Z"
+      "last_scanned": "2026-05-30T00:09:19.922983571Z"
     },
     {
       "score": 100,
@@ -424,7 +629,23 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:27.693212181Z"
+      "last_scanned": "2026-05-30T00:09:19.857306108Z"
+    },
+    {
+      "score": 96,
+      "handle": "npm:@gongrzhe/server-gmail-autoauth-mcp@1.1.11",
+      "source": "registry",
+      "name": "server-gmail-autoauth-mcp",
+      "repo_url": "https://github.com/gongrzhe/server-gmail-autoauth-mcp",
+      "tool_count": 6,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 1,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-30T00:09:25.979913775Z"
     },
     {
       "score": 96,
@@ -439,7 +660,23 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:24.174608309Z"
+      "last_scanned": "2026-05-30T00:09:17.349735827Z"
+    },
+    {
+      "score": 92,
+      "handle": "npm:firecrawl-mcp@3.20.1",
+      "source": "registry",
+      "name": "firecrawl-mcp",
+      "repo_url": "https://github.com/firecrawl/firecrawl-mcp-server",
+      "tool_count": 20,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 2,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-30T00:09:23.544168457Z"
     },
     {
       "score": 92,
@@ -454,7 +691,69 @@
         "high": 2,
         "critical": 0
       },
-      "last_scanned": "2026-05-29T23:49:31.800756824Z"
+      "last_scanned": "2026-05-30T00:09:22.703264686Z"
+    },
+    {
+      "score": 90,
+      "handle": "pypi:mcp-server-mysql@0.1.4",
+      "source": "registry",
+      "name": "mcp-server-mysql",
+      "tool_count": 3,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 1
+      },
+      "last_scanned": "2026-05-30T00:09:27.600612942Z"
+    },
+    {
+      "score": 88,
+      "handle": "npm:@modelcontextprotocol/server-redis@2025.4.25",
+      "source": "registry",
+      "name": "server-redis",
+      "tool_count": 8,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 3,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-30T00:09:23.045970281Z"
+    },
+    {
+      "score": 80,
+      "handle": "npm:obsidian-mcp@1.0.6",
+      "source": "registry",
+      "name": "obsidian-mcp",
+      "repo_url": "https://github.com/StevenStavrakis/obsidian-mcp",
+      "tool_count": 12,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 5,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-30T00:09:27.088530941Z"
+    },
+    {
+      "score": 68,
+      "handle": "pypi:mcp-server-mssql@0.1.0",
+      "source": "registry",
+      "name": "mcp-server-mssql",
+      "repo_url": "https://github.com/daedalus/mcp-server-mssql",
+      "tool_count": 21,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 3,
+        "critical": 2
+      },
+      "last_scanned": "2026-05-30T00:09:27.466831419Z"
     }
   ]
 }
