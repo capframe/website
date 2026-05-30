@@ -34,6 +34,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "daily",
       priority: 0.8,
     },
+    {
+      url: "https://capframe.ai/leaderboard/movers",
+      lastModified: lastScanned,
+      changeFrequency: "daily",
+      priority: 0.7,
+    },
     ...board.rows.map((row) => ({
       url: `https://capframe.ai/leaderboard/${slugifyHandle(row.handle)}`,
       lastModified: new Date(row.last_scanned ?? lastScanned),
