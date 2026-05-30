@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { loadLeaderboard } from "@/lib/leaderboard/load";
-import type { Row, SeverityCounts } from "@/lib/leaderboard/types";
+import type {
+  Finding,
+  Row,
+  Severity,
+  SeverityCounts,
+} from "@/lib/leaderboard/types";
 import { CAPFRAME_GITHUB, CAPFRAME_VERSION } from "@/lib/version";
 
 export const metadata: Metadata = {
@@ -95,69 +100,179 @@ export default async function LeaderboardPage() {
 
 function Table({ rows }: { rows: Row[] }) {
   return (
-    <div className="mt-12 overflow-x-auto rounded-md border border-[var(--color-line)]">
-      <table className="w-full border-collapse text-[0.92rem]">
-        <thead>
-          <tr className="border-b border-[var(--color-line)] bg-[var(--color-bg-2)]/60 mono uppercase tracking-[0.14em] text-[10.5px] text-[var(--color-fg-3)]">
-            <th className="text-left py-3 px-4">#</th>
-            <th className="text-left py-3 px-4">Server</th>
-            <th className="text-right py-3 px-4">Score</th>
-            <th className="text-right py-3 px-4 hidden sm:table-cell">
-              Tools
-            </th>
-            <th className="text-right py-3 px-4 hidden sm:table-cell">
-              Findings
-            </th>
-            <th className="text-right py-3 px-4 hidden md:table-cell">
-              Source
-            </th>
-            <th className="text-right py-3 px-4 hidden lg:table-cell">
-              Last scan
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((row, i) => (
-            <tr
-              key={row.handle}
-              className="border-b border-[var(--color-line)] last:border-b-0 hover:bg-[var(--color-bg-2)]/30 transition-colors"
-            >
-              <td className="py-3 px-4 mono text-[11px] text-[var(--color-fg-3)] tabular-nums">
-                {String(i + 1).padStart(2, "0")}
-              </td>
-              <td className="py-3 px-4">
-                <ServerCell row={row} />
-              </td>
-              <td className="py-3 px-4 text-right">
-                <ScoreBadge score={row.score} max={100} />
-              </td>
-              <td className="py-3 px-4 text-right hidden sm:table-cell">
-                <ToolsCell count={row.tool_count} />
-              </td>
-              <td className="py-3 px-4 text-right hidden sm:table-cell">
-                <FindingsCell counts={row.counts} />
-              </td>
-              <td className="py-3 px-4 text-right hidden md:table-cell mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-fg-3)]">
-                {row.source}
-              </td>
-              <td className="py-3 px-4 text-right hidden lg:table-cell mono text-[11px] text-[var(--color-fg-3)] tabular-nums">
-                {formatDate(row.last_scanned)}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div className="mt-12 space-y-1.5">
+      <div className="hidden sm:grid grid-cols-[2.5rem_1fr_5.5rem_3.5rem_5.5rem_4.5rem_5rem] gap-3 px-4 py-3 mono uppercase tracking-[0.14em] text-[10.5px] text-[var(--color-fg-3)] border-b border-[var(--color-line)]">
+        <span>#</span>
+        <span>Server</span>
+        <span className="text-right">Score</span>
+        <span className="text-right">Tools</span>
+        <span className="text-right">Findings</span>
+        <span className="text-right hidden md:inline">Source</span>
+        <span className="text-right hidden lg:inline">Last scan</span>
+      </div>
+      {rows.map((row, i) => (
+        <ServerRow key={row.handle} row={row} index={i + 1} />
+      ))}
     </div>
   );
 }
 
-function ServerCell({ row }: { row: Row }) {
+function ServerRow({ row, index }: { row: Row; index: number }) {
+  const hasDetails = (row.findings?.length ?? 0) > 0;
+
+  // Servers with no findings render as a plain non-clickable row.
+  if (!hasDetails) {
+    return (
+      <div className="grid grid-cols-[1fr_5.5rem_3.5rem_5.5rem] sm:grid-cols-[2.5rem_1fr_5.5rem_3.5rem_5.5rem_4.5rem_5rem] gap-3 px-4 py-3 items-center rounded-md border border-[var(--color-line)] bg-[var(--color-bg-2)]/20">
+        <span className="hidden sm:inline mono text-[11px] text-[var(--color-fg-3)] tabular-nums">
+          {String(index).padStart(2, "0")}
+        </span>
+        <ServerCell row={row} />
+        <span className="text-right">
+          <ScoreBadge score={row.score} max={100} />
+        </span>
+        <span className="text-right">
+          <ToolsCell count={row.tool_count} />
+        </span>
+        <span className="text-right">
+          <FindingsCell counts={row.counts} />
+        </span>
+        <span className="text-right hidden md:inline mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-fg-3)]">
+          {row.source}
+        </span>
+        <span className="text-right hidden lg:inline mono text-[11px] text-[var(--color-fg-3)] tabular-nums">
+          {formatDate(row.last_scanned)}
+        </span>
+      </div>
+    );
+  }
+
+  // Servers with findings render as a <details> so the row is
+  // expandable to show every finding. No JS — uses native disclosure.
+  return (
+    <details
+      className="group rounded-md border border-[var(--color-line)] bg-[var(--color-bg-2)]/30 hover:border-[var(--color-line-hover)] transition-colors"
+      id={`server-${slugifyHandle(row.handle)}`}
+    >
+      <summary className="grid grid-cols-[1fr_5.5rem_3.5rem_5.5rem] sm:grid-cols-[2.5rem_1fr_5.5rem_3.5rem_5.5rem_4.5rem_5rem] gap-3 px-4 py-3 items-center cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+        <span className="hidden sm:inline mono text-[11px] text-[var(--color-fg-3)] tabular-nums">
+          {String(index).padStart(2, "0")}
+        </span>
+        <ServerCell row={row} expandable />
+        <span className="text-right">
+          <ScoreBadge score={row.score} max={100} />
+        </span>
+        <span className="text-right">
+          <ToolsCell count={row.tool_count} />
+        </span>
+        <span className="text-right">
+          <FindingsCell counts={row.counts} />
+        </span>
+        <span className="text-right hidden md:inline mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-fg-3)]">
+          {row.source}
+        </span>
+        <span className="text-right hidden lg:inline mono text-[11px] text-[var(--color-fg-3)] tabular-nums">
+          {formatDate(row.last_scanned)}
+        </span>
+      </summary>
+      <div className="px-4 pb-4 pt-1 border-t border-[var(--color-line)] mt-2">
+        <FindingsList findings={row.findings ?? []} />
+      </div>
+    </details>
+  );
+}
+
+function FindingsList({ findings }: { findings: Finding[] }) {
+  // Sort by severity desc so the most important ones are at the top.
+  const order: Record<Severity, number> = {
+    critical: 0,
+    high: 1,
+    medium: 2,
+    low: 3,
+    info: 4,
+  };
+  const sorted = [...findings].sort(
+    (a, b) => order[a.severity] - order[b.severity],
+  );
+  return (
+    <ol className="mt-3 space-y-2.5">
+      {sorted.map((f) => (
+        <li
+          key={f.id}
+          className="grid grid-cols-[5rem_1fr] gap-3 items-baseline"
+        >
+          <SeverityChip severity={f.severity} />
+          <div className="text-[0.92rem] text-[var(--color-fg-2)] leading-snug">
+            <span className="text-[var(--color-fg)] font-medium">
+              {f.title}
+            </span>
+            {f.tool && (
+              <span className="mono text-[11px] text-[var(--color-fg-3)] ml-2">
+                · {f.tool}
+              </span>
+            )}
+            {f.category && (
+              <span className="mono text-[10.5px] uppercase tracking-[0.14em] text-[var(--color-accent-3)] ml-2">
+                {f.category.replace(/_/g, " ")}
+              </span>
+            )}
+            {f.description && (
+              <p className="mt-1 text-[0.88rem] text-[var(--color-fg-3)]">
+                {f.description}
+              </p>
+            )}
+            {f.remediation && (
+              <p className="mt-1.5 text-[0.85rem] text-[var(--color-fg-3)]">
+                <span className="text-[var(--color-accent-3)] mono text-[10px] uppercase tracking-[0.14em]">
+                  fix:
+                </span>{" "}
+                {f.remediation}
+              </p>
+            )}
+          </div>
+        </li>
+      ))}
+    </ol>
+  );
+}
+
+function SeverityChip({ severity }: { severity: Severity }) {
+  const color = {
+    critical: "text-red-400 border-red-400/40 bg-red-400/5",
+    high: "text-amber-300 border-amber-300/40 bg-amber-300/5",
+    medium: "text-[var(--color-accent-3)] border-[var(--color-accent-3)]/40",
+    low: "text-[var(--color-fg-3)] border-[var(--color-fg-3)]/40",
+    info: "text-[var(--color-fg-3)] border-[var(--color-fg-3)]/40",
+  }[severity];
+  return (
+    <span
+      className={`mono text-[10px] uppercase tracking-[0.14em] inline-block px-2 py-0.5 rounded border text-center ${color}`}
+    >
+      {severity}
+    </span>
+  );
+}
+
+function slugifyHandle(handle: string): string {
+  return handle.replace(/[^a-zA-Z0-9]+/g, "-").toLowerCase();
+}
+
+function ServerCell({ row, expandable }: { row: Row; expandable?: boolean }) {
   return (
     <div className="flex flex-col gap-0.5">
-      <span className="font-medium text-[var(--color-fg)]">
+      <span className="font-medium text-[var(--color-fg)] flex items-center gap-2">
         {row.name ?? row.handle}
+        {expandable && (
+          <span
+            className="mono text-[10px] uppercase tracking-[0.14em] text-[var(--color-accent-3)] group-open:text-[var(--color-accent)]"
+            aria-hidden="true"
+          >
+            <span className="group-open:hidden">▸ details</span>
+            <span className="hidden group-open:inline">▾ hide</span>
+          </span>
+        )}
       </span>
-      <span className="mono text-[11px] text-[var(--color-fg-3)]">
+      <span className="mono text-[11px] text-[var(--color-fg-3)] truncate">
         {row.handle}
       </span>
     </div>
