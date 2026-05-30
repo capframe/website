@@ -1,6 +1,6 @@
 {
   "schema_version": "capframe.leaderboard.v1",
-  "generated_at": "2026-05-30T00:09:27.990383485Z",
+  "generated_at": "2026-05-30T00:31:16.207552527Z",
   "total_scanned": 48,
   "weights": {
     "critical": 10,
@@ -24,7 +24,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:22.560951305Z"
+      "last_scanned": "2026-05-30T00:31:11.050903893Z"
     },
     {
       "score": 100,
@@ -40,7 +40,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:26.829403396Z"
+      "last_scanned": "2026-05-30T00:31:15.767033761Z"
     },
     {
       "score": 100,
@@ -55,7 +55,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:21.790148667Z"
+      "last_scanned": "2026-05-30T00:31:10.287728242Z"
     },
     {
       "score": 100,
@@ -71,7 +71,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:25.200001027Z"
+      "last_scanned": "2026-05-30T00:31:13.760526446Z"
     },
     {
       "score": 100,
@@ -87,7 +87,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:23.390577459Z"
+      "last_scanned": "2026-05-30T00:31:11.938562981Z"
     },
     {
       "score": 100,
@@ -103,7 +103,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:20.350203409Z"
+      "last_scanned": "2026-05-30T00:31:09.096085573Z"
     },
     {
       "score": 100,
@@ -119,7 +119,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:26.297802828Z"
+      "last_scanned": "2026-05-30T00:31:15.050991263Z"
     },
     {
       "score": 100,
@@ -135,14 +135,14 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:25.762271557Z"
+      "last_scanned": "2026-05-30T00:31:14.183822663Z"
     },
     {
       "score": 100,
       "handle": "npm:@modelcontextprotocol/server-aws-kb-retrieval@0.6.2",
       "source": "registry",
       "name": "server-aws-kb-retrieval",
-      "tool_count": 4,
+      "tool_count": 1,
       "counts": {
         "info": 0,
         "low": 0,
@@ -150,14 +150,14 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:19.44463114Z"
+      "last_scanned": "2026-05-30T00:31:07.802075371Z"
     },
     {
       "score": 100,
       "handle": "npm:@modelcontextprotocol/server-brave-search@0.6.2",
       "source": "registry",
       "name": "server-brave-search",
-      "tool_count": 5,
+      "tool_count": 2,
       "counts": {
         "info": 0,
         "low": 0,
@@ -165,7 +165,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:18.96720002Z"
+      "last_scanned": "2026-05-30T00:31:07.308756445Z"
     },
     {
       "score": 100,
@@ -181,7 +181,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:16.610354447Z"
+      "last_scanned": "2026-05-30T00:31:04.131854059Z"
     },
     {
       "score": 100,
@@ -197,7 +197,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:16.852099025Z"
+      "last_scanned": "2026-05-30T00:31:04.330514219Z"
     },
     {
       "score": 100,
@@ -212,14 +212,14 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:19.790403513Z"
+      "last_scanned": "2026-05-30T00:31:08.194297573Z"
     },
     {
       "score": 100,
       "handle": "npm:@modelcontextprotocol/server-google-maps@0.6.2",
       "source": "registry",
       "name": "server-google-maps",
-      "tool_count": 12,
+      "tool_count": 7,
       "counts": {
         "info": 0,
         "low": 0,
@@ -227,7 +227,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:18.467888227Z"
+      "last_scanned": "2026-05-30T00:31:06.566615079Z"
     },
     {
       "score": 100,
@@ -243,7 +243,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:17.157046742Z"
+      "last_scanned": "2026-05-30T00:31:04.721010695Z"
     },
     {
       "score": 100,
@@ -258,14 +258,14 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:18.666080255Z"
+      "last_scanned": "2026-05-30T00:31:07.000746461Z"
     },
     {
       "score": 100,
       "handle": "npm:@modelcontextprotocol/server-puppeteer@2025.5.12",
       "source": "registry",
       "name": "server-puppeteer",
-      "tool_count": 17,
+      "tool_count": 8,
       "counts": {
         "info": 0,
         "low": 0,
@@ -273,7 +273,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:17.633458687Z"
+      "last_scanned": "2026-05-30T00:31:05.647678965Z"
     },
     {
       "score": 100,
@@ -289,22 +289,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:17.818891253Z"
-    },
-    {
-      "score": 100,
-      "handle": "npm:@modelcontextprotocol/server-slack@2025.4.25",
-      "source": "registry",
-      "name": "server-slack",
-      "tool_count": 9,
-      "counts": {
-        "info": 0,
-        "low": 0,
-        "medium": 0,
-        "high": 0,
-        "critical": 0
-      },
-      "last_scanned": "2026-05-30T00:09:17.973107731Z"
+      "last_scanned": "2026-05-30T00:31:05.886066727Z"
     },
     {
       "score": 100,
@@ -319,7 +304,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:20.129942238Z"
+      "last_scanned": "2026-05-30T00:31:08.636840813Z"
     },
     {
       "score": 100,
@@ -334,7 +319,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:24.708566003Z"
+      "last_scanned": "2026-05-30T00:31:13.368195228Z"
     },
     {
       "score": 100,
@@ -350,7 +335,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:20.996287018Z"
+      "last_scanned": "2026-05-30T00:31:09.453165812Z"
     },
     {
       "score": 100,
@@ -366,7 +351,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:20.543226959Z"
+      "last_scanned": "2026-05-30T00:31:09.271744969Z"
     },
     {
       "score": 100,
@@ -382,7 +367,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:24.079603309Z"
+      "last_scanned": "2026-05-30T00:31:12.730807294Z"
     },
     {
       "score": 100,
@@ -398,7 +383,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:24.260887043Z"
+      "last_scanned": "2026-05-30T00:31:13.01873436Z"
     },
     {
       "score": 100,
@@ -414,7 +399,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:21.406148739Z"
+      "last_scanned": "2026-05-30T00:31:10.089844581Z"
     },
     {
       "score": 100,
@@ -430,7 +415,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:23.861518737Z"
+      "last_scanned": "2026-05-30T00:31:12.44161056Z"
     },
     {
       "score": 100,
@@ -446,7 +431,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:21.251645134Z"
+      "last_scanned": "2026-05-30T00:31:09.678994375Z"
     },
     {
       "score": 100,
@@ -461,7 +446,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:22.613098035Z"
+      "last_scanned": "2026-05-30T00:31:11.119974326Z"
     },
     {
       "score": 100,
@@ -477,7 +462,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:27.722505235Z"
+      "last_scanned": "2026-05-30T00:31:16.135749721Z"
     },
     {
       "score": 100,
@@ -492,7 +477,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:27.977326731Z"
+      "last_scanned": "2026-05-30T00:31:16.193481495Z"
     },
     {
       "score": 100,
@@ -507,7 +492,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:27.211159429Z"
+      "last_scanned": "2026-05-30T00:31:16.015663772Z"
     },
     {
       "score": 100,
@@ -523,14 +508,14 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:22.67663601Z"
+      "last_scanned": "2026-05-30T00:31:11.176693793Z"
     },
     {
       "score": 100,
       "handle": "pypi:mcp-server-fetch@2025.4.7",
       "source": "registry",
       "name": "mcp-server-fetch",
-      "tool_count": 5,
+      "tool_count": 1,
       "counts": {
         "info": 0,
         "low": 0,
@@ -538,22 +523,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:19.891387073Z"
-    },
-    {
-      "score": 100,
-      "handle": "pypi:mcp-server-git@2026.1.14",
-      "source": "registry",
-      "name": "mcp-server-git",
-      "tool_count": 15,
-      "counts": {
-        "info": 0,
-        "low": 0,
-        "medium": 0,
-        "high": 0,
-        "critical": 0
-      },
-      "last_scanned": "2026-05-30T00:09:19.827541403Z"
+      "last_scanned": "2026-05-30T00:31:08.292045714Z"
     },
     {
       "score": 100,
@@ -569,7 +539,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:27.856843132Z"
+      "last_scanned": "2026-05-30T00:31:16.169564544Z"
     },
     {
       "score": 100,
@@ -584,7 +554,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:22.641049184Z"
+      "last_scanned": "2026-05-30T00:31:11.14797666Z"
     },
     {
       "score": 100,
@@ -599,29 +569,14 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:22.586906878Z"
-    },
-    {
-      "score": 100,
-      "handle": "pypi:mcp-server-sqlite@2025.4.25",
-      "source": "registry",
-      "name": "mcp-server-sqlite",
-      "tool_count": 3,
-      "counts": {
-        "info": 0,
-        "low": 0,
-        "medium": 0,
-        "high": 0,
-        "critical": 0
-      },
-      "last_scanned": "2026-05-30T00:09:19.922983571Z"
+      "last_scanned": "2026-05-30T00:31:11.078088522Z"
     },
     {
       "score": 100,
       "handle": "pypi:mcp-server-time@2026.1.26",
       "source": "registry",
       "name": "mcp-server-time",
-      "tool_count": 6,
+      "tool_count": 2,
       "counts": {
         "info": 0,
         "low": 0,
@@ -629,7 +584,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:19.857306108Z"
+      "last_scanned": "2026-05-30T00:31:08.262274356Z"
     },
     {
       "score": 96,
@@ -645,14 +600,14 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:25.979913775Z"
+      "last_scanned": "2026-05-30T00:31:14.526128076Z"
     },
     {
       "score": 96,
-      "handle": "npm:@modelcontextprotocol/server-github@2025.4.8",
+      "handle": "npm:@modelcontextprotocol/server-slack@2025.4.25",
       "source": "registry",
-      "name": "server-github",
-      "tool_count": 44,
+      "name": "server-slack",
+      "tool_count": 8,
       "counts": {
         "info": 0,
         "low": 0,
@@ -660,15 +615,45 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:17.349735827Z"
+      "last_scanned": "2026-05-30T00:31:06.117218899Z"
     },
     {
-      "score": 92,
+      "score": 94,
       "handle": "npm:firecrawl-mcp@3.20.1",
       "source": "registry",
       "name": "firecrawl-mcp",
       "repo_url": "https://github.com/firecrawl/firecrawl-mcp-server",
-      "tool_count": 20,
+      "tool_count": 4,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 3,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-30T00:31:12.170696653Z"
+    },
+    {
+      "score": 94,
+      "handle": "pypi:mcp-server-git@2026.1.14",
+      "source": "registry",
+      "name": "mcp-server-git",
+      "tool_count": 12,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 1,
+        "high": 1,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-30T00:31:08.226927927Z"
+    },
+    {
+      "score": 92,
+      "handle": "npm:@modelcontextprotocol/server-redis@2025.4.25",
+      "source": "registry",
+      "name": "server-redis",
+      "tool_count": 5,
       "counts": {
         "info": 0,
         "low": 0,
@@ -676,7 +661,7 @@
         "high": 2,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:23.544168457Z"
+      "last_scanned": "2026-05-30T00:31:11.536727115Z"
     },
     {
       "score": 92,
@@ -691,7 +676,7 @@
         "high": 2,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:22.703264686Z"
+      "last_scanned": "2026-05-30T00:31:11.203257207Z"
     },
     {
       "score": 90,
@@ -706,22 +691,22 @@
         "high": 0,
         "critical": 1
       },
-      "last_scanned": "2026-05-30T00:09:27.600612942Z"
+      "last_scanned": "2026-05-30T00:31:16.105691102Z"
     },
     {
-      "score": 88,
-      "handle": "npm:@modelcontextprotocol/server-redis@2025.4.25",
+      "score": 90,
+      "handle": "pypi:mcp-server-sqlite@2025.4.25",
       "source": "registry",
-      "name": "server-redis",
-      "tool_count": 8,
+      "name": "mcp-server-sqlite",
+      "tool_count": 3,
       "counts": {
         "info": 0,
         "low": 0,
         "medium": 0,
-        "high": 3,
-        "critical": 0
+        "high": 0,
+        "critical": 1
       },
-      "last_scanned": "2026-05-30T00:09:23.045970281Z"
+      "last_scanned": "2026-05-30T00:31:08.320725819Z"
     },
     {
       "score": 80,
@@ -737,7 +722,22 @@
         "high": 5,
         "critical": 0
       },
-      "last_scanned": "2026-05-30T00:09:27.088530941Z"
+      "last_scanned": "2026-05-30T00:31:15.989780392Z"
+    },
+    {
+      "score": 68,
+      "handle": "npm:@modelcontextprotocol/server-github@2025.4.8",
+      "source": "registry",
+      "name": "server-github",
+      "tool_count": 26,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 8,
+        "critical": 0
+      },
+      "last_scanned": "2026-05-30T00:31:05.228417186Z"
     },
     {
       "score": 68,
@@ -753,7 +753,7 @@
         "high": 3,
         "critical": 2
       },
-      "last_scanned": "2026-05-30T00:09:27.466831419Z"
+      "last_scanned": "2026-05-30T00:31:16.074312981Z"
     }
   ]
 }
