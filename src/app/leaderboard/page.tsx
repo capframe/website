@@ -1,18 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { loadLeaderboard } from "@/lib/leaderboard/load";
-import type { Row, SeverityCounts } from "@/lib/leaderboard/types";
 import { CAPFRAME_GITHUB, CAPFRAME_VERSION } from "@/lib/version";
-import {
-  FindingsCell,
-  FindingsList,
-  Footer,
-  Header,
-  ScoreBadge,
-  StatusBar,
-  formatDate,
-  slugifyHandle,
-} from "./_components";
+import { Footer, Header, StatusBar, formatDate } from "./_components";
+import { FilterableTable } from "./_filter";
 
 export const metadata: Metadata = {
   title: "Leaderboard",
@@ -66,7 +57,7 @@ export default async function LeaderboardPage() {
             <Stat label="Schema" value="findings.v2" />
           </div>
 
-          <Table rows={board.rows} />
+          <FilterableTable rows={board.rows} />
 
           <div className="mt-12 rounded-md border border-[var(--color-line)] bg-[var(--color-bg-2)]/40 p-5 text-[0.92rem] text-[var(--color-fg-2)]">
             <p className="mono text-[11px] uppercase tracking-[0.18em] text-[var(--color-accent-3)] mb-2">
@@ -96,147 +87,6 @@ export default async function LeaderboardPage() {
       </main>
       <Footer />
     </>
-  );
-}
-
-/* ────────────────────────────────────────────────────────────────────────── */
-/* Table                                                                       */
-/* ────────────────────────────────────────────────────────────────────────── */
-
-function Table({ rows }: { rows: Row[] }) {
-  return (
-    <div className="mt-12 space-y-1.5">
-      <div className="hidden sm:grid grid-cols-[2.5rem_1fr_5.5rem_3.5rem_5.5rem_4.5rem_5rem] gap-3 px-4 py-3 mono uppercase tracking-[0.14em] text-[10.5px] text-[var(--color-fg-3)] border-b border-[var(--color-line)]">
-        <span>#</span>
-        <span>Server</span>
-        <span className="text-right">Score</span>
-        <span className="text-right">Tools</span>
-        <span className="text-right">Findings</span>
-        <span className="text-right hidden md:inline">Source</span>
-        <span className="text-right hidden lg:inline">Last scan</span>
-      </div>
-      {rows.map((row, i) => (
-        <ServerRow key={row.handle} row={row} index={i + 1} />
-      ))}
-    </div>
-  );
-}
-
-function ServerRow({ row, index }: { row: Row; index: number }) {
-  const hasDetails = (row.findings?.length ?? 0) > 0;
-  const slug = slugifyHandle(row.handle);
-  const detailHref = `/leaderboard/${slug}`;
-
-  // Servers with no findings render as a row linking to the detail page.
-  if (!hasDetails) {
-    return (
-      <Link
-        href={detailHref}
-        className="grid grid-cols-[1fr_5.5rem_3.5rem_5.5rem] sm:grid-cols-[2.5rem_1fr_5.5rem_3.5rem_5.5rem_4.5rem_5rem] gap-3 px-4 py-3 items-center rounded-md border border-[var(--color-line)] bg-[var(--color-bg-2)]/20 hover:border-[var(--color-line-hover)] transition-colors"
-      >
-        <span className="hidden sm:inline mono text-[11px] text-[var(--color-fg-3)] tabular-nums">
-          {String(index).padStart(2, "0")}
-        </span>
-        <ServerCell row={row} />
-        <span className="text-right">
-          <ScoreBadge score={row.score} max={100} />
-        </span>
-        <span className="text-right">
-          <ToolsCell count={row.tool_count} />
-        </span>
-        <span className="text-right">
-          <FindingsCell counts={row.counts} />
-        </span>
-        <span className="text-right hidden md:inline mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-fg-3)]">
-          {row.source}
-        </span>
-        <span className="text-right hidden lg:inline mono text-[11px] text-[var(--color-fg-3)] tabular-nums">
-          {formatDate(row.last_scanned)}
-        </span>
-      </Link>
-    );
-  }
-
-  // Servers with findings render as <details> for inline expand + a
-  // "view all" link inside that jumps to the per-server detail page.
-  return (
-    <details
-      className="group rounded-md border border-[var(--color-line)] bg-[var(--color-bg-2)]/30 hover:border-[var(--color-line-hover)] transition-colors"
-      id={`server-${slug}`}
-    >
-      <summary className="grid grid-cols-[1fr_5.5rem_3.5rem_5.5rem] sm:grid-cols-[2.5rem_1fr_5.5rem_3.5rem_5.5rem_4.5rem_5rem] gap-3 px-4 py-3 items-center cursor-pointer list-none [&::-webkit-details-marker]:hidden">
-        <span className="hidden sm:inline mono text-[11px] text-[var(--color-fg-3)] tabular-nums">
-          {String(index).padStart(2, "0")}
-        </span>
-        <ServerCell row={row} expandable />
-        <span className="text-right">
-          <ScoreBadge score={row.score} max={100} />
-        </span>
-        <span className="text-right">
-          <ToolsCell count={row.tool_count} />
-        </span>
-        <span className="text-right">
-          <FindingsCell counts={row.counts} />
-        </span>
-        <span className="text-right hidden md:inline mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-fg-3)]">
-          {row.source}
-        </span>
-        <span className="text-right hidden lg:inline mono text-[11px] text-[var(--color-fg-3)] tabular-nums">
-          {formatDate(row.last_scanned)}
-        </span>
-      </summary>
-      <div className="px-4 pb-4 pt-1 border-t border-[var(--color-line)] mt-2">
-        <FindingsList findings={row.findings ?? []} />
-        <Link
-          href={detailHref}
-          className="inline-flex items-center gap-2 mt-4 mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-accent-3)] hover:text-[var(--color-accent)]"
-        >
-          Open full report
-          <span aria-hidden="true">→</span>
-        </Link>
-      </div>
-    </details>
-  );
-}
-
-function ServerCell({ row, expandable }: { row: Row; expandable?: boolean }) {
-  return (
-    <div className="flex flex-col gap-0.5">
-      <span className="font-medium text-[var(--color-fg)] flex items-center gap-2">
-        {row.name ?? row.handle}
-        {expandable && (
-          <span
-            className="mono text-[10px] uppercase tracking-[0.14em] text-[var(--color-accent-3)] group-open:text-[var(--color-accent)]"
-            aria-hidden="true"
-          >
-            <span className="group-open:hidden">▸ details</span>
-            <span className="hidden group-open:inline">▾ hide</span>
-          </span>
-        )}
-      </span>
-      <span className="mono text-[11px] text-[var(--color-fg-3)] truncate">
-        {row.handle}
-      </span>
-    </div>
-  );
-}
-
-function ToolsCell({ count }: { count?: number }) {
-  if (count === undefined) {
-    return (
-      <span className="mono text-[11px] text-[var(--color-fg-3)]">—</span>
-    );
-  }
-  // Tier color shows producer maturity at a glance: 20+ tools = README
-  // was fully parsed; 5-19 = good extraction; 0-4 = sparse / fallback.
-  const color =
-    count >= 20
-      ? "text-[var(--color-accent)]"
-      : count >= 5
-        ? "text-[var(--color-accent-3)]"
-        : "text-[var(--color-fg-3)]";
-  return (
-    <span className={`mono text-[12px] tabular-nums ${color}`}>{count}</span>
   );
 }
 
