@@ -1,6 +1,6 @@
 {
   "schema_version": "capframe.leaderboard.v1",
-  "generated_at": "2026-05-30T00:46:50.982592829Z",
+  "generated_at": "2026-05-30T02:03:18.604Z",
   "total_scanned": 48,
   "weights": {
     "critical": 10,
@@ -169,38 +169,6 @@
     },
     {
       "score": 100,
-      "handle": "npm:@modelcontextprotocol/server-everything@2026.1.26",
-      "source": "registry",
-      "name": "server-everything",
-      "repo_url": "https://github.com/modelcontextprotocol/servers",
-      "tool_count": 1,
-      "counts": {
-        "info": 0,
-        "low": 0,
-        "medium": 0,
-        "high": 0,
-        "critical": 0
-      },
-      "last_scanned": "2026-05-30T00:46:38.590299775Z"
-    },
-    {
-      "score": 100,
-      "handle": "npm:@modelcontextprotocol/server-filesystem@2026.1.14",
-      "source": "registry",
-      "name": "server-filesystem",
-      "repo_url": "https://github.com/modelcontextprotocol/servers",
-      "tool_count": 2,
-      "counts": {
-        "info": 0,
-        "low": 0,
-        "medium": 0,
-        "high": 0,
-        "critical": 0
-      },
-      "last_scanned": "2026-05-30T00:46:38.768727594Z"
-    },
-    {
-      "score": 100,
       "handle": "npm:@modelcontextprotocol/server-gdrive@2025.1.14",
       "source": "registry",
       "name": "server-gdrive",
@@ -231,22 +199,6 @@
     },
     {
       "score": 100,
-      "handle": "npm:@modelcontextprotocol/server-memory@2026.1.26",
-      "source": "registry",
-      "name": "server-memory",
-      "repo_url": "https://github.com/modelcontextprotocol/servers",
-      "tool_count": 1,
-      "counts": {
-        "info": 0,
-        "low": 0,
-        "medium": 0,
-        "high": 0,
-        "critical": 0
-      },
-      "last_scanned": "2026-05-30T00:46:38.966866111Z"
-    },
-    {
-      "score": 100,
       "handle": "npm:@modelcontextprotocol/server-postgres@0.6.2",
       "source": "registry",
       "name": "server-postgres",
@@ -274,22 +226,6 @@
         "critical": 0
       },
       "last_scanned": "2026-05-30T00:46:39.572569909Z"
-    },
-    {
-      "score": 100,
-      "handle": "npm:@modelcontextprotocol/server-sequential-thinking@2025.12.18",
-      "source": "registry",
-      "name": "server-sequential-thinking",
-      "repo_url": "https://github.com/modelcontextprotocol/servers",
-      "tool_count": 1,
-      "counts": {
-        "info": 0,
-        "low": 0,
-        "medium": 0,
-        "high": 0,
-        "critical": 0
-      },
-      "last_scanned": "2026-05-30T00:46:39.838806478Z"
     },
     {
       "score": 100,
@@ -585,6 +521,44 @@
         "critical": 0
       },
       "last_scanned": "2026-05-30T00:46:42.155976679Z"
+    },
+    {
+      "score": 98,
+      "handle": "npm:@modelcontextprotocol/server-sequential-thinking@2025.12.18",
+      "source": "sandbox",
+      "name": "server-sequential-thinking",
+      "repo_url": "https://github.com/modelcontextprotocol/servers",
+      "tool_count": 1,
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "info": 0,
+        "low": 0,
+        "medium": 1
+      },
+      "last_scanned": "2026-05-30T01:50:29.3456255Z",
+      "findings": [
+        {
+          "category": "unconstrained_input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `branchId`, `thought`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "id": "f-r1-sequentialthinking",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "owasp_llm": [
+              "LLM01"
+            ]
+          },
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "severity": "medium",
+          "title": "Tool `sequentialthinking` accepts unconstrained string input",
+          "tool": "sequentialthinking"
+        }
+      ]
     },
     {
       "score": 96,
@@ -985,6 +959,164 @@
       ]
     },
     {
+      "score": 84,
+      "handle": "npm:@modelcontextprotocol/server-everything@2026.1.26",
+      "source": "sandbox",
+      "name": "server-everything",
+      "repo_url": "https://github.com/modelcontextprotocol/servers",
+      "tool_count": 13,
+      "counts": {
+        "critical": 0,
+        "high": 1,
+        "info": 0,
+        "low": 0,
+        "medium": 6
+      },
+      "last_scanned": "2026-05-30T01:50:06.523699Z",
+      "findings": [
+        {
+          "category": "unconstrained_input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `message`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "id": "f-r1-echo",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "owasp_llm": [
+              "LLM01"
+            ]
+          },
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "severity": "medium",
+          "title": "Tool `echo` accepts unconstrained string input",
+          "tool": "echo"
+        },
+        {
+          "category": "unconstrained_input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `messageType`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "id": "f-r1-get_annotated_message",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "owasp_llm": [
+              "LLM01"
+            ]
+          },
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "severity": "medium",
+          "title": "Tool `get-annotated-message` accepts unconstrained string input",
+          "tool": "get-annotated-message"
+        },
+        {
+          "category": "unconstrained_input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `resourceType`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "id": "f-r1-get_resource_reference",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "owasp_llm": [
+              "LLM01"
+            ]
+          },
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "severity": "medium",
+          "title": "Tool `get-resource-reference` accepts unconstrained string input",
+          "tool": "get-resource-reference"
+        },
+        {
+          "category": "unconstrained_input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `location`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "id": "f-r1-get_structured_content",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "owasp_llm": [
+              "LLM01"
+            ]
+          },
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "severity": "medium",
+          "title": "Tool `get-structured-content` accepts unconstrained string input",
+          "tool": "get-structured-content"
+        },
+        {
+          "category": "unconstrained_input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `data`, `name`, `outputType`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "id": "f-r1-gzip_file_as_resource",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "owasp_llm": [
+              "LLM01"
+            ]
+          },
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "severity": "medium",
+          "title": "Tool `gzip-file-as-resource` accepts unconstrained string input",
+          "tool": "gzip-file-as-resource"
+        },
+        {
+          "category": "excessive_agency",
+          "description": "`toggle-subscriber-updates` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "id": "f-r3-toggle_subscriber_updates",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "owasp_llm": [
+              "LLM08"
+            ]
+          },
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "severity": "high",
+          "title": "Tool `toggle-subscriber-updates` name implies a side effect that is not declared",
+          "tool": "toggle-subscriber-updates"
+        },
+        {
+          "category": "unconstrained_input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `topic`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "id": "f-r1-simulate_research_query",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "owasp_llm": [
+              "LLM01"
+            ]
+          },
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "severity": "medium",
+          "title": "Tool `simulate-research-query` accepts unconstrained string input",
+          "tool": "simulate-research-query"
+        }
+      ]
+    },
+    {
       "score": 80,
       "handle": "npm:obsidian-mcp@1.0.6",
       "source": "registry",
@@ -1099,6 +1231,144 @@
               "T0051"
             ]
           }
+        }
+      ]
+    },
+    {
+      "score": 78,
+      "handle": "npm:@modelcontextprotocol/server-memory@2026.1.26",
+      "source": "sandbox",
+      "name": "server-memory",
+      "repo_url": "https://github.com/modelcontextprotocol/servers",
+      "tool_count": 9,
+      "counts": {
+        "critical": 0,
+        "high": 5,
+        "info": 0,
+        "low": 0,
+        "medium": 1
+      },
+      "last_scanned": "2026-05-30T01:50:17.8046877Z",
+      "findings": [
+        {
+          "category": "excessive_agency",
+          "description": "`create_entities` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "id": "f-r3-create_entities",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "owasp_llm": [
+              "LLM08"
+            ]
+          },
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "severity": "high",
+          "title": "Tool `create_entities` name implies a side effect that is not declared",
+          "tool": "create_entities"
+        },
+        {
+          "category": "excessive_agency",
+          "description": "`create_relations` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "id": "f-r3-create_relations",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "owasp_llm": [
+              "LLM08"
+            ]
+          },
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "severity": "high",
+          "title": "Tool `create_relations` name implies a side effect that is not declared",
+          "tool": "create_relations"
+        },
+        {
+          "category": "excessive_agency",
+          "description": "`delete_entities` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "id": "f-r3-delete_entities",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "owasp_llm": [
+              "LLM08"
+            ]
+          },
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "severity": "high",
+          "title": "Tool `delete_entities` name implies a side effect that is not declared",
+          "tool": "delete_entities"
+        },
+        {
+          "category": "excessive_agency",
+          "description": "`delete_observations` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "id": "f-r3-delete_observations",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "owasp_llm": [
+              "LLM08"
+            ]
+          },
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "severity": "high",
+          "title": "Tool `delete_observations` name implies a side effect that is not declared",
+          "tool": "delete_observations"
+        },
+        {
+          "category": "excessive_agency",
+          "description": "`delete_relations` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "id": "f-r3-delete_relations",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "owasp_llm": [
+              "LLM08"
+            ]
+          },
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "severity": "high",
+          "title": "Tool `delete_relations` name implies a side effect that is not declared",
+          "tool": "delete_relations"
+        },
+        {
+          "category": "unconstrained_input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `query`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "id": "f-r1-search_nodes",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "owasp_llm": [
+              "LLM01"
+            ]
+          },
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "severity": "medium",
+          "title": "Tool `search_nodes` accepts unconstrained string input",
+          "tool": "search_nodes"
         }
       ]
     },
@@ -1394,6 +1664,324 @@
               "T0051"
             ]
           }
+        }
+      ]
+    },
+    {
+      "score": 64,
+      "handle": "npm:@modelcontextprotocol/server-filesystem@2026.1.14",
+      "source": "sandbox",
+      "name": "server-filesystem",
+      "repo_url": "https://github.com/modelcontextprotocol/servers",
+      "tool_count": 14,
+      "counts": {
+        "critical": 0,
+        "high": 3,
+        "info": 0,
+        "low": 0,
+        "medium": 12
+      },
+      "last_scanned": "2026-05-30T01:50:41.6341452Z",
+      "findings": [
+        {
+          "category": "unconstrained_input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `path`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "id": "f-r1-read_file",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "owasp_llm": [
+              "LLM01"
+            ]
+          },
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "severity": "medium",
+          "title": "Tool `read_file` accepts unconstrained string input",
+          "tool": "read_file"
+        },
+        {
+          "category": "unconstrained_input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `path`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "id": "f-r1-read_text_file",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "owasp_llm": [
+              "LLM01"
+            ]
+          },
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "severity": "medium",
+          "title": "Tool `read_text_file` accepts unconstrained string input",
+          "tool": "read_text_file"
+        },
+        {
+          "category": "unconstrained_input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `path`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "id": "f-r1-read_media_file",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "owasp_llm": [
+              "LLM01"
+            ]
+          },
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "severity": "medium",
+          "title": "Tool `read_media_file` accepts unconstrained string input",
+          "tool": "read_media_file"
+        },
+        {
+          "category": "unconstrained_input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `content`, `path`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "id": "f-r1-write_file",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "owasp_llm": [
+              "LLM01"
+            ]
+          },
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "severity": "medium",
+          "title": "Tool `write_file` accepts unconstrained string input",
+          "tool": "write_file"
+        },
+        {
+          "category": "excessive_agency",
+          "description": "`write_file` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "id": "f-r3-write_file",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "owasp_llm": [
+              "LLM08"
+            ]
+          },
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "severity": "high",
+          "title": "Tool `write_file` name implies a side effect that is not declared",
+          "tool": "write_file"
+        },
+        {
+          "category": "unconstrained_input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `path`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "id": "f-r1-edit_file",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "owasp_llm": [
+              "LLM01"
+            ]
+          },
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "severity": "medium",
+          "title": "Tool `edit_file` accepts unconstrained string input",
+          "tool": "edit_file"
+        },
+        {
+          "category": "excessive_agency",
+          "description": "`edit_file` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "id": "f-r3-edit_file",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "owasp_llm": [
+              "LLM08"
+            ]
+          },
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "severity": "high",
+          "title": "Tool `edit_file` name implies a side effect that is not declared",
+          "tool": "edit_file"
+        },
+        {
+          "category": "unconstrained_input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `path`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "id": "f-r1-create_directory",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "owasp_llm": [
+              "LLM01"
+            ]
+          },
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "severity": "medium",
+          "title": "Tool `create_directory` accepts unconstrained string input",
+          "tool": "create_directory"
+        },
+        {
+          "category": "excessive_agency",
+          "description": "`create_directory` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "id": "f-r3-create_directory",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "owasp_llm": [
+              "LLM08"
+            ]
+          },
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "severity": "high",
+          "title": "Tool `create_directory` name implies a side effect that is not declared",
+          "tool": "create_directory"
+        },
+        {
+          "category": "unconstrained_input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `path`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "id": "f-r1-list_directory",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "owasp_llm": [
+              "LLM01"
+            ]
+          },
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "severity": "medium",
+          "title": "Tool `list_directory` accepts unconstrained string input",
+          "tool": "list_directory"
+        },
+        {
+          "category": "unconstrained_input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `path`, `sortBy`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "id": "f-r1-list_directory_with_sizes",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "owasp_llm": [
+              "LLM01"
+            ]
+          },
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "severity": "medium",
+          "title": "Tool `list_directory_with_sizes` accepts unconstrained string input",
+          "tool": "list_directory_with_sizes"
+        },
+        {
+          "category": "unconstrained_input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `path`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "id": "f-r1-directory_tree",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "owasp_llm": [
+              "LLM01"
+            ]
+          },
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "severity": "medium",
+          "title": "Tool `directory_tree` accepts unconstrained string input",
+          "tool": "directory_tree"
+        },
+        {
+          "category": "unconstrained_input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `destination`, `source`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "id": "f-r1-move_file",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "owasp_llm": [
+              "LLM01"
+            ]
+          },
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "severity": "medium",
+          "title": "Tool `move_file` accepts unconstrained string input",
+          "tool": "move_file"
+        },
+        {
+          "category": "unconstrained_input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `path`, `pattern`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "id": "f-r1-search_files",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "owasp_llm": [
+              "LLM01"
+            ]
+          },
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "severity": "medium",
+          "title": "Tool `search_files` accepts unconstrained string input",
+          "tool": "search_files"
+        },
+        {
+          "category": "unconstrained_input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `path`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "id": "f-r1-get_file_info",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "owasp_llm": [
+              "LLM01"
+            ]
+          },
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "severity": "medium",
+          "title": "Tool `get_file_info` accepts unconstrained string input",
+          "tool": "get_file_info"
         }
       ]
     }
