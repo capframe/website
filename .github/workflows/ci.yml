@@ -1,0 +1,121 @@
+name: ci
+
+# Runs on PRs + every push to main. Two layers:
+#   1. typecheck + build  — catches the easy-to-miss errors (broken
+#      imports, type drift, schema mismatch in sample.json).
+#   2. runtime smoke      — boots `next start` against the built
+#      artefacts and curls the routes that have historically been
+#      shipping broken. The first ImageResponse 500 on prod survived
+#      a clean `next build` because Satori only runs at request time;
+#      this step exists to never let that happen again.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Typecheck
+        run: npx tsc --noEmit
+
+      - name: Build
+        run: npm run build
+
+      - name: Start server
+        # Background — we curl it from the next step. PORT picks a
+        # high port to avoid clashes with the runner.
+        run: |
+          npx next start --port 41788 > /tmp/next.log 2>&1 &
+          echo $! > /tmp/next.pid
+          # Wait for ready signal in the log (max ~30s).
+          for _ in $(seq 1 60); do
+            if grep -q "Ready" /tmp/next.log 2>/dev/null; then
+              echo "next ready"
+              exit 0
+            fi
+            sleep 0.5
+          done
+          echo "next did not become ready in 30s"
+          cat /tmp/next.log
+          exit 1
+
+      # Runtime smoke. Each curl asserts HTTP 200 (`-f`) AND inspects
+      # the content-type / size so a 200-with-empty-body or
+      # 200-with-error-html still fails the build.
+      - name: Smoke — /leaderboard renders
+        run: |
+          out=$(curl -fsS -w '\nstatus=%{http_code} size=%{size_download} type=%{content_type}\n' http://127.0.0.1:41788/leaderboard 2>&1)
+          echo "$out" | tail -3
+          echo "$out" | grep -E "status=200" || { echo "leaderboard FAILED"; exit 1; }
+          # Page should be >50KB; smaller means the table didn't render.
+          size=$(echo "$out" | grep -oE "size=[0-9]+" | head -1 | cut -d= -f2)
+          if [ "$size" -lt 50000 ]; then echo "leaderboard suspiciously small ($size bytes)"; exit 1; fi
+
+      - name: Smoke — first per-server detail page renders
+        run: |
+          # Pull any slug from the bundled sample.json so the test is
+          # data-agnostic. Falls back to a known slug if jq isn't avail.
+          slug=$(node -e "const d=require('./src/lib/leaderboard/sample.json');const r=d.rows.find(x=>(x.findings||[]).length);console.log((r.handle||'').replace(/[^a-zA-Z0-9]+/g,'-').toLowerCase());")
+          echo "testing slug: $slug"
+          curl -fsS -o /tmp/server-page.html -w "status=%{http_code} size=%{size_download}\n" "http://127.0.0.1:41788/leaderboard/$slug"
+          grep -q "MCP security report\|All [0-9]\\+ findings\\|No findings" /tmp/server-page.html || { echo "per-server page missing expected content"; exit 1; }
+
+      # The bug-class this workflow is here to prevent. ImageResponse
+      # routes return 200 from `next build` but die at request time
+      # if Satori rejects the JSX. Assert content-type AND a real PNG
+      # size so a future regression can't pass.
+      - name: Smoke — per-server OG image returns a real PNG
+        run: |
+          slug=$(node -e "const d=require('./src/lib/leaderboard/sample.json');const r=d.rows.find(x=>(x.findings||[]).length);console.log((r.handle||'').replace(/[^a-zA-Z0-9]+/g,'-').toLowerCase());")
+          echo "testing slug: $slug"
+          curl -fsS -o /tmp/og.png -w "status=%{http_code} size=%{size_download} type=%{content_type}\n" "http://127.0.0.1:41788/leaderboard/$slug/opengraph-image" | tee /tmp/og.meta
+          grep -q "type=image/png" /tmp/og.meta || { echo "OG image content-type wrong"; cat /tmp/og.meta; exit 1; }
+          size=$(stat -c%s /tmp/og.png 2>/dev/null || stat -f%z /tmp/og.png)
+          if [ "$size" -lt 20000 ]; then echo "OG image suspiciously small ($size bytes)"; exit 1; fi
+
+      - name: Smoke — per-tool OG image returns a real PNG
+        run: |
+          # Find a (server, tool) pair where the tool actually has a finding.
+          read slug tool <<<"$(node -e "
+            const d=require('./src/lib/leaderboard/sample.json');
+            for(const r of d.rows){if(!(r.findings||[]).length)continue;for(const f of r.findings){if(f.tool){const s=r.handle.replace(/[^a-zA-Z0-9]+/g,'-').toLowerCase();const t=f.tool.replace(/[^a-zA-Z0-9]+/g,'-').toLowerCase();console.log(s,t);process.exit(0);}}}
+          ")"
+          echo "testing slug=$slug tool=$tool"
+          curl -fsS -o /tmp/og-tool.png -w "status=%{http_code} size=%{size_download} type=%{content_type}\n" "http://127.0.0.1:41788/leaderboard/$slug/$tool/opengraph-image" | tee /tmp/og-tool.meta
+          grep -q "type=image/png" /tmp/og-tool.meta || { echo "per-tool OG content-type wrong"; cat /tmp/og-tool.meta; exit 1; }
+          size=$(stat -c%s /tmp/og-tool.png 2>/dev/null || stat -f%z /tmp/og-tool.png)
+          if [ "$size" -lt 20000 ]; then echo "per-tool OG suspiciously small ($size bytes)"; exit 1; fi
+
+      - name: Smoke — sitemap.xml lists the leaderboard URLs
+        run: |
+          curl -fsS http://127.0.0.1:41788/sitemap.xml -o /tmp/sitemap.xml
+          # Must include at least the index + one server slug + one tool slug.
+          grep -q "https://capframe.ai/leaderboard</loc>" /tmp/sitemap.xml || { echo "sitemap missing /leaderboard"; exit 1; }
+          grep -q "https://capframe.ai/leaderboard/[a-z0-9-]\\+</loc>" /tmp/sitemap.xml || { echo "sitemap missing per-server URLs"; exit 1; }
+
+      - name: Tear down
+        if: always()
+        run: |
+          if [ -f /tmp/next.pid ]; then kill "$(cat /tmp/next.pid)" 2>/dev/null || true; fi
