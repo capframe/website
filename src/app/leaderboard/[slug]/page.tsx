@@ -236,7 +236,7 @@ export default async function ServerDetailPage({
                 audited.
               </p>
             ) : (
-              <FindingsList findings={findings} />
+              <FindingsList findings={findings} serverSlug={slug} />
             )}
           </div>
 

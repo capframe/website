@@ -7,6 +7,11 @@ import Link from "next/link";
 import type { Finding, Severity, SeverityCounts } from "@/lib/leaderboard/types";
 import { CAPFRAME_GITHUB, CAPFRAME_VERSION } from "@/lib/version";
 
+/** Slug a tool name for use in /leaderboard/[slug]/[tool] URLs. */
+export function slugifyTool(name: string): string {
+  return name.replace(/[^a-zA-Z0-9]+/g, "-").toLowerCase();
+}
+
 /* ────────────────────────────────────────────────────────────────────────── */
 /* Chrome                                                                       */
 /* ────────────────────────────────────────────────────────────────────────── */
@@ -189,7 +194,14 @@ export function FindingsCell({ counts }: { counts: SeverityCounts }) {
 /* Findings list (sortable, reused by index + detail)                          */
 /* ────────────────────────────────────────────────────────────────────────── */
 
-export function FindingsList({ findings }: { findings: Finding[] }) {
+export function FindingsList({
+  findings,
+  serverSlug,
+}: {
+  findings: Finding[];
+  /** When set, tool names link to /leaderboard/[serverSlug]/[toolSlug]. */
+  serverSlug?: string;
+}) {
   const sorted = sortFindingsBySeverity(findings);
   return (
     <ol className="mt-3 space-y-2.5">
@@ -201,11 +213,19 @@ export function FindingsList({ findings }: { findings: Finding[] }) {
           <SeverityChip severity={f.severity} />
           <div className="text-[0.92rem] text-[var(--color-fg-2)] leading-snug">
             <span className="text-[var(--color-fg)] font-medium">{f.title}</span>
-            {f.tool && (
-              <span className="mono text-[11px] text-[var(--color-fg-3)] ml-2">
-                · {f.tool}
-              </span>
-            )}
+            {f.tool &&
+              (serverSlug ? (
+                <Link
+                  href={`/leaderboard/${serverSlug}/${slugifyTool(f.tool)}`}
+                  className="mono text-[11px] text-[var(--color-accent-3)] ml-2 hover:text-[var(--color-accent)] underline-offset-2"
+                >
+                  · {f.tool}
+                </Link>
+              ) : (
+                <span className="mono text-[11px] text-[var(--color-fg-3)] ml-2">
+                  · {f.tool}
+                </span>
+              ))}
             {f.category && (
               <span className="mono text-[10.5px] uppercase tracking-[0.14em] text-[var(--color-accent-3)] ml-2">
                 {f.category.replace(/_/g, " ")}
