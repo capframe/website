@@ -24,6 +24,8 @@ interface Mover {
   current: Row;
   previous: Row;
   delta: number;
+  /** True when the handle differs between scans (version bump). */
+  versionChanged: boolean;
 }
 
 interface Diff {
@@ -33,27 +35,58 @@ interface Diff {
   unchanged: number;
 }
 
+/**
+ * Diff-stable identity for a handle. Strips the trailing `@version` for
+ * registry handles so that a package upgrading from 1.0.0 → 1.0.1 shows
+ * up as a single moved row (with a version-change marker) rather than
+ * one "added" + one "removed" row.
+ *
+ * Forms handled:
+ *   npm:@scope/name@1.2.3 → npm:@scope/name
+ *   npm:name@1.2.3        → npm:name
+ *   pypi:name@1.0.0       → pypi:name
+ *   https://...           → unchanged (URL is its own identity)
+ */
+function diffKey(handle: string): string {
+  if (handle.startsWith("http://") || handle.startsWith("https://")) {
+    return handle;
+  }
+  const lastAt = handle.lastIndexOf("@");
+  if (lastAt <= 0) return handle;
+  // Only strip if what follows the last `@` actually looks like a version
+  // (digits, semver, calver, `v1.0.0`). That guards against scoped-npm
+  // edge cases like `npm:@scope/name` with no version — where the only
+  // `@` is the scope marker and there's nothing to strip.
+  const after = handle.slice(lastAt + 1);
+  if (!/^[0-9v][0-9a-zA-Z.\-+]*$/.test(after)) return handle;
+  return handle.slice(0, lastAt);
+}
+
 function diff(current: Leaderboard, previous: Leaderboard): Diff {
-  const prevMap = new Map(previous.rows.map((r) => [r.handle, r]));
-  const currMap = new Map(current.rows.map((r) => [r.handle, r]));
+  const prevByKey = new Map<string, Row>();
+  for (const r of previous.rows) prevByKey.set(diffKey(r.handle), r);
+  const currByKey = new Map<string, Row>();
+  for (const r of current.rows) currByKey.set(diffKey(r.handle), r);
 
   const movers: Mover[] = [];
   const added: Row[] = [];
   let unchanged = 0;
   for (const r of current.rows) {
-    const prior = prevMap.get(r.handle);
+    const key = diffKey(r.handle);
+    const prior = prevByKey.get(key);
     if (!prior) {
       added.push(r);
       continue;
     }
+    const versionChanged = prior.handle !== r.handle;
     const delta = r.score - prior.score;
-    if (delta === 0) {
+    if (delta === 0 && !versionChanged) {
       unchanged++;
       continue;
     }
-    movers.push({ current: r, previous: prior, delta });
+    movers.push({ current: r, previous: prior, delta, versionChanged });
   }
-  const removed = previous.rows.filter((r) => !currMap.has(r.handle));
+  const removed = previous.rows.filter((r) => !currByKey.has(diffKey(r.handle)));
 
   movers.sort(
     (a, b) =>
@@ -143,6 +176,11 @@ function MoversBody({
   const { movers, added, removed, unchanged } = diff(current, previous);
   const risers = movers.filter((m) => m.delta > 0).slice(0, 15);
   const fallers = movers.filter((m) => m.delta < 0).slice(0, 15);
+  // Version bumps with no score change still matter — they prove the
+  // upstream package shipped but our rules saw the same surface.
+  const silentBumps = movers.filter(
+    (m) => m.versionChanged && m.delta === 0,
+  );
 
   return (
     <>
@@ -179,6 +217,39 @@ function MoversBody({
           empty="None removed this run."
         />
       </div>
+
+      {silentBumps.length > 0 && (
+        <div className="mt-12">
+          <div className="flex items-baseline gap-3 mb-2">
+            <h2 className="text-[1.15rem] font-semibold tracking-[-0.02em] text-[var(--color-fg-2)]">
+              Version bumps ({silentBumps.length})
+            </h2>
+            <span className="mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-fg-3)]">
+              new release, same surface — no score change
+            </span>
+          </div>
+          <ol className="space-y-1.5">
+            {silentBumps.map((m) => (
+              <li key={m.current.handle}>
+                <Link
+                  href={`/leaderboard/${slugifyHandle(m.current.handle)}`}
+                  className="grid grid-cols-[1fr_auto] gap-3 items-center rounded-md border border-[var(--color-line)] bg-[var(--color-bg-2)]/30 hover:border-[var(--color-line-hover)] px-3 py-2 transition-colors"
+                >
+                  <div className="min-w-0">
+                    <div className="font-medium text-[var(--color-fg)] truncate">
+                      {m.current.name ?? m.current.handle}
+                    </div>
+                    <div className="mono text-[11px] text-[var(--color-fg-3)] truncate">
+                      {m.previous.handle} → {m.current.handle}
+                    </div>
+                  </div>
+                  <ScoreBadge score={m.current.score} max={100} />
+                </Link>
+              </li>
+            ))}
+          </ol>
+        </div>
+      )}
 
       <div className="mt-12 mono text-[11px] uppercase tracking-[0.18em] text-[var(--color-fg-3)]">
         {unchanged} unchanged · {movers.length} moved · {added.length} added ·{" "}
@@ -222,11 +293,18 @@ function MoverList({
                 className="grid grid-cols-[1fr_auto_auto] gap-3 items-center rounded-md border border-[var(--color-line)] bg-[var(--color-bg-2)]/30 hover:border-[var(--color-line-hover)] px-3 py-2 transition-colors"
               >
                 <div className="min-w-0">
-                  <div className="font-medium text-[var(--color-fg)] truncate">
+                  <div className="font-medium text-[var(--color-fg)] truncate flex items-center gap-2">
                     {m.current.name ?? m.current.handle}
+                    {m.versionChanged && (
+                      <span className="mono text-[9.5px] uppercase tracking-[0.16em] text-[var(--color-accent-3)] border border-[var(--color-accent-3)]/40 rounded px-1.5 py-0.5">
+                        new version
+                      </span>
+                    )}
                   </div>
                   <div className="mono text-[11px] text-[var(--color-fg-3)] truncate">
-                    {m.current.handle}
+                    {m.versionChanged
+                      ? `${m.previous.handle}  →  ${m.current.handle}`
+                      : m.current.handle}
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
@@ -239,7 +317,9 @@ function MoverList({
                   className={`mono text-[13px] tabular-nums px-2 py-0.5 rounded border ${
                     m.delta > 0
                       ? "text-[var(--color-accent)] border-[var(--color-accent)]/40"
-                      : "text-red-400 border-red-400/40"
+                      : m.delta < 0
+                        ? "text-red-400 border-red-400/40"
+                        : "text-[var(--color-fg-3)] border-[var(--color-line)]"
                   }`}
                 >
                   {m.delta > 0 ? "+" : ""}
