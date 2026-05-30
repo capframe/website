@@ -130,6 +130,7 @@ export default async function ServerOg({
           >
             <div
               style={{
+                display: "flex",
                 fontSize: 76,
                 lineHeight: 1.0,
                 fontWeight: 600,
@@ -142,6 +143,7 @@ export default async function ServerOg({
             </div>
             <div
               style={{
+                display: "flex",
                 fontFamily: "JetBrains Mono, ui-monospace, monospace",
                 fontSize: 22,
                 color: "#a3aab9",
@@ -169,6 +171,7 @@ export default async function ServerOg({
           >
             <div
               style={{
+                display: "flex",
                 fontFamily: "JetBrains Mono, ui-monospace, monospace",
                 fontSize: 26,
                 letterSpacing: 4,
@@ -179,6 +182,7 @@ export default async function ServerOg({
             </div>
             <div
               style={{
+                display: "flex",
                 fontSize: 140,
                 fontWeight: 700,
                 letterSpacing: "-0.04em",
@@ -187,10 +191,11 @@ export default async function ServerOg({
                 marginTop: 4,
               }}
             >
-              {row.score}
+              {String(row.score)}
             </div>
             <div
               style={{
+                display: "flex",
                 fontFamily: "JetBrains Mono, ui-monospace, monospace",
                 fontSize: 16,
                 letterSpacing: 3,
@@ -215,6 +220,7 @@ export default async function ServerOg({
           {findingsCount === 0 ? (
             <div
               style={{
+                display: "flex",
                 fontFamily: "JetBrains Mono, ui-monospace, monospace",
                 fontSize: 22,
                 letterSpacing: 3,
