@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s · Capframe",
   },
   description:
-    "Find what your agents touch. Bind their authority. Guard every call. Three Rust modules for discovery, capability tokens, and runtime policy enforcement of MCP-using AI agents.",
+    "Find what your agents touch. Bind their authority. Guard every call. Three MCP-native modules — discovery and capability tokens in Rust, runtime policy in Python — for securing MCP-using AI agents.",
   applicationName: "Capframe",
   authors: [{ name: "Euan Crosson" }],
   keywords: [
@@ -36,6 +36,7 @@ export const metadata: Metadata = {
     "MITRE ATLAS",
     "agent runtime",
     "Rust",
+    "Python",
   ],
   openGraph: {
     type: "website",

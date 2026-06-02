@@ -113,10 +113,10 @@ function Hero() {
         </h1>
 
         <p className="rise rise-3 mt-7 text-[1.05rem] sm:text-[1.15rem] leading-[1.65] text-[var(--color-fg-2)] max-w-[36rem]">
-          A deterministic Rust runtime that maps every tool your agents reach,
-          mints scoped, revocable capability tokens, and decides every call in{" "}
+          A deterministic runtime that maps every tool your agents reach,
+          mints scoped, revocable capability tokens — verified in{" "}
           <span className="text-fg">single&#8209;digit microseconds</span> —{" "}
-          with{" "}
+          and decides every call against a policy you wrote, with{" "}
           <span className="text-fg">no LLM in the decision path</span>.
           Stops prompt&#8209;injected refunds, runaway tool storms, indirect&#8209;injection
           data exfil, and unscoped MCP access before they reach prod.{" "}
@@ -286,9 +286,9 @@ function ThreatLandscape() {
       </div>
 
       <p className="mt-12 text-[0.95rem] leading-[1.7] text-[var(--color-fg-3)] max-w-[42rem]">
-        Capframe collapses all four into a single Rust binary sitting in the
-        agent&apos;s tool-call boundary. Every call is decided by a policy you
-        wrote, not a model you can&apos;t inspect.
+        Capframe puts all four at the agent&apos;s tool-call boundary — Find and
+        Bind as Rust binaries, Guard as a pip-installable Python layer. Every
+        call is decided by a policy you wrote, not a model you can&apos;t inspect.
       </p>
     </section>
   );
@@ -312,7 +312,7 @@ function Flow() {
         <span className="label">The pipeline</span>
       </div>
       <h2 className="text-[clamp(1.9rem,3.4vw,2.7rem)] font-semibold tracking-[-0.025em] max-w-[46rem]">
-        Four stages. One static binary. Microsecond decisions. No model in the loop.
+        Four stages. Microsecond capability checks. One findings schema. No model in the loop.
       </h2>
       <p className="mt-5 text-[1.02rem] leading-[1.7] text-[var(--color-fg-2)] max-w-[42rem]">
         Map the surface, mint scoped authority, enforce every call against a
@@ -379,7 +379,7 @@ function Modules() {
       tag: "03.2",
       name: "Bind",
       role: "Authority",
-      desc: "The authority layer — and the most battle-tested module in the stack. Prompt injection is a confused-deputy attack (Lampson, 1974): smarter guardrails don't fix it, removing the agent's ambient authority does. Bind mints macaroon-style capability tokens — attenuable, revocable, ed25519 holder-of-key — that bound what an agent CAN do at issuance time. Out-of-scope calls are refused before the underlying tool ever sees them, each producing a signed, tamper-evident receipt.",
+      desc: "The authority layer — and the most adversarially-tested module in the stack. Prompt injection is a confused-deputy attack (Lampson, 1974): smarter guardrails don't fix it, removing the agent's ambient authority does. Bind mints macaroon-style capability tokens — attenuable, revocable, ed25519 holder-of-key — that bound what an agent CAN do at issuance time. Out-of-scope calls are refused before the underlying tool ever sees them, each producing a signed, tamper-evident receipt.",
       bullets: [
         "Macaroon chain (HMAC-SHA256): a holder can't broaden scope without the root key",
         "ed25519 holder-of-key proofs defeat token theft and replay",
@@ -400,11 +400,11 @@ function Modules() {
       tag: "03.3",
       name: "Guard",
       role: "Enforcement",
-      desc: "A deterministic Rust policy evaluator that sits inline at the agent's tool-call boundary. Single-digit-microsecond decisions. No LLM in the decision path — every allow/deny is reproducible, fuzzable, and immune to the jailbreak that just broke your agent. Synthesize policy from observed gaps, backtest against the default corpus, ship.",
+      desc: "A deterministic Python policy evaluator that sits inline at the agent's tool-call boundary. No LLM in the decision path — every allow/deny is reproducible, fuzzable, and immune to the jailbreak that just broke your agent. Synthesize policy from observed injection gaps, backtest against the corpus, ship.",
       bullets: [
         "Inline at the tool-call boundary — not a sidecar, not a daemon",
         "Synthesizes YAML policy from a findings.v1 file in one command",
-        "Default corpus of 247 jailbreak / injection / scope-escape cases",
+        "Default corpus of 308 jailbreak / injection / scope-escape cases",
         "Fail-closed by construction — no policy = no calls",
       ],
       code: `$ capframe guard synth ./capframe.findings.json
@@ -412,9 +412,8 @@ function Modules() {
 ✓ policy → ./policy.yaml
 
 $ capframe guard backtest ./policy.yaml
-✓ 247/247 corpus cases pass
-✓ false-positive rate: 0.0%
-✓ p99 decision latency: 8.4 µs`,
+✓ 308-case corpus · TPR 1.00 / FPR 0.01
+✓ deterministic · no model in the decision path`,
     },
   ];
   return (
@@ -427,8 +426,9 @@ $ capframe guard backtest ./policy.yaml
         Standalone, or composed. Either way, three primitives — not three products.
       </h2>
       <p className="mt-4 text-[1.02rem] text-[var(--color-fg-2)] max-w-[42rem]">
-        Each module ships as its own Rust crate, its own CLI subcommand, and its own
-        public GitHub repo. Adopt one at a time, or wire them together through the
+        Find and Bind ship as Rust crates with CLI subcommands; Guard ships as a
+        Python package (pip install mcp-guardrails) — each in its own public GitHub
+        repo. Adopt one at a time, or wire them together through the
         shared <code className="text-[var(--color-accent-3)]">findings.v1</code> JSON
         Schema — the wire format Find emits, Bind scopes against, and Guard enforces.
       </p>
@@ -495,7 +495,7 @@ function BindSpotlight() {
     {
       n: "4 HIGH",
       label: "defects in our own engine",
-      sub: "found by a 4-agent / 36-angle self-review · published · 3 of 4 closed",
+      sub: "found by a 4-agent / 36-angle self-review · published · 4 of 4 closed",
     },
     {
       n: "1.4 µs",
@@ -517,7 +517,7 @@ function BindSpotlight() {
     <section className="max-w-[1440px] mx-auto py-20 lg:py-24 border-t border-[var(--color-line)]">
       <div className="flex items-baseline gap-3 mb-4">
         <span className="mono text-[12px] text-[var(--color-accent)]">§ 04</span>
-        <span className="label">Battle-tested · the Bind layer</span>
+        <span className="label">Adversarially-tested · the Bind layer</span>
       </div>
       <h2 className="text-[clamp(1.9rem,3.4vw,2.7rem)] font-semibold tracking-[-0.025em] max-w-[48rem]">
         Bind isn&apos;t a claim. It&apos;s been attacked ten times — and every
@@ -629,7 +629,7 @@ function Engineering() {
       n: "01",
       title: "Deterministic policy evaluator",
       body:
-        "Rust, single-digit microseconds per decision, p99 under 10µs even at 50k policy rules. The same input always returns the same allow/deny — fuzzable, reproducible, immune to the next jailbreak. Most importantly: no LLM in the decision path. Your enforcement boundary is not a model you have to re-evaluate every time someone publishes a new attack paper.",
+        "Deterministic and model-free. The same input always returns the same allow/deny — fuzzable, reproducible, immune to the next jailbreak. Most importantly: no LLM in the decision path. Your enforcement boundary is not a model you have to re-evaluate every time someone publishes a new attack paper.",
       pill: "0 LLM calls",
     },
     {
@@ -655,10 +655,10 @@ function Engineering() {
     },
     {
       n: "05",
-      title: "Single static binary",
+      title: "Static binaries, no daemon",
       body:
-        "No daemon. No kernel module. No Python runtime. No container. One sha256-verified binary per platform — x86_64 / aarch64 across Linux, macOS, and Windows. Runs in CI, in your IDE, on your laptop, and inline at the tool-call boundary. MIT licensed — read every line of the code your security depends on.",
-      pill: "6 targets · MIT",
+        "No daemon. No kernel module. No container. Find and Bind ship as sha256-verified static Rust binaries — x86_64 / aarch64 across Linux, macOS, and Windows — and Guard installs as a Python package alongside. Runs in CI, in your IDE, on your laptop, and inline at the tool-call boundary. Permissive OSS (Apache-2.0 + MIT) — read every line of the code your security depends on.",
+      pill: "6 targets · OSS",
     },
     {
       n: "06",
@@ -679,7 +679,7 @@ function Engineering() {
       </h2>
       <p className="mt-5 text-[1.02rem] leading-[1.7] text-[var(--color-fg-2)] max-w-[44rem]">
         Capframe is not a wrapper around an LLM, not a policy DSL transpiled to a model
-        prompt, and not a managed service. It&apos;s a deterministic Rust runtime
+        prompt, and not a managed service. It&apos;s a deterministic runtime
         with three primitives — tokens, policy, receipts — that sit inline at the
         boundary your agent already calls through.
       </p>
@@ -709,8 +709,8 @@ function Engineering() {
       </div>
 
       <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
-        <Stat n="< 10 µs" label="p99 decision latency" />
-        <Stat n="247" label="default jailbreak corpus" />
+        <Stat n="1.4 µs" label="Bind chain-verify (p50)" />
+        <Stat n="308" label="default jailbreak corpus" />
         <Stat n="6" label="cross-compiled targets" />
         <Stat n="0" label="LLM calls on the hot path" />
       </div>
@@ -967,13 +967,13 @@ function Pricing() {
 function FAQ() {
   const qa = [
     { q: "How is this different from an LLM-as-judge guardrail?",
-      a: "An LLM judge is another model you have to trust — and another attack surface. Capframe's Guard is a deterministic Rust evaluator: the same input always yields the same allow/deny, with no model in the path. That means it's fuzzable, reproducible, microsecond-fast, and immune to the next jailbreak paper. LLM judges are useful for content classification; they are not safe to put inline at a tool-call boundary." },
+      a: "An LLM judge is another model you have to trust — and another attack surface. Capframe's Guard is a deterministic Python evaluator: the same input always yields the same allow/deny, with no model in the path. That means it's fuzzable, reproducible, and immune to the next jailbreak paper. LLM judges are useful for content classification; they are not safe to put inline at a tool-call boundary." },
     { q: "How is this different from prompt-injection scanners or red-team frameworks?",
       a: "Scanners tell you about a vulnerability after the fact. Capframe enforces the boundary at the moment of the call — the agent never gets to make a refund it shouldn't, regardless of what the prompt said. Find covers the offline discovery surface; Guard is the runtime backstop the scanner ecosystem doesn't have." },
     { q: "Is the runtime fast enough for production?",
-      a: "Yes. Guard evaluates policy in single-digit microseconds, p99 under 10µs at 50k rules. Pure Rust, zero heap allocation on the hot path, no model in the loop. You can drop it inline at the tool-call boundary without measurable user-visible latency." },
+      a: "Yes. Guard is a deterministic rule engine — no model inference and no network hop in the decision path, so a decision is a pure function of (policy, call). (Raw capability verification, in the Rust Bind layer, runs in single-digit microseconds.) Drop Guard inline at the tool-call boundary and measure it on your own traffic." },
     { q: "Does my agent data leave my environment?",
-      a: "No. The CLI is local-first — Find, Bind, Guard, Report all run as a single static binary on your laptop, your CI, or your inference host. The Pro / Enterprise hosted control plane is opt-in and stores only the metadata you choose to sync." },
+      a: "No. It's local-first — Find, Bind, Guard, and Report all run on your laptop, your CI, or your inference host (Find and Bind as Rust binaries, Guard as a pip-installable Python layer). The Pro / Enterprise hosted control plane is opt-in and stores only the metadata you choose to sync." },
     { q: "Does this only work with MCP?",
       a: "Today, yes — Capframe is built around the Model Context Protocol. That covers Claude Desktop, Cursor, Continue, Cline, LangGraph via the MCP bridge, and most agentic Rust/Python frameworks. Native adapters for OpenAI function calling and Anthropic tool use are on the roadmap; the policy file stays the same." },
     { q: "Why three separate modules?",

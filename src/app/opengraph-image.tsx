@@ -75,7 +75,7 @@ export default async function OpenGraphImage() {
               lineHeight: 1.4,
             }}
           >
-            Three Rust modules. MCP-native. Audit-mapped to OWASP LLM, NIST AI
+            Three MCP-native modules. Audit-mapped to OWASP LLM, NIST AI
             RMF, MITRE ATLAS.
           </div>
         </div>
