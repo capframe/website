@@ -24,6 +24,7 @@ export default function Home() {
         <Engineering />
         <Compliance />
         <Demo />
+        <Audit />
         <Pricing />
         <FAQ />
       </main>
@@ -78,6 +79,7 @@ function Header() {
           <a href="#modules" className="hover:text-fg transition-colors">Modules</a>
           <a href="#compliance" className="hover:text-fg transition-colors">Compliance</a>
           <a href="#install" className="hover:text-fg transition-colors">Install</a>
+          <a href="#audit" className="text-[var(--color-accent)] hover:opacity-80 transition-opacity">Audit</a>
           <a href="#pricing" className="hover:text-fg transition-colors">Pricing</a>
           <Link href="/changelog" className="hover:text-fg transition-colors">Changelog</Link>
           <Link href="/blog" className="hover:text-fg transition-colors">Blog</Link>
@@ -128,6 +130,10 @@ function Hero() {
         <div className="rise rise-4 mt-10 flex flex-wrap items-center gap-3">
           <a href="#install" className="btn-primary">
             Install Capframe
+            <span aria-hidden>→</span>
+          </a>
+          <a href="#audit" className="btn-ghost">
+            Get a $750 audit
             <span aria-hidden>→</span>
           </a>
           <a href={GH} className="btn-ghost">
@@ -847,6 +853,74 @@ $ capframe report --format html --out ./report.html
 }
 
 /* ────────────────────────────────────────────────────────────────────────── */
+/* AUDIT — done-for-you services (the lead commercial motion)                  */
+/* ────────────────────────────────────────────────────────────────────────── */
+
+function Audit() {
+  const deliverables = [
+    "Branded OWASP LLM Top 10 / NIST AI RMF / MITRE ATLAS findings report (HTML + PDF)",
+    "Prioritized remediation checklist — what to fix, in what order, and why",
+    "30-minute walkthrough call + a sample deterministic policy you can drop in front of your agents",
+  ];
+  return (
+    <section id="audit" className="max-w-[1440px] mx-auto py-20 lg:py-24 border-t border-[var(--color-line)]">
+      <div className="flex items-baseline gap-3 mb-4">
+        <span className="mono text-[12px] text-[var(--color-accent)]">§ 08</span>
+        <span className="label">Done-for-you</span>
+      </div>
+      <h2 className="text-[clamp(1.9rem,3.4vw,2.7rem)] font-semibold tracking-[-0.025em] max-w-[44rem]">
+        Short on time? We&apos;ll audit your agents.
+      </h2>
+      <p className="mt-5 text-[1.05rem] leading-[1.7] text-[var(--color-fg-2)] max-w-[43rem]">
+        The same posture we run on our own tools and on 90+ public servers on the{" "}
+        <Link href="/leaderboard" className="text-[var(--color-accent)] hover:underline">leaderboard</Link>
+        , pointed at your stack. I map your agent&apos;s tool surface — MCP servers, or your existing
+        OpenAI / Anthropic / LangChain tool definitions — and hand you a report you can act on in five business days.
+      </p>
+
+      <div className="mt-12 card p-8 sm:p-10 border-[var(--color-accent)]/50 shadow-[0_0_60px_-20px_rgba(0,245,160,0.4)] grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 relative">
+        <div className="absolute -top-3 left-8 sm:left-10 px-2 py-0.5 mono text-[10px] tracking-[0.18em] uppercase rounded bg-[var(--color-accent)] text-[#04241a]">
+          Founding · first 3 customers
+        </div>
+        <div className="lg:col-span-7">
+          <h3 className="text-[1.4rem] font-semibold">Agent Security Audit</h3>
+          <ul className="mt-5 space-y-2.5 text-[14px]">
+            {deliverables.map((d) => (
+              <li key={d} className="flex gap-3 text-[var(--color-fg-2)]">
+                <span className="text-[var(--color-accent)] shrink-0">✓</span>
+                <span>{d}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 text-[0.95rem] leading-[1.65] text-[var(--color-fg-3)]">
+            <span className="text-fg">Guarantee:</span> if the report doesn&apos;t surface at least one
+            issue you didn&apos;t already know about, you pay nothing.
+          </p>
+        </div>
+        <div className="lg:col-span-5 lg:border-l lg:border-[var(--color-line)] lg:pl-12 flex flex-col justify-center">
+          <div className="flex items-baseline gap-2">
+            <span className="text-[2.8rem] font-semibold leading-none tracking-[-0.02em]">$750</span>
+            <span className="mono text-[11px] tracking-[0.14em] uppercase text-[var(--color-fg-3)]">founding</span>
+          </div>
+          <div className="mono text-[11px] tracking-[0.14em] uppercase text-[var(--color-fg-3)] mt-2">
+            standard $2,500 · 5 business days
+          </div>
+          <a href="mailto:hello@capframe.ai?subject=Capframe%20Agent%20Security%20Audit%20(Founding)&body=Hi%20—%20I'd%20like%20a%20Capframe%20agent%20security%20audit.%20My%20agent%20framework%20%2F%20MCP%20servers%3A%20"
+             className="btn-primary mt-7 w-full justify-center">
+            Request an audit
+            <span aria-hidden>→</span>
+          </a>
+          <Link href="/blog/red-teaming-my-own-engine"
+                className="mt-3 text-center mono text-[10.5px] tracking-[0.14em] uppercase text-[var(--color-fg-3)] hover:text-fg transition-colors">
+            See a sample teardown ↗
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
 /* PRICING                                                                     */
 /* ────────────────────────────────────────────────────────────────────────── */
 
@@ -872,8 +946,8 @@ function Pricing() {
     },
     {
       name: "Pro",
-      price: "$199",
-      cadence: "per month",
+      price: "Early access",
+      cadence: "$199/mo · planned",
       status: "early access · waitlist open",
       blurb:
         "Hosted control plane for AI teams shipping agents at velocity. Currently in private early access — join the waitlist below.",
@@ -912,7 +986,7 @@ function Pricing() {
   return (
     <section id="pricing" className="max-w-[1440px] mx-auto py-20 lg:py-24 border-t border-[var(--color-line)]">
       <div className="flex items-baseline gap-3 mb-4">
-        <span className="mono text-[12px] text-[var(--color-accent)]">§ 08</span>
+        <span className="mono text-[12px] text-[var(--color-accent)]">§ 09</span>
         <span className="label">Pricing</span>
       </div>
       <h2 className="text-[clamp(1.9rem,3.4vw,2.7rem)] font-semibold tracking-[-0.025em] max-w-[44rem]">
@@ -986,7 +1060,7 @@ function FAQ() {
   return (
     <section className="max-w-[1440px] mx-auto py-20 lg:py-24 border-t border-[var(--color-line)]">
       <div className="flex items-baseline gap-3 mb-4">
-        <span className="mono text-[12px] text-[var(--color-accent)]">§ 09</span>
+        <span className="mono text-[12px] text-[var(--color-accent)]">§ 10</span>
         <span className="label">Common questions</span>
       </div>
       <h2 className="text-[clamp(1.9rem,3.4vw,2.7rem)] font-semibold tracking-[-0.025em] max-w-[44rem]">
