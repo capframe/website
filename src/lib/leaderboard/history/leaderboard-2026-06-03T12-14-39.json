@@ -1,6 +1,6 @@
 {
   "schema_version": "capframe.leaderboard.v1",
-  "generated_at": "2026-06-03T12:47:53.288741827Z",
+  "generated_at": "2026-06-03T12:14:39.365255213Z",
   "total_scanned": 87,
   "weights": {
     "critical": 10,
@@ -23,7 +23,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:41.722289391Z"
+      "last_scanned": "2026-06-03T12:14:27.006122411Z"
     },
     {
       "score": 100,
@@ -38,7 +38,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:44.240240208Z"
+      "last_scanned": "2026-06-03T12:14:29.301626876Z"
     },
     {
       "score": 100,
@@ -54,7 +54,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:29.785800608Z"
+      "last_scanned": "2026-06-03T11:58:43.957238325Z"
     },
     {
       "score": 100,
@@ -69,7 +69,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:28.821805304Z"
+      "last_scanned": "2026-06-03T11:58:42.975105772Z"
     },
     {
       "score": 100,
@@ -85,7 +85,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:32.783546593Z"
+      "last_scanned": "2026-06-03T11:58:47.856115241Z"
     },
     {
       "score": 100,
@@ -101,7 +101,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:30.558808358Z"
+      "last_scanned": "2026-06-03T11:58:45.50696787Z"
     },
     {
       "score": 100,
@@ -117,7 +117,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:27.482528674Z"
+      "last_scanned": "2026-06-03T11:58:40.978163352Z"
     },
     {
       "score": 100,
@@ -133,7 +133,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:33.9946686Z"
+      "last_scanned": "2026-06-03T11:58:49.335138098Z"
     },
     {
       "score": 100,
@@ -149,7 +149,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:33.220609917Z"
+      "last_scanned": "2026-06-03T11:58:48.372876661Z"
     },
     {
       "score": 100,
@@ -164,7 +164,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:26.553914382Z"
+      "last_scanned": "2026-06-03T11:58:39.390238045Z"
     },
     {
       "score": 100,
@@ -179,7 +179,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:26.836690208Z"
+      "last_scanned": "2026-06-03T11:58:39.806898445Z"
     },
     {
       "score": 100,
@@ -194,7 +194,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:25.496954299Z"
+      "last_scanned": "2026-06-03T11:58:37.949612664Z"
     },
     {
       "score": 100,
@@ -209,7 +209,22 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:27.173153197Z"
+      "last_scanned": "2026-06-03T11:58:40.551078681Z"
+    },
+    {
+      "score": 100,
+      "handle": "npm:@sentry/mcp-server@0.35.0",
+      "source": "registry",
+      "name": "mcp-server",
+      "tool_count": 1,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "last_scanned": "2026-06-03T11:58:47.408819658Z"
     },
     {
       "score": 100,
@@ -225,7 +240,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:27.992556252Z"
+      "last_scanned": "2026-06-03T11:58:41.747021759Z"
     },
     {
       "score": 100,
@@ -241,7 +256,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:31.594165594Z"
+      "last_scanned": "2026-06-03T11:58:46.587840145Z"
     },
     {
       "score": 100,
@@ -257,7 +272,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:31.928843667Z"
+      "last_scanned": "2026-06-03T11:58:47.064215528Z"
     },
     {
       "score": 100,
@@ -273,7 +288,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:28.545876592Z"
+      "last_scanned": "2026-06-03T11:58:42.479664579Z"
     },
     {
       "score": 100,
@@ -289,7 +304,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:31.253925905Z"
+      "last_scanned": "2026-06-03T11:58:46.233794265Z"
     },
     {
       "score": 100,
@@ -304,7 +319,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:36:38.498499765Z"
+      "last_scanned": "2026-06-03T12:01:17.954532272Z"
     },
     {
       "score": 100,
@@ -320,7 +335,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:35.503346154Z"
+      "last_scanned": "2026-06-03T11:58:51.075322837Z"
     },
     {
       "score": 100,
@@ -335,7 +350,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:35.544563378Z"
+      "last_scanned": "2026-06-03T11:58:51.24624402Z"
     },
     {
       "score": 100,
@@ -350,7 +365,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:35.424414592Z"
+      "last_scanned": "2026-06-03T11:58:50.753158866Z"
     },
     {
       "score": 100,
@@ -366,7 +381,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:29.862346946Z"
+      "last_scanned": "2026-06-03T11:58:44.310661318Z"
     },
     {
       "score": 100,
@@ -382,7 +397,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:35.52388407Z"
+      "last_scanned": "2026-06-03T11:58:51.155214688Z"
     },
     {
       "score": 100,
@@ -397,7 +412,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:29.843849565Z"
+      "last_scanned": "2026-06-03T11:58:44.218258682Z"
     },
     {
       "score": 100,
@@ -412,7 +427,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:29.804695333Z"
+      "last_scanned": "2026-06-03T11:58:44.048298062Z"
     },
     {
       "score": 98,
@@ -427,7 +442,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:38.044537167Z",
+      "last_scanned": "2026-06-03T12:14:22.375267404Z",
       "findings": [
         {
           "id": "f-r1-check_domain",
@@ -464,7 +479,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:40.081107159Z",
+      "last_scanned": "2026-06-03T12:14:23.570864701Z",
       "findings": [
         {
           "id": "f-r1-search_astro_docs",
@@ -501,7 +516,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:40.231733114Z",
+      "last_scanned": "2026-06-03T12:14:23.99460856Z",
       "findings": [
         {
           "id": "f-r1-web_search_exa",
@@ -538,7 +553,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:51.814103605Z",
+      "last_scanned": "2026-06-03T12:14:38.157645954Z",
       "findings": [
         {
           "id": "f-r1-searchgithub",
@@ -575,7 +590,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:40.457917526Z",
+      "last_scanned": "2026-06-03T12:14:24.540850078Z",
       "findings": [
         {
           "id": "f-r1-listremotemcpservers",
@@ -612,7 +627,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:35:18.458422873Z",
+      "last_scanned": "2026-06-03T11:59:44.158848347Z",
       "findings": [
         {
           "id": "f-r1-query",
@@ -650,7 +665,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:35:06.198818Z",
+      "last_scanned": "2026-06-03T11:59:28.897903363Z",
       "findings": [
         {
           "id": "f-r1-sequentialthinking",
@@ -688,7 +703,7 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:34.796678027Z",
+      "last_scanned": "2026-06-03T12:14:16.343503532Z",
       "findings": [
         {
           "id": "f-r4-get_quotes",
@@ -726,7 +741,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:35.304532246Z",
+      "last_scanned": "2026-06-03T12:14:17.60061224Z",
       "findings": [
         {
           "id": "f-r1-search_cloudflare_documentation",
@@ -784,7 +799,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:35.529651423Z",
+      "last_scanned": "2026-06-03T12:14:18.245384174Z",
       "findings": [
         {
           "id": "f-r1-resolve_library_id",
@@ -842,7 +857,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:32.225797118Z",
+      "last_scanned": "2026-06-03T12:14:13.758177928Z",
       "findings": [
         {
           "id": "f-r1-read_wiki_structure",
@@ -900,7 +915,7 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:33.476182753Z",
+      "last_scanned": "2026-06-03T11:58:48.78509686Z",
       "findings": [
         {
           "id": "f-r3-savepath",
@@ -937,7 +952,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:35:20.709983672Z",
+      "last_scanned": "2026-06-03T11:59:46.910669242Z",
       "findings": [
         {
           "id": "f-r1-brave_web_search",
@@ -994,7 +1009,7 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:25.014507698Z",
+      "last_scanned": "2026-06-03T11:58:37.441777237Z",
       "findings": [
         {
           "id": "f-r3-slack_post_message",
@@ -1032,7 +1047,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:35:44.972066234Z",
+      "last_scanned": "2026-06-03T12:00:17.174636529Z",
       "findings": [
         {
           "id": "f-r1-resolve_library_id",
@@ -1089,7 +1104,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:37:39.278936833Z",
+      "last_scanned": "2026-06-03T12:02:32.00223603Z",
       "findings": [
         {
           "id": "f-r1-get_figma_data",
@@ -1146,7 +1161,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:36:08.484676629Z",
+      "last_scanned": "2026-06-03T12:00:44.439346205Z",
       "findings": [
         {
           "id": "f-r1-fetch",
@@ -1203,7 +1218,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:35:59.730450915Z",
+      "last_scanned": "2026-06-03T12:00:35.18506338Z",
       "findings": [
         {
           "id": "f-r1-get_current_time",
@@ -1260,7 +1275,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:46.017155285Z",
+      "last_scanned": "2026-06-03T12:14:32.762562946Z",
       "findings": [
         {
           "id": "f-r1-get_disruptions",
@@ -1337,7 +1352,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:44.501366972Z",
+      "last_scanned": "2026-06-03T12:14:30.469123546Z",
       "findings": [
         {
           "id": "f-r1-stylus_erc20",
@@ -1415,7 +1430,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:30.886947033Z",
+      "last_scanned": "2026-06-03T11:58:45.84173028Z",
       "findings": [
         {
           "id": "f-r6-call",
@@ -1492,7 +1507,7 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:26.86255722Z",
+      "last_scanned": "2026-06-03T11:58:39.892454482Z",
       "findings": [
         {
           "id": "f-r3-git_create_branch",
@@ -1549,7 +1564,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:51.309049285Z",
+      "last_scanned": "2026-06-03T12:14:37.421357726Z",
       "findings": [
         {
           "id": "f-r1-microsoft_docs_search",
@@ -1646,7 +1661,7 @@
         "high": 2,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:30.334104906Z",
+      "last_scanned": "2026-06-03T11:58:44.915621198Z",
       "findings": [
         {
           "id": "f-r3-set",
@@ -1703,7 +1718,7 @@
         "high": 2,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:29.881646546Z",
+      "last_scanned": "2026-06-03T11:58:44.38990387Z",
       "findings": [
         {
           "id": "f-r3-set_value",
@@ -1761,7 +1776,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:36.372312209Z",
+      "last_scanned": "2026-06-03T12:14:19.473258823Z",
       "findings": [
         {
           "id": "f-r1-match_common_libs_owner_repo_mapping",
@@ -1878,7 +1893,7 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:47.607562816Z",
+      "last_scanned": "2026-06-03T12:14:35.613701675Z",
       "findings": [
         {
           "id": "f-r1-create_short_url",
@@ -1975,7 +1990,7 @@
         "high": 0,
         "critical": 1
       },
-      "last_scanned": "2026-06-03T12:34:35.483716826Z",
+      "last_scanned": "2026-06-03T11:58:50.994858443Z",
       "findings": [
         {
           "id": "f-r7-query_execution",
@@ -2012,7 +2027,7 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:53.273598522Z",
+      "last_scanned": "2026-06-03T12:14:39.340838939Z",
       "findings": [
         {
           "id": "f-r1-search_markets",
@@ -2129,7 +2144,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:48.759172308Z",
+      "last_scanned": "2026-06-03T12:14:37.19813032Z",
       "findings": [
         {
           "id": "f-r1-search_openai_docs",
@@ -2266,7 +2281,7 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:36.723821155Z",
+      "last_scanned": "2026-06-03T12:14:20.000039507Z",
       "findings": [
         {
           "id": "f-r1-aws___search_documentation",
@@ -2383,7 +2398,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:43.172649736Z",
+      "last_scanned": "2026-06-03T12:14:28.253358386Z",
       "findings": [
         {
           "id": "f-r1-cairo_erc20",
@@ -2540,7 +2555,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:48.372881566Z",
+      "last_scanned": "2026-06-03T12:14:36.4883803Z",
       "findings": [
         {
           "id": "f-r1-tweetsave_get_tweet",
@@ -2718,7 +2733,7 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:56.193290545Z",
+      "last_scanned": "2026-06-03T11:59:15.890704646Z",
       "findings": [
         {
           "id": "f-r1-echo",
@@ -2875,7 +2890,7 @@
         "high": 2,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:38.644241585Z",
+      "last_scanned": "2026-06-03T12:14:22.778502935Z",
       "findings": [
         {
           "id": "f-r1-experience_availability",
@@ -3033,7 +3048,7 @@
         "high": 5,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:34:35.403937296Z",
+      "last_scanned": "2026-06-03T11:58:50.662446643Z",
       "findings": [
         {
           "id": "f-r3-create_note",
@@ -3151,7 +3166,7 @@
         "high": 2,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:35:50.726126024Z",
+      "last_scanned": "2026-06-03T12:00:24.429856794Z",
       "findings": [
         {
           "id": "f-r1-tavily_search",
@@ -3329,7 +3344,7 @@
         "high": 3,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:36.483646022Z",
+      "last_scanned": "2026-06-03T12:14:19.803177984Z",
       "findings": [
         {
           "id": "f-r4-space_search",
@@ -3507,7 +3522,7 @@
         "high": 5,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:35:00.946071863Z",
+      "last_scanned": "2026-06-03T11:59:22.144107396Z",
       "findings": [
         {
           "id": "f-r3-create_entities",
@@ -3644,7 +3659,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:44.685108212Z",
+      "last_scanned": "2026-06-03T12:14:31.248040746Z",
       "findings": [
         {
           "id": "f-r1-get_latest_version",
@@ -3901,7 +3916,7 @@
         "high": 0,
         "critical": 1
       },
-      "last_scanned": "2026-06-03T12:35:38.718963004Z",
+      "last_scanned": "2026-06-03T12:00:08.920345497Z",
       "findings": [
         {
           "id": "f-r1-puppeteer_navigate",
@@ -4078,7 +4093,7 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:33.804973782Z",
+      "last_scanned": "2026-06-03T12:14:14.83843716Z",
       "findings": [
         {
           "id": "f-r1-list_models",
@@ -4355,7 +4370,7 @@
         "high": 1,
         "critical": 1
       },
-      "last_scanned": "2026-06-03T12:37:12.013723697Z",
+      "last_scanned": "2026-06-03T12:01:58.230258858Z",
       "findings": [
         {
           "id": "f-r1-browserbase_session_create",
@@ -4540,223 +4555,6 @@
       ]
     },
     {
-      "score": 70,
-      "handle": "npm:@sentry/mcp-server@0.35.0",
-      "source": "sandbox",
-      "name": "Sentry MCP",
-      "tool_count": 23,
-      "counts": {
-        "info": 0,
-        "low": 0,
-        "medium": 5,
-        "high": 5,
-        "critical": 0
-      },
-      "last_scanned": "2026-06-03T12:42:41.702357126Z",
-      "findings": [
-        {
-          "id": "f-r6-get_event_attachment",
-          "severity": "medium",
-          "category": "indirect_injection",
-          "title": "Tool `get_event_attachment` fetches external web content -- indirect-injection surface",
-          "description": "Description: \"Download attachments from a Sentry event.\n\nUse this tool when you need to:\n- Download files attached to a specific event\n- Access screenshots, log files, or other attachments uploaded with an error report\n- Retrieve attachment metadata and download URLs\n\n<examples>\n### Download a specific attachment by ID\n\n```\nget_event_attachment(organizationSlug='my-organization', projectSlug='my-project', eventId='c49541c747cb4d8aa3efb70ca5aba243', attachmentId='12345')\n```\n\n### List all attachments for an event\n\n```\nget_event_attachment(organizationSlug='my-organization', projectSlug='my-project', eventId='c49541c747cb4d8aa3efb70ca5aba243')\n```\n\n</examples>\n\n<hints>\n- If `attachmentId` is provided, the specific attachment will be downloaded as an embedded resource\n- If `attachmentId` is omitted, all attachments for the event will be listed with download information\n- The `projectSlug` is required to identify which project the event belongs to\n</hints>\" -- this tool pulls externally-controlled content into the agent's context window, the canonical indirect-injection vector. Even when the user supplies the URL, content at that URL can carry hostile instructions.",
-          "tool": "get_event_attachment",
-          "remediation": "Sandbox the fetched content: strip prompts before forwarding to the model, constrain to an allow-list of domains, and route through capframe-guard with a `domain in [...]` caveat.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r3-update_issue",
-          "severity": "high",
-          "category": "excessive_agency",
-          "title": "Tool `update_issue` name implies a side effect that is not declared",
-          "description": "`update_issue` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
-          "tool": "update_issue",
-          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.6"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r3-create_team",
-          "severity": "high",
-          "category": "excessive_agency",
-          "title": "Tool `create_team` name implies a side effect that is not declared",
-          "description": "`create_team` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
-          "tool": "create_team",
-          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.6"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r3-create_project",
-          "severity": "high",
-          "category": "excessive_agency",
-          "title": "Tool `create_project` name implies a side effect that is not declared",
-          "description": "`create_project` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
-          "tool": "create_project",
-          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.6"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r3-update_project",
-          "severity": "high",
-          "category": "excessive_agency",
-          "title": "Tool `update_project` name implies a side effect that is not declared",
-          "description": "`update_project` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
-          "tool": "update_project",
-          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.6"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r3-create_dsn",
-          "severity": "high",
-          "category": "excessive_agency",
-          "title": "Tool `create_dsn` name implies a side effect that is not declared",
-          "description": "`create_dsn` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
-          "tool": "create_dsn",
-          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.6"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-get_doc",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `get_doc` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `path`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "get_doc",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r6-get_doc",
-          "severity": "medium",
-          "category": "indirect_injection",
-          "title": "Tool `get_doc` fetches external web content -- indirect-injection surface",
-          "description": "Description: \"Fetch the full markdown content of a Sentry documentation page.\n\nUse this tool when you need to:\n- Read the complete documentation for a specific topic\n- Get detailed implementation examples or code snippets\n- Access the full context of a documentation page\n- Extract specific sections from documentation\n\n<examples>\n### Get the Next.js integration guide\n\n```\nget_doc(path='/platforms/javascript/guides/nextjs.md')\n```\n</examples>\n\n<hints>\n- Use the path from search_docs results for accurate fetching\n- Paths should end with .md extension\n</hints>\" -- this tool pulls externally-controlled content into the agent's context window, the canonical indirect-injection vector. Even when the user supplies the URL, content at that URL can carry hostile instructions.",
-          "tool": "get_doc",
-          "remediation": "Sandbox the fetched content: strip prompts before forwarding to the model, constrain to an allow-list of domains, and route through capframe-guard with a `domain in [...]` caveat.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-get_sentry_resource",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `get_sentry_resource` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `organizationSlug`, `resourceId`, `resourceType`, `url`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "get_sentry_resource",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r6-get_sentry_resource",
-          "severity": "medium",
-          "category": "indirect_injection",
-          "title": "Tool `get_sentry_resource` fetches external web content -- indirect-injection surface",
-          "description": "Description: \"Fetch a Sentry resource by URL or by type and ID. Pass a Sentry URL directly and the resource type is auto-detected.\n\nSupports issues, events, traces, spans, AI conversations, replays, breadcrumbs, and preprod snapshots.\nSentry URLs require authentication that this tool handles.\nTrace lookups return a condensed overview by default.\n\nFor preprod snapshot URLs (matching 'sentry.io/preprod/snapshots/'):\n- Without ?selectedSnapshot=: returns the snapshot diff summary (changed, added, removed images)\n- With ?selectedSnapshot=<image_file_name>: returns the specific image and full metadata\n\nFor `resourceType='span'`, pass `resourceId` as `<traceId>:<spanId>`.\n\n<examples>\n### From a Sentry URL\nget_sentry_resource(url='https://sentry.io/issues/PROJECT-123/')\n\n### Breadcrumbs from a Sentry URL\nget_sentry_resource(url='https://sentry.io/issues/PROJECT-123/', resourceType='breadcrumbs')\n\n### By type and ID\nget_sentry_resource(resourceType='issue', organizationSlug='my-org', resourceId='PROJECT-123')\n\n### Span by trace and span ID\nget_sentry_resource(resourceType='span', organizationSlug='my-org', resourceId='a4d1aae7216b47ff8117cf4e09ce9d0a:aa8e7f3384ef4ff5')\n\n### Replay by ID\nget_sentry_resource(resourceType='replay', organizationSlug='my-org', resourceId='7e07485f-12f9-416b-8b14-26260799b51f')\n\n### AI conversation by ID\nget_sentry_resource(resourceType='ai_conversation', organizationSlug='my-org', resourceId='conversation-123')\n\n### Investigate a failed snapshot test from CI\nget_sentry_resource(url='https://sentry.sentry.io/preprod/snapshots/241539/')\n\n### View a specific changed snapshot image\nget_sentry_resource(url='https://sentry.sentry.io/preprod/snapshots/241539/?selectedSnapshot=login_screen.png')\n</examples>\" -- this tool pulls externally-controlled content into the agent's context window, the canonical indirect-injection vector. Even when the user supplies the URL, content at that URL can carry hostile instructions.",
-          "tool": "get_sentry_resource",
-          "remediation": "Sandbox the fetched content: strip prompts before forwarding to the model, constrain to an allow-list of domains, and route through capframe-guard with a `domain in [...]` caveat.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        }
-      ]
-    },
-    {
       "score": 68,
       "handle": "npm:@apify/actors-mcp-server@0.10.11",
       "source": "sandbox",
@@ -4769,7 +4567,7 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:37:26.771571764Z",
+      "last_scanned": "2026-06-03T12:02:15.992553154Z",
       "findings": [
         {
           "id": "f-r1-search_actors",
@@ -5087,7 +4885,7 @@
         "high": 3,
         "critical": 2
       },
-      "last_scanned": "2026-06-03T12:34:35.463864434Z",
+      "last_scanned": "2026-06-03T11:58:50.913502445Z",
       "findings": [
         {
           "id": "f-r7-execute_query",
@@ -5205,7 +5003,7 @@
         "high": 3,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:35:12.202931734Z",
+      "last_scanned": "2026-06-03T11:59:36.40266578Z",
       "findings": [
         {
           "id": "f-r1-read_file",
@@ -5522,7 +5320,7 @@
         "high": 2,
         "critical": 2
       },
-      "last_scanned": "2026-06-03T12:36:16.739031181Z",
+      "last_scanned": "2026-06-03T12:00:53.19368858Z",
       "findings": [
         {
           "id": "f-r1-read_query",
@@ -5719,7 +5517,7 @@
         "high": 3,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:39.941570095Z",
+      "last_scanned": "2026-06-03T12:14:23.375619412Z",
       "findings": [
         {
           "id": "f-r1-search_businesses",
@@ -6096,7 +5894,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:47:46.514588829Z",
+      "last_scanned": "2026-06-03T12:14:33.802997487Z",
       "findings": [
         {
           "id": "f-r1-mta_get_arrivals",
@@ -6573,7 +6371,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:38:23.303581346Z",
+      "last_scanned": "2026-06-03T12:03:34.78524203Z",
       "findings": [
         {
           "id": "f-r1-generate_area_chart",
@@ -7170,7 +6968,7 @@
         "high": 7,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:37:44.281907619Z",
+      "last_scanned": "2026-06-03T12:02:38.506103443Z",
       "findings": [
         {
           "id": "f-r1-hubspot_list_objects",
@@ -7647,7 +7445,7 @@
         "high": 1,
         "critical": 2
       },
-      "last_scanned": "2026-06-03T12:38:26.307029373Z",
+      "last_scanned": "2026-06-03T12:03:38.038634026Z",
       "findings": [
         {
           "id": "f-r1-browser_console_messages",
@@ -8084,7 +7882,7 @@
         "high": 8,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:37:31.775094046Z",
+      "last_scanned": "2026-06-03T12:02:22.246304211Z",
       "findings": [
         {
           "id": "f-r1-list_records",
@@ -8561,7 +8359,7 @@
         "high": 8,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:35:15.705444549Z",
+      "last_scanned": "2026-06-03T11:59:40.905989891Z",
       "findings": [
         {
           "id": "f-r1-create_or_update_file",
@@ -9259,7 +9057,7 @@
         "high": 5,
         "critical": 4
       },
-      "last_scanned": "2026-06-03T12:38:17.549534185Z",
+      "last_scanned": "2026-06-03T12:03:27.780436471Z",
       "findings": [
         {
           "id": "f-r7-get_config",
@@ -9716,7 +9514,7 @@
         "high": 4,
         "critical": 2
       },
-      "last_scanned": "2026-06-03T12:38:32.061180969Z",
+      "last_scanned": "2026-06-03T12:03:45.543033245Z",
       "findings": [
         {
           "id": "f-r1-search_docs",
@@ -10393,7 +10191,7 @@
         "high": 3,
         "critical": 2
       },
-      "last_scanned": "2026-06-03T12:47:23.852006432Z",
+      "last_scanned": "2026-06-03T12:13:53.877936515Z",
       "findings": [
         {
           "id": "f-r1-list_apps",
@@ -11110,7 +10908,7 @@
         "high": 13,
         "critical": 0
       },
-      "last_scanned": "2026-06-03T12:43:16.468737986Z",
+      "last_scanned": "2026-06-03T12:09:12.974308161Z",
       "findings": [
         {
           "id": "f-r1-aggregate_db",
@@ -11847,1208 +11645,8 @@
         "high": 66,
         "critical": 1
       },
-      "last_scanned": "2026-06-03T12:47:35.179864066Z",
+      "last_scanned": "2026-06-03T12:14:17.25281247Z",
       "findings": [
-        {
-          "id": "f-r1-mine",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `mine` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "mine",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-get_poi",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `get_poi` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "get_poi",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-get_missions",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `get_missions` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "get_missions",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-view_market",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `view_market` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `category`, `item_id`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "view_market",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-cancel_ship_listing",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `cancel_ship_listing` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `listing_id`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "cancel_ship_listing",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r3-cancel_ship_listing",
-          "severity": "high",
-          "category": "excessive_agency",
-          "title": "Tool `cancel_ship_listing` name implies a side effect that is not declared",
-          "description": "`cancel_ship_listing` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
-          "tool": "cancel_ship_listing",
-          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.6"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r5-cancel_ship_listing",
-          "severity": "medium",
-          "category": "excessive_agency",
-          "title": "Tool `cancel_ship_listing` description mentions money but no `money` side-effect is declared",
-          "description": "Description: \"Remove your ship listing from the exchange (Cancel a ship listing you created. The listing fee is not refunded.)\" -- this references money/payment/refund/etc., but the declared side_effects ([]) don't include `money`. A capframe-bind policy that relies on declared side_effects to scope spend caveats will under-scope this tool.",
-          "tool": "cancel_ship_listing",
-          "remediation": "Add `money` to the tool's `side_effects` declaration, or rewrite the description to clarify that no actual money moves.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.6"
-            ],
-            "mitre_atlas": [
-              "T0040"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-claim",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `claim` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `registration_code`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "claim",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-loot_wreck",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `loot_wreck` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `item_id`, `module_id`, `session_id`, `wreck_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "loot_wreck",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r4-loot_wreck",
-          "severity": "high",
-          "category": "excessive_agency",
-          "title": "Tool `loot_wreck` accepts an unbounded monetary / quota value",
-          "description": "The numeric parameter(s) `quantity` have a money/quota-shaped name but no `maximum` constraint. An LLM tricked by indirect-injection can call the tool with arbitrarily large values.",
-          "tool": "loot_wreck",
-          "remediation": "Add a `maximum` (and ideally `minimum`) to each money/quota numeric, OR enforce the cap via a capframe-bind `--limit` caveat at the agent boundary.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MANAGE-2.2"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-scrap_ship",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `scrap_ship` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`, `ship_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "scrap_ship",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-faction_remove_enemy",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `faction_remove_enemy` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`, `target_faction_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "faction_remove_enemy",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r3-faction_remove_enemy",
-          "severity": "high",
-          "category": "excessive_agency",
-          "title": "Tool `faction_remove_enemy` name implies a side effect that is not declared",
-          "description": "`faction_remove_enemy` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
-          "tool": "faction_remove_enemy",
-          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.6"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-get_nearby",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `get_nearby` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "get_nearby",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-view_completed_mission",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `view_completed_mission` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`, `template_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "view_completed_mission",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-faction_post_mission",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `faction_post_mission` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `description`, `giver_name`, `giver_title`, `session_id`, `title`, `type`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "faction_post_mission",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r3-faction_post_mission",
-          "severity": "high",
-          "category": "excessive_agency",
-          "title": "Tool `faction_post_mission` name implies a side effect that is not declared",
-          "description": "`faction_post_mission` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
-          "tool": "faction_post_mission",
-          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.6"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-self_destruct",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `self_destruct` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "self_destruct",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-buy",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `buy` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `deliver_to`, `item_id`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "buy",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r3-buy",
-          "severity": "high",
-          "category": "excessive_agency",
-          "title": "Tool `buy` name implies a side effect that is not declared",
-          "description": "`buy` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
-          "tool": "buy",
-          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.6"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r4-buy",
-          "severity": "high",
-          "category": "excessive_agency",
-          "title": "Tool `buy` accepts an unbounded monetary / quota value",
-          "description": "The numeric parameter(s) `quantity` have a money/quota-shaped name but no `maximum` constraint. An LLM tricked by indirect-injection can call the tool with arbitrarily large values.",
-          "tool": "buy",
-          "remediation": "Add a `maximum` (and ideally `minimum`) to each money/quota numeric, OR enforce the cap via a capframe-bind `--limit` caveat at the agent boundary.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MANAGE-2.2"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r5-buy",
-          "severity": "medium",
-          "category": "excessive_agency",
-          "title": "Tool `buy` description mentions money but no `money` side-effect is declared",
-          "description": "Description: \"Buy items at market price from the station exchange (No fees for instant fills. Items delivered to cargo (or storage if cargo full). Use deliver_to=storage to send directly to storage. Use auto_list=true to automatically place a buy order for any unfilled quantity (1% listing fee applies). Accepts item_id or item name (e.g. 'Iron Ore').)\" -- this references money/payment/refund/etc., but the declared side_effects ([]) don't include `money`. A capframe-bind policy that relies on declared side_effects to scope spend caveats will under-scope this tool.",
-          "tool": "buy",
-          "remediation": "Add `money` to the tool's `side_effects` declaration, or rewrite the description to clarify that no actual money moves.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.6"
-            ],
-            "mitre_atlas": [
-              "T0040"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-trade_cancel",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `trade_cancel` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`, `trade_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "trade_cancel",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r3-trade_cancel",
-          "severity": "high",
-          "category": "excessive_agency",
-          "title": "Tool `trade_cancel` name implies a side effect that is not declared",
-          "description": "`trade_cancel` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
-          "tool": "trade_cancel",
-          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.6"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-fleet",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `fleet` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `action`, `player_id`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "fleet",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-join_faction",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `join_faction` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `faction_id`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "join_faction",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-faction_promote",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `faction_promote` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `player_id`, `role_id`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "faction_promote",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r5-faction_promote",
-          "severity": "medium",
-          "category": "excessive_agency",
-          "title": "Tool `faction_promote` description mentions money but no `money` side-effect is declared",
-          "description": "Description: \"Promote or demote a faction member (player_id accepts a player ID or username. Leader can change any member's role. Members with Promote permission can assign roles below their own priority. Only the leader can transfer leadership (role_id=leader). Roles: recruit, member, officer, leader.)\" -- this references money/payment/refund/etc., but the declared side_effects ([]) don't include `money`. A capframe-bind policy that relies on declared side_effects to scope spend caveats will under-scope this tool.",
-          "tool": "faction_promote",
-          "remediation": "Add `money` to the tool's `side_effects` declaration, or rewrite the description to clarify that no actual money moves.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.6"
-            ],
-            "mitre_atlas": [
-              "T0040"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-get_commands",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `get_commands` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "get_commands",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-captains_log_add",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `captains_log_add` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "captains_log_add",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-create_sell_order",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `create_sell_order` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `item_id`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "create_sell_order",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r3-create_sell_order",
-          "severity": "high",
-          "category": "excessive_agency",
-          "title": "Tool `create_sell_order` name implies a side effect that is not declared",
-          "description": "`create_sell_order` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
-          "tool": "create_sell_order",
-          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.6"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r4-create_sell_order",
-          "severity": "high",
-          "category": "excessive_agency",
-          "title": "Tool `create_sell_order` accepts an unbounded monetary / quota value",
-          "description": "The numeric parameter(s) `price_each`, `quantity` have a money/quota-shaped name but no `maximum` constraint. An LLM tricked by indirect-injection can call the tool with arbitrarily large values.",
-          "tool": "create_sell_order",
-          "remediation": "Add a `maximum` (and ideally `minimum`) to each money/quota numeric, OR enforce the cap via a capframe-bind `--limit` caveat at the agent boundary.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MANAGE-2.2"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-create_buy_order",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `create_buy_order` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `deliver_to`, `item_id`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "create_buy_order",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r3-create_buy_order",
-          "severity": "high",
-          "category": "excessive_agency",
-          "title": "Tool `create_buy_order` name implies a side effect that is not declared",
-          "description": "`create_buy_order` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
-          "tool": "create_buy_order",
-          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.6"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r4-create_buy_order",
-          "severity": "high",
-          "category": "excessive_agency",
-          "title": "Tool `create_buy_order` accepts an unbounded monetary / quota value",
-          "description": "The numeric parameter(s) `price_each`, `quantity` have a money/quota-shaped name but no `maximum` constraint. An LLM tricked by indirect-injection can call the tool with arbitrarily large values.",
-          "tool": "create_buy_order",
-          "remediation": "Add a `maximum` (and ideally `minimum`) to each money/quota numeric, OR enforce the cap via a capframe-bind `--limit` caveat at the agent boundary.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MANAGE-2.2"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r5-create_buy_order",
-          "severity": "medium",
-          "category": "excessive_agency",
-          "title": "Tool `create_buy_order` description mentions money but no `money` side-effect is declared",
-          "description": "Description: \"Place a buy offer on the station exchange (1% listing fee on the portion that goes on the order book. Instant fills incur no fee. Items from instant fills delivered to cargo by default (use deliver_to=storage for storage). Accepts item_id or item name (e.g. 'Iron Ore'). Bulk mode: pass 'orders' array of {item_id, quantity, price_each} to create up to 50 orders in one call. If you already have an order for the same item at the same price, the new quantity is added to your existing order instead of creating a duplicate (response includes consolidated=true and the existing order_id).)\" -- this references money/payment/refund/etc., but the declared side_effects ([]) don't include `money`. A capframe-bind policy that relies on declared side_effects to scope spend caveats will under-scope this tool.",
-          "tool": "create_buy_order",
-          "remediation": "Add `money` to the tool's `side_effects` declaration, or rewrite the description to clarify that no actual money moves.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.6"
-            ],
-            "mitre_atlas": [
-              "T0040"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-faction_list_missions",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `faction_list_missions` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "faction_list_missions",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-faction_submit_intel",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `faction_submit_intel` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "faction_submit_intel",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-analyze_market",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `analyze_market` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "analyze_market",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-faction_create_role",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `faction_create_role` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `name`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "faction_create_role",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r3-faction_create_role",
-          "severity": "high",
-          "category": "excessive_agency",
-          "title": "Tool `faction_create_role` name implies a side effect that is not declared",
-          "description": "`faction_create_role` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
-          "tool": "faction_create_role",
-          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.6"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-get_insurance_quote",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `get_insurance_quote` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "get_insurance_quote",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-faction_query_trade_intel",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `faction_query_trade_intel` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `base_id`, `item_id`, `session_id`, `source_faction_id`, `station_name`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "faction_query_trade_intel",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-catalog",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `catalog` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `category`, `class`, `empire`, `id`, `search`, `session_id`, `type`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "catalog",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-tow_wreck",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `tow_wreck` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`, `wreck_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "tow_wreck",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-faction_kick",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `faction_kick` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `player_id`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "faction_kick",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-faction_accept_peace",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `faction_accept_peace` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`, `target_faction_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "faction_accept_peace",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-get_empire_info",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `get_empire_info` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `empire_id`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "get_empire_info",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r6-get_empire_info",
-          "severity": "medium",
-          "category": "indirect_injection",
-          "title": "Tool `get_empire_info` fetches external web content -- indirect-injection surface",
-          "description": "Description: \"Get the live policy snapshot for one or all empires (Returns fees, tax rates, criminal-law parameters, reputation dynamics, citizenship requirements, and contraband lists for empires. Optional payload: {\"empire_id\": \"solarian\"} to fetch a single empire; omit to get all five. Valid empire_id values: solarian, voidborn, crimson, nebula, outerrim. No authentication required. Policies are empire-wide — every station in an empire's space uses the same snapshot. Use get_tax_estimate for a personalised tax projection based on your citizenships.)\" -- this tool pulls externally-controlled content into the agent's context window, the canonical indirect-injection vector. Even when the user supplies the URL, content at that URL can carry hostile instructions.",
-          "tool": "get_empire_info",
-          "remediation": "Sandbox the fetched content: strip prompts before forwarding to the model, constrain to an allow-list of domains, and route through capframe-guard with a `domain in [...]` caveat.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-send_gift",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `send_gift` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `item_id`, `recipient`, `session_id`, `ship_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "send_gift",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r3-send_gift",
-          "severity": "high",
-          "category": "excessive_agency",
-          "title": "Tool `send_gift` name implies a side effect that is not declared",
-          "description": "`send_gift` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
-          "tool": "send_gift",
-          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.6"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r4-send_gift",
-          "severity": "high",
-          "category": "excessive_agency",
-          "title": "Tool `send_gift` accepts an unbounded monetary / quota value",
-          "description": "The numeric parameter(s) `credits`, `quantity` have a money/quota-shaped name but no `maximum` constraint. An LLM tricked by indirect-injection can call the tool with arbitrarily large values.",
-          "tool": "send_gift",
-          "remediation": "Add a `maximum` (and ideally `minimum`) to each money/quota numeric, OR enforce the cap via a capframe-bind `--limit` caveat at the agent boundary.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MANAGE-2.2"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r5-send_gift",
-          "severity": "medium",
-          "category": "excessive_agency",
-          "title": "Tool `send_gift` description mentions money but no `money` side-effect is declared",
-          "description": "Description: \"Send items, credits, or a ship to another player or to an empire at this station (recipient accepts a player username/ID, an empire alias ('solarian', 'voidborn', 'crimson', 'nebula', 'outerrim' — also accepts long names like 'Solarian Confederacy' or 'empire:crimson'), or 'faction:TAG' for another faction. Provide item_id+quantity to gift items from cargo, credits to gift from wallet, or ship_id to transfer a stored ship — these are mutually exclusive (one per call). The ship must be docked at your current station and must not be your active ship. Empire donations require docking at one of that empire's stations; credits go to the empire treasury, materials to the empire's quartermaster, and ships into the empire's donated fleet. Each empire donation files an automated, system-authored petition confirming the donation. For player gifts, the recipient does NOT need to be online or at this station — async delivery shows on their next storage view. Must be docked at a base with storage service.)\" -- this references money/payment/refund/etc., but the declared side_effects ([]) don't include `money`. A capframe-bind policy that relies on declared side_effects to scope spend caveats will under-scope this tool.",
-          "tool": "send_gift",
-          "remediation": "Add `money` to the tool's `side_effects` declaration, or rewrite the description to clarify that no actual money moves.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.6"
-            ],
-            "mitre_atlas": [
-              "T0040"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-battle",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `battle` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `action`, `session_id`, `stance`, `target_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "battle",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-faction_withdraw_invite",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `faction_withdraw_invite` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `player_id`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "faction_withdraw_invite",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-get_tax_estimate",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `get_tax_estimate` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "get_tax_estimate",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r5-get_tax_estimate",
-          "severity": "medium",
-          "category": "excessive_agency",
-          "title": "Tool `get_tax_estimate` description mentions money but no `money` side-effect is declared",
-          "description": "Description: \"Preview what taxes you'd owe right now (Returns the income-tax assessment you would face if the weekly cycle ran this instant (taxable income accrued since your last assessment, per-empire breakdown with foreign-tax deductions, total owed), the property-tax assessment against your assessed_property_value (hull + fitted modules across every ship you own, computed via the same CalculateFittedShipValue helper used by insurance and salvage; bills the full rate per citizenship empire independently with no mutual-deduction credits), and the current sales-tax rate every empire would charge you at buy time. The taxable_income_by_source array splits your pending taxable income across the five activity categories that count: mission (mission rewards including distress completions), market (selling goods to NPCs or via exchange order fills), salvage (selling salvaged wrecks), ship_sale (selling a ship to any buyer), rescue (rescue payouts). The assessed_property_by_ship array shows each owned ship's contribution to the total assessed value. Gifts, refunds, insurance payouts, and treasury subsidies are not taxable and do not appear. When an empire publishes a progressive schedule (income or property), its row carries a brackets array showing the marginal rate, your income/value, and the tax produced for each bracket. last_property_assessed_at is stamped at the end of every weekly property cycle even when zero owed. All rate_bps fields are basis points: 100 = 1%, 10000 = 100%. Pure read — no escrow, no notifications.)\" -- this references money/payment/refund/etc., but the declared side_effects ([]) don't include `money`. A capframe-bind policy that relies on declared side_effects to scope spend caveats will under-scope this tool.",
-          "tool": "get_tax_estimate",
-          "remediation": "Add `money` to the tool's `side_effects` declaration, or rewrite the description to clarify that no actual money moves.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.6"
-            ],
-            "mitre_atlas": [
-              "T0040"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-forum_list",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `forum_list` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `author`, `category`, `date_from`, `date_to`, `faction_tag`, `search`, `session_id`, `sort_by`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "forum_list",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-get_guide",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "title": "Tool `get_guide` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `guide`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "get_guide",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
         {
           "id": "f-r1-buy_listed_ship",
           "severity": "medium",
@@ -17310,6 +15908,1206 @@
           }
         },
         {
+          "id": "f-r1-mine",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `mine` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "mine",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-get_poi",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `get_poi` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "get_poi",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-get_missions",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `get_missions` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "get_missions",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-view_market",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `view_market` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `category`, `item_id`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "view_market",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-cancel_ship_listing",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `cancel_ship_listing` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `listing_id`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "cancel_ship_listing",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r3-cancel_ship_listing",
+          "severity": "high",
+          "category": "excessive_agency",
+          "title": "Tool `cancel_ship_listing` name implies a side effect that is not declared",
+          "description": "`cancel_ship_listing` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "tool": "cancel_ship_listing",
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "mappings": {
+            "owasp_llm": [
+              "LLM08"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r5-cancel_ship_listing",
+          "severity": "medium",
+          "category": "excessive_agency",
+          "title": "Tool `cancel_ship_listing` description mentions money but no `money` side-effect is declared",
+          "description": "Description: \"Remove your ship listing from the exchange (Cancel a ship listing you created. The listing fee is not refunded.)\" -- this references money/payment/refund/etc., but the declared side_effects ([]) don't include `money`. A capframe-bind policy that relies on declared side_effects to scope spend caveats will under-scope this tool.",
+          "tool": "cancel_ship_listing",
+          "remediation": "Add `money` to the tool's `side_effects` declaration, or rewrite the description to clarify that no actual money moves.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM08"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "mitre_atlas": [
+              "T0040"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-claim",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `claim` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `registration_code`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "claim",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-loot_wreck",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `loot_wreck` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `item_id`, `module_id`, `session_id`, `wreck_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "loot_wreck",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r4-loot_wreck",
+          "severity": "high",
+          "category": "excessive_agency",
+          "title": "Tool `loot_wreck` accepts an unbounded monetary / quota value",
+          "description": "The numeric parameter(s) `quantity` have a money/quota-shaped name but no `maximum` constraint. An LLM tricked by indirect-injection can call the tool with arbitrarily large values.",
+          "tool": "loot_wreck",
+          "remediation": "Add a `maximum` (and ideally `minimum`) to each money/quota numeric, OR enforce the cap via a capframe-bind `--limit` caveat at the agent boundary.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM08"
+            ],
+            "nist_rmf": [
+              "MANAGE-2.2"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-scrap_ship",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `scrap_ship` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`, `ship_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "scrap_ship",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-faction_remove_enemy",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `faction_remove_enemy` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`, `target_faction_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "faction_remove_enemy",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r3-faction_remove_enemy",
+          "severity": "high",
+          "category": "excessive_agency",
+          "title": "Tool `faction_remove_enemy` name implies a side effect that is not declared",
+          "description": "`faction_remove_enemy` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "tool": "faction_remove_enemy",
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "mappings": {
+            "owasp_llm": [
+              "LLM08"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-get_nearby",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `get_nearby` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "get_nearby",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-view_completed_mission",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `view_completed_mission` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`, `template_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "view_completed_mission",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-faction_post_mission",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `faction_post_mission` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `description`, `giver_name`, `giver_title`, `session_id`, `title`, `type`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "faction_post_mission",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r3-faction_post_mission",
+          "severity": "high",
+          "category": "excessive_agency",
+          "title": "Tool `faction_post_mission` name implies a side effect that is not declared",
+          "description": "`faction_post_mission` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "tool": "faction_post_mission",
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "mappings": {
+            "owasp_llm": [
+              "LLM08"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-self_destruct",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `self_destruct` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "self_destruct",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-buy",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `buy` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `deliver_to`, `item_id`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "buy",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r3-buy",
+          "severity": "high",
+          "category": "excessive_agency",
+          "title": "Tool `buy` name implies a side effect that is not declared",
+          "description": "`buy` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "tool": "buy",
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "mappings": {
+            "owasp_llm": [
+              "LLM08"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r4-buy",
+          "severity": "high",
+          "category": "excessive_agency",
+          "title": "Tool `buy` accepts an unbounded monetary / quota value",
+          "description": "The numeric parameter(s) `quantity` have a money/quota-shaped name but no `maximum` constraint. An LLM tricked by indirect-injection can call the tool with arbitrarily large values.",
+          "tool": "buy",
+          "remediation": "Add a `maximum` (and ideally `minimum`) to each money/quota numeric, OR enforce the cap via a capframe-bind `--limit` caveat at the agent boundary.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM08"
+            ],
+            "nist_rmf": [
+              "MANAGE-2.2"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r5-buy",
+          "severity": "medium",
+          "category": "excessive_agency",
+          "title": "Tool `buy` description mentions money but no `money` side-effect is declared",
+          "description": "Description: \"Buy items at market price from the station exchange (No fees for instant fills. Items delivered to cargo (or storage if cargo full). Use deliver_to=storage to send directly to storage. Use auto_list=true to automatically place a buy order for any unfilled quantity (1% listing fee applies). Accepts item_id or item name (e.g. 'Iron Ore').)\" -- this references money/payment/refund/etc., but the declared side_effects ([]) don't include `money`. A capframe-bind policy that relies on declared side_effects to scope spend caveats will under-scope this tool.",
+          "tool": "buy",
+          "remediation": "Add `money` to the tool's `side_effects` declaration, or rewrite the description to clarify that no actual money moves.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM08"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "mitre_atlas": [
+              "T0040"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-trade_cancel",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `trade_cancel` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`, `trade_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "trade_cancel",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r3-trade_cancel",
+          "severity": "high",
+          "category": "excessive_agency",
+          "title": "Tool `trade_cancel` name implies a side effect that is not declared",
+          "description": "`trade_cancel` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "tool": "trade_cancel",
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "mappings": {
+            "owasp_llm": [
+              "LLM08"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-fleet",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `fleet` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `action`, `player_id`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "fleet",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-join_faction",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `join_faction` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `faction_id`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "join_faction",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-faction_promote",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `faction_promote` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `player_id`, `role_id`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "faction_promote",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r5-faction_promote",
+          "severity": "medium",
+          "category": "excessive_agency",
+          "title": "Tool `faction_promote` description mentions money but no `money` side-effect is declared",
+          "description": "Description: \"Promote or demote a faction member (player_id accepts a player ID or username. Leader can change any member's role. Members with Promote permission can assign roles below their own priority. Only the leader can transfer leadership (role_id=leader). Roles: recruit, member, officer, leader.)\" -- this references money/payment/refund/etc., but the declared side_effects ([]) don't include `money`. A capframe-bind policy that relies on declared side_effects to scope spend caveats will under-scope this tool.",
+          "tool": "faction_promote",
+          "remediation": "Add `money` to the tool's `side_effects` declaration, or rewrite the description to clarify that no actual money moves.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM08"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "mitre_atlas": [
+              "T0040"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-get_commands",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `get_commands` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "get_commands",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-captains_log_add",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `captains_log_add` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "captains_log_add",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-create_sell_order",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `create_sell_order` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `item_id`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "create_sell_order",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r3-create_sell_order",
+          "severity": "high",
+          "category": "excessive_agency",
+          "title": "Tool `create_sell_order` name implies a side effect that is not declared",
+          "description": "`create_sell_order` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "tool": "create_sell_order",
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "mappings": {
+            "owasp_llm": [
+              "LLM08"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r4-create_sell_order",
+          "severity": "high",
+          "category": "excessive_agency",
+          "title": "Tool `create_sell_order` accepts an unbounded monetary / quota value",
+          "description": "The numeric parameter(s) `price_each`, `quantity` have a money/quota-shaped name but no `maximum` constraint. An LLM tricked by indirect-injection can call the tool with arbitrarily large values.",
+          "tool": "create_sell_order",
+          "remediation": "Add a `maximum` (and ideally `minimum`) to each money/quota numeric, OR enforce the cap via a capframe-bind `--limit` caveat at the agent boundary.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM08"
+            ],
+            "nist_rmf": [
+              "MANAGE-2.2"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-create_buy_order",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `create_buy_order` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `deliver_to`, `item_id`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "create_buy_order",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r3-create_buy_order",
+          "severity": "high",
+          "category": "excessive_agency",
+          "title": "Tool `create_buy_order` name implies a side effect that is not declared",
+          "description": "`create_buy_order` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "tool": "create_buy_order",
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "mappings": {
+            "owasp_llm": [
+              "LLM08"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r4-create_buy_order",
+          "severity": "high",
+          "category": "excessive_agency",
+          "title": "Tool `create_buy_order` accepts an unbounded monetary / quota value",
+          "description": "The numeric parameter(s) `price_each`, `quantity` have a money/quota-shaped name but no `maximum` constraint. An LLM tricked by indirect-injection can call the tool with arbitrarily large values.",
+          "tool": "create_buy_order",
+          "remediation": "Add a `maximum` (and ideally `minimum`) to each money/quota numeric, OR enforce the cap via a capframe-bind `--limit` caveat at the agent boundary.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM08"
+            ],
+            "nist_rmf": [
+              "MANAGE-2.2"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r5-create_buy_order",
+          "severity": "medium",
+          "category": "excessive_agency",
+          "title": "Tool `create_buy_order` description mentions money but no `money` side-effect is declared",
+          "description": "Description: \"Place a buy offer on the station exchange (1% listing fee on the portion that goes on the order book. Instant fills incur no fee. Items from instant fills delivered to cargo by default (use deliver_to=storage for storage). Accepts item_id or item name (e.g. 'Iron Ore'). Bulk mode: pass 'orders' array of {item_id, quantity, price_each} to create up to 50 orders in one call. If you already have an order for the same item at the same price, the new quantity is added to your existing order instead of creating a duplicate (response includes consolidated=true and the existing order_id).)\" -- this references money/payment/refund/etc., but the declared side_effects ([]) don't include `money`. A capframe-bind policy that relies on declared side_effects to scope spend caveats will under-scope this tool.",
+          "tool": "create_buy_order",
+          "remediation": "Add `money` to the tool's `side_effects` declaration, or rewrite the description to clarify that no actual money moves.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM08"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "mitre_atlas": [
+              "T0040"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-faction_list_missions",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `faction_list_missions` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "faction_list_missions",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-faction_submit_intel",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `faction_submit_intel` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "faction_submit_intel",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-analyze_market",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `analyze_market` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "analyze_market",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-faction_create_role",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `faction_create_role` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `name`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "faction_create_role",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r3-faction_create_role",
+          "severity": "high",
+          "category": "excessive_agency",
+          "title": "Tool `faction_create_role` name implies a side effect that is not declared",
+          "description": "`faction_create_role` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "tool": "faction_create_role",
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "mappings": {
+            "owasp_llm": [
+              "LLM08"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-get_insurance_quote",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `get_insurance_quote` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "get_insurance_quote",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-faction_query_trade_intel",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `faction_query_trade_intel` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `base_id`, `item_id`, `session_id`, `source_faction_id`, `station_name`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "faction_query_trade_intel",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-catalog",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `catalog` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `category`, `class`, `empire`, `id`, `search`, `session_id`, `type`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "catalog",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-tow_wreck",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `tow_wreck` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`, `wreck_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "tow_wreck",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-faction_kick",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `faction_kick` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `player_id`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "faction_kick",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-faction_accept_peace",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `faction_accept_peace` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`, `target_faction_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "faction_accept_peace",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-get_empire_info",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `get_empire_info` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `empire_id`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "get_empire_info",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r6-get_empire_info",
+          "severity": "medium",
+          "category": "indirect_injection",
+          "title": "Tool `get_empire_info` fetches external web content -- indirect-injection surface",
+          "description": "Description: \"Get the live policy snapshot for one or all empires (Returns fees, tax rates, criminal-law parameters, reputation dynamics, citizenship requirements, and contraband lists for empires. Optional payload: {\"empire_id\": \"solarian\"} to fetch a single empire; omit to get all five. Valid empire_id values: solarian, voidborn, crimson, nebula, outerrim. No authentication required. Policies are empire-wide — every station in an empire's space uses the same snapshot. Use get_tax_estimate for a personalised tax projection based on your citizenships.)\" -- this tool pulls externally-controlled content into the agent's context window, the canonical indirect-injection vector. Even when the user supplies the URL, content at that URL can carry hostile instructions.",
+          "tool": "get_empire_info",
+          "remediation": "Sandbox the fetched content: strip prompts before forwarding to the model, constrain to an allow-list of domains, and route through capframe-guard with a `domain in [...]` caveat.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-send_gift",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `send_gift` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `item_id`, `recipient`, `session_id`, `ship_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "send_gift",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r3-send_gift",
+          "severity": "high",
+          "category": "excessive_agency",
+          "title": "Tool `send_gift` name implies a side effect that is not declared",
+          "description": "`send_gift` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "tool": "send_gift",
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "mappings": {
+            "owasp_llm": [
+              "LLM08"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r4-send_gift",
+          "severity": "high",
+          "category": "excessive_agency",
+          "title": "Tool `send_gift` accepts an unbounded monetary / quota value",
+          "description": "The numeric parameter(s) `credits`, `quantity` have a money/quota-shaped name but no `maximum` constraint. An LLM tricked by indirect-injection can call the tool with arbitrarily large values.",
+          "tool": "send_gift",
+          "remediation": "Add a `maximum` (and ideally `minimum`) to each money/quota numeric, OR enforce the cap via a capframe-bind `--limit` caveat at the agent boundary.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM08"
+            ],
+            "nist_rmf": [
+              "MANAGE-2.2"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r5-send_gift",
+          "severity": "medium",
+          "category": "excessive_agency",
+          "title": "Tool `send_gift` description mentions money but no `money` side-effect is declared",
+          "description": "Description: \"Send items, credits, or a ship to another player or to an empire at this station (recipient accepts a player username/ID, an empire alias ('solarian', 'voidborn', 'crimson', 'nebula', 'outerrim' — also accepts long names like 'Solarian Confederacy' or 'empire:crimson'), or 'faction:TAG' for another faction. Provide item_id+quantity to gift items from cargo, credits to gift from wallet, or ship_id to transfer a stored ship — these are mutually exclusive (one per call). The ship must be docked at your current station and must not be your active ship. Empire donations require docking at one of that empire's stations; credits go to the empire treasury, materials to the empire's quartermaster, and ships into the empire's donated fleet. Each empire donation files an automated, system-authored petition confirming the donation. For player gifts, the recipient does NOT need to be online or at this station — async delivery shows on their next storage view. Must be docked at a base with storage service.)\" -- this references money/payment/refund/etc., but the declared side_effects ([]) don't include `money`. A capframe-bind policy that relies on declared side_effects to scope spend caveats will under-scope this tool.",
+          "tool": "send_gift",
+          "remediation": "Add `money` to the tool's `side_effects` declaration, or rewrite the description to clarify that no actual money moves.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM08"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "mitre_atlas": [
+              "T0040"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-battle",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `battle` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `action`, `session_id`, `stance`, `target_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "battle",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-faction_withdraw_invite",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `faction_withdraw_invite` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `player_id`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "faction_withdraw_invite",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-get_tax_estimate",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `get_tax_estimate` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "get_tax_estimate",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r5-get_tax_estimate",
+          "severity": "medium",
+          "category": "excessive_agency",
+          "title": "Tool `get_tax_estimate` description mentions money but no `money` side-effect is declared",
+          "description": "Description: \"Preview what taxes you'd owe right now (Returns the income-tax assessment you would face if the weekly cycle ran this instant (taxable income accrued since your last assessment, per-empire breakdown with foreign-tax deductions, total owed), the property-tax assessment against your assessed_property_value (hull + fitted modules across every ship you own, computed via the same CalculateFittedShipValue helper used by insurance and salvage; bills the full rate per citizenship empire independently with no mutual-deduction credits), and the current sales-tax rate every empire would charge you at buy time. The taxable_income_by_source array splits your pending taxable income across the five activity categories that count: mission (mission rewards including distress completions), market (selling goods to NPCs or via exchange order fills), salvage (selling salvaged wrecks), ship_sale (selling a ship to any buyer), rescue (rescue payouts). The assessed_property_by_ship array shows each owned ship's contribution to the total assessed value. Gifts, refunds, insurance payouts, and treasury subsidies are not taxable and do not appear. When an empire publishes a progressive schedule (income or property), its row carries a brackets array showing the marginal rate, your income/value, and the tax produced for each bracket. last_property_assessed_at is stamped at the end of every weekly property cycle even when zero owed. All rate_bps fields are basis points: 100 = 1%, 10000 = 100%. Pure read — no escrow, no notifications.)\" -- this references money/payment/refund/etc., but the declared side_effects ([]) don't include `money`. A capframe-bind policy that relies on declared side_effects to scope spend caveats will under-scope this tool.",
+          "tool": "get_tax_estimate",
+          "remediation": "Add `money` to the tool's `side_effects` declaration, or rewrite the description to clarify that no actual money moves.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM08"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "mitre_atlas": [
+              "T0040"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-forum_list",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `forum_list` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `author`, `category`, `date_from`, `date_to`, `faction_tag`, `search`, `session_id`, `sort_by`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "forum_list",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-get_guide",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "title": "Tool `get_guide` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `guide`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "get_guide",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
           "id": "f-r1-get_notifications",
           "severity": "medium",
           "category": "unconstrained_input",
@@ -17345,7 +17143,7 @@
         "high": 6,
         "critical": 1
       },
-      "last_scanned": "2026-06-03T12:36:47.503205136Z",
+      "last_scanned": "2026-06-03T12:01:28.711586893Z",
       "findings": [
         {
           "id": "f-r1-firecrawl_scrape",
