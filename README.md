@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# capframe/website
 
-## Getting Started
+Marketing website and documentation for [Capframe](https://capframe.ai) — capability-based security for AI agents.
 
-First, run the development server:
+**Live at:** [capframe.ai](https://capframe.ai)  
+**Deployed on:** Vercel (auto-deploy from `main`)
+
+---
+
+## What this repo is
+
+This is the Next.js 16 website for Capframe. It serves:
+
+| Route | What it is |
+|---|---|
+| `/` | Marketing homepage |
+| `/blog` | Technical blog (MDX content in `src/content/blog/`) |
+| `/docs` | Documentation (starting with `findings-v1` schema docs) |
+| `/changelog` | Product changelog |
+| `/leaderboard` | Public MCP server security leaderboard |
+| `/quickstart` | Getting-started guide |
+| `/schema` | Redirect → `findings.v1.json` in `capframe/capframe` |
+| `/install` | Redirect → `install.sh` (used by `curl capframe.ai/install \| sh`) |
+| `/install.ps1` | Redirect → `install.ps1` (used by `iwr capframe.ai/install.ps1`) |
+| `/find`, `/bind`, `/guard` | Memorable shortcuts to each module's GitHub repo |
+
+> **The `/install` and `/install.ps1` routes are load-bearing.** They are referenced directly in the main `capframe/capframe` README. Do not remove or break them.
+
+---
+
+## Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **Blog/docs content:** Markdown files in `src/content/` parsed with `gray-matter` + `marked`
+- **Analytics:** Vercel Analytics (`@vercel/analytics`)
+- **Deployment:** Vercel
+
+---
+
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build   # production build
+npm run lint    # ESLint
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Adding a blog post
 
-To learn more about Next.js, take a look at the following resources:
+1. Create a new `.md` file in `src/content/blog/`.
+2. Add frontmatter:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```md
+---
+title: "Your post title"
+date: "2026-06-18"
+description: "One-sentence summary shown in the blog index."
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Post body here.
+```
 
-## Deploy on Vercel
+3. The post is automatically picked up by the blog index at `/blog`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Security headers
+
+Security headers (CSP, HSTS, `X-Frame-Options`, etc.) are set in `next.config.ts`. The CSP is strict — `script-src` is locked to `'self'` and Vercel Analytics. If you add a third-party script, update the CSP before merging.
+
+---
+
+## Related repos
+
+| Repo | Role |
+|---|---|
+| [capframe/capframe](https://github.com/capframe/capframe) | CLI dispatcher + `findings.v1` schema |
+| [euanmcrosson-dotcom/mcp-recon](https://github.com/euanmcrosson-dotcom/mcp-recon) | Find module |
+| [euanmcrosson-dotcom/capnagent](https://github.com/euanmcrosson-dotcom/capnagent) | Bind module |
+| [euanmcrosson-dotcom/mcp-guard](https://github.com/euanmcrosson-dotcom/mcp-guard) | Guard module |
+| [euanmcrosson-dotcom/purple-scaffold](https://github.com/euanmcrosson-dotcom/purple-scaffold) | Research / purple-team harness |
