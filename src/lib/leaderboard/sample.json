@@ -1,7 +1,7 @@
 {
   "schema_version": "capframe.leaderboard.v1",
   "generated_at": "2026-06-27T09:35:19.089178198Z",
-  "total_scanned": 88,
+  "total_scanned": 89,
   "weights": {
     "critical": 10,
     "high": 4,
@@ -5392,6 +5392,304 @@
               "T0051"
             ]
           }
+        }
+      ]
+    },
+    {
+      "score": 58,
+      "handle": "npm:@phantom/mcp-server@1.2.7",
+      "source": "registry",
+      "name": "Phantom Wallet MCP",
+      "repo_url": "https://github.com/phantom",
+      "tool_count": 30,
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "medium": 7,
+        "high": 7,
+        "critical": 0
+      },
+      "last_scanned": "2026-06-27T14:54:05.0583181Z",
+      "findings": [
+        {
+          "category": "excessive_agency",
+          "description": "Description: \"Returns token balances for the connected wallet.\" -- this references money/payment/refund/etc., but the declared side_effects ([]) don't include `money`. A capframe-bind policy that relies on declared side_effects to scope spend caveats will under-scope this tool.",
+          "id": "f-r5-wallet_balances",
+          "mappings": {
+            "mitre_atlas": [
+              "T0040"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "owasp_llm": [
+              "LLM08"
+            ]
+          },
+          "remediation": "Add `money` to the tool's `side_effects` declaration, or rewrite the description to clarify that no actual money moves.",
+          "severity": "medium",
+          "title": "Tool `wallet_balances` description mentions money but no `money` side-effect is declared",
+          "tool": "wallet_balances"
+        },
+        {
+          "category": "excessive_agency",
+          "description": "Description: \"Rebalance the wallet portfolio to a target allocation.\" -- this references money/payment/refund/etc., but the declared side_effects ([]) don't include `money`. A capframe-bind policy that relies on declared side_effects to scope spend caveats will under-scope this tool.",
+          "id": "f-r5-wallet_rebalance",
+          "mappings": {
+            "mitre_atlas": [
+              "T0040"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "owasp_llm": [
+              "LLM08"
+            ]
+          },
+          "remediation": "Add `money` to the tool's `side_effects` declaration, or rewrite the description to clarify that no actual money moves.",
+          "severity": "medium",
+          "title": "Tool `wallet_rebalance` description mentions money but no `money` side-effect is declared",
+          "tool": "wallet_rebalance"
+        },
+        {
+          "category": "excessive_agency",
+          "description": "`solana_send` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "id": "f-r3-solana_send",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "owasp_llm": [
+              "LLM08"
+            ]
+          },
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "severity": "high",
+          "title": "Tool `solana_send` name implies a side effect that is not declared",
+          "tool": "solana_send"
+        },
+        {
+          "category": "excessive_agency",
+          "description": "`evm_send` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "id": "f-r3-evm_send",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "owasp_llm": [
+              "LLM08"
+            ]
+          },
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "severity": "high",
+          "title": "Tool `evm_send` name implies a side effect that is not declared",
+          "tool": "evm_send"
+        },
+        {
+          "category": "excessive_agency",
+          "description": "`transfer` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "id": "f-r3-transfer",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "owasp_llm": [
+              "LLM08"
+            ]
+          },
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "severity": "high",
+          "title": "Tool `transfer` name implies a side effect that is not declared",
+          "tool": "transfer"
+        },
+        {
+          "category": "excessive_agency",
+          "description": "Description: \"Transfer tokens between wallets on Solana or EVM chains.\" -- this references money/payment/refund/etc., but the declared side_effects ([]) don't include `money`. A capframe-bind policy that relies on declared side_effects to scope spend caveats will under-scope this tool.",
+          "id": "f-r5-transfer",
+          "mappings": {
+            "mitre_atlas": [
+              "T0040"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "owasp_llm": [
+              "LLM08"
+            ]
+          },
+          "remediation": "Add `money` to the tool's `side_effects` declaration, or rewrite the description to clarify that no actual money moves.",
+          "severity": "medium",
+          "title": "Tool `transfer` description mentions money but no `money` side-effect is declared",
+          "tool": "transfer"
+        },
+        {
+          "category": "excessive_agency",
+          "description": "`buy` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "id": "f-r3-buy",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "owasp_llm": [
+              "LLM08"
+            ]
+          },
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "severity": "high",
+          "title": "Tool `buy` name implies a side effect that is not declared",
+          "tool": "buy"
+        },
+        {
+          "category": "excessive_agency",
+          "description": "Description: \"Buy a token with another token (swap).\" -- this references money/payment/refund/etc., but the declared side_effects ([]) don't include `money`. A capframe-bind policy that relies on declared side_effects to scope spend caveats will under-scope this tool.",
+          "id": "f-r5-buy",
+          "mappings": {
+            "mitre_atlas": [
+              "T0040"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "owasp_llm": [
+              "LLM08"
+            ]
+          },
+          "remediation": "Add `money` to the tool's `side_effects` declaration, or rewrite the description to clarify that no actual money moves.",
+          "severity": "medium",
+          "title": "Tool `buy` description mentions money but no `money` side-effect is declared",
+          "tool": "buy"
+        },
+        {
+          "category": "excessive_agency",
+          "description": "`pay` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "id": "f-r3-pay",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "owasp_llm": [
+              "LLM08"
+            ]
+          },
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "severity": "high",
+          "title": "Tool `pay` name implies a side effect that is not declared",
+          "tool": "pay"
+        },
+        {
+          "category": "excessive_agency",
+          "description": "Description: \"Pay for API access using tokens.\" -- this references money/payment/refund/etc., but the declared side_effects ([]) don't include `money`. A capframe-bind policy that relies on declared side_effects to scope spend caveats will under-scope this tool.",
+          "id": "f-r5-pay",
+          "mappings": {
+            "mitre_atlas": [
+              "T0040"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "owasp_llm": [
+              "LLM08"
+            ]
+          },
+          "remediation": "Add `money` to the tool's `side_effects` declaration, or rewrite the description to clarify that no actual money moves.",
+          "severity": "medium",
+          "title": "Tool `pay` description mentions money but no `money` side-effect is declared",
+          "tool": "pay"
+        },
+        {
+          "category": "indirect_injection",
+          "description": "Description: \"Fetch the current price of a token by its address and chain.\" -- this tool pulls externally-controlled content into the agent's context window, the canonical indirect-injection vector. Even when the user supplies the URL, content at that URL can carry hostile instructions.",
+          "id": "f-r6-get_token_price",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "owasp_llm": [
+              "LLM01"
+            ]
+          },
+          "remediation": "Sandbox the fetched content: strip prompts before forwarding to the model, constrain to an allow-list of domains, and route through capframe-guard with a `domain in [...]` caveat.",
+          "severity": "medium",
+          "title": "Tool `get_token_price` fetches external web content -- indirect-injection surface",
+          "tool": "get_token_price"
+        },
+        {
+          "category": "excessive_agency",
+          "description": "`perps_cancel` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "id": "f-r3-perps_cancel",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "owasp_llm": [
+              "LLM08"
+            ]
+          },
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "severity": "high",
+          "title": "Tool `perps_cancel` name implies a side effect that is not declared",
+          "tool": "perps_cancel"
+        },
+        {
+          "category": "excessive_agency",
+          "description": "`perps_transfer` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "id": "f-r3-perps_transfer",
+          "mappings": {
+            "mitre_atlas": [
+              "T0051"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "owasp_llm": [
+              "LLM08"
+            ]
+          },
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "severity": "high",
+          "title": "Tool `perps_transfer` name implies a side effect that is not declared",
+          "tool": "perps_transfer"
+        },
+        {
+          "category": "excessive_agency",
+          "description": "Description: \"Transfer funds between spot and perps accounts.\" -- this references money/payment/refund/etc., but the declared side_effects ([]) don't include `money`. A capframe-bind policy that relies on declared side_effects to scope spend caveats will under-scope this tool.",
+          "id": "f-r5-perps_transfer",
+          "mappings": {
+            "mitre_atlas": [
+              "T0040"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "owasp_llm": [
+              "LLM08"
+            ]
+          },
+          "remediation": "Add `money` to the tool's `side_effects` declaration, or rewrite the description to clarify that no actual money moves.",
+          "severity": "medium",
+          "title": "Tool `perps_transfer` description mentions money but no `money` side-effect is declared",
+          "tool": "perps_transfer"
         }
       ]
     },
