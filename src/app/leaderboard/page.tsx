@@ -5,6 +5,8 @@ import { CAPFRAME_GITHUB, CAPFRAME_VERSION } from "@/lib/version";
 import { Footer, Header, StatusBar, formatDate } from "./_components";
 import { FilterableTable } from "./_filter";
 
+export const dynamic = "force-static";
+
 export const metadata: Metadata = {
   title: "Leaderboard",
   description:
