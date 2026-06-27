@@ -7,7 +7,8 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import type { Row, ServerSource } from "@/lib/leaderboard/types";
+import type { Leaderboard, Row, ServerSource } from "@/lib/leaderboard/types";
+import sampleData from "@/lib/leaderboard/sample.json";
 import {
   FindingsCell,
   FindingsList,
@@ -24,7 +25,9 @@ type Tier = "A" | "B" | "C" | "D";
 const ALL_SOURCES: ServerSource[] = ["registry", "sandbox", "http", "file"];
 const ALL_TIERS: Tier[] = ["A", "B", "C", "D"];
 
-export function FilterableTable({ rows }: { rows: Row[] }) {
+const _board = sampleData as Leaderboard;
+
+export function FilterableTable({ rows = _board.rows }: { rows?: Row[] }) {
   const [query, setQuery] = useState("");
   const [sources, setSources] = useState<Set<ServerSource>>(
     () => new Set(ALL_SOURCES),
