@@ -5,10 +5,12 @@ const RAW = "https://raw.githubusercontent.com/capframe/capframe/main";
 /** Strict CSP for a static marketing site with no inline scripts of our own. */
 const CSP = [
   "default-src 'self'",
-  // Next.js 16 emits a small inline bootstrap script per page; the ImageResponse
-  // OG image is a separate route. `unsafe-inline` is on style-src because Next
-  // emits inline critical CSS; we keep script-src locked down to self.
-  "script-src 'self' https://va.vercel-scripts.com",
+  // Next.js 16 (App Router) embeds RSC flight data as inline <script> tags on
+  // every page. Without 'unsafe-inline' the browser blocks them and React never
+  // receives its hydration payload. The inline scripts are server-generated
+  // JSON-like data only — no user-supplied code — so XSS risk is low.
+  // TODO: migrate to nonces via middleware for a stricter policy.
+  "script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob:",
   "font-src 'self' data:",
