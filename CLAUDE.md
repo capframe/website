@@ -27,7 +27,7 @@ next.config.ts          Redirects (/install, /install.ps1, /schema, /find, /bind
 ## Critical constraints
 
 - **Do not remove or break `/install` or `/install.ps1` redirects** in `next.config.ts`. They are referenced in `capframe/capframe`'s README and used by real users running `curl capframe.ai/install | sh`.
-- **CSP is strict.** `script-src` is locked to `'self'` + Vercel Analytics. Adding any inline scripts or new third-party scripts requires updating the CSP in `next.config.ts` first.
+- **CSP `script-src` MUST keep `'unsafe-inline'`.** Next.js 16 App Router embeds the RSC hydration payload as ~88 inline `<script>` tags on every page. Without `'unsafe-inline'`, the browser silently blocks them, `self.__next_f` stays empty, React never hydrates, and **every client component (leaderboard filters, search) renders as dead static HTML with no error** — looks fine to a crawler, broken for users. This shipped to prod once (2026-06-27, caught via HN). Do NOT "tighten" `script-src` back to `'self'`-only. If you need a stricter policy, the only correct path is per-request nonces via middleware — not removing `'unsafe-inline'`. Any new third-party script still requires a CSP update in `next.config.ts` first.
 - **Next.js version is 16** with the App Router. File-based routing lives in `src/app/`. Use Server Components by default; add `'use client'` only when you need browser APIs or React hooks.
 - **No test suite yet.** `npm run build` + `npm run lint` are the gates. Make sure both pass before considering a change done.
 - **Tailwind v4** — configuration is in `postcss.config.mjs`, not `tailwind.config.js`. The v4 API differs from v3.
