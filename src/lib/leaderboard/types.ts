@@ -35,6 +35,8 @@ export interface Finding {
   tool?: string;
   remediation?: string;
   mappings?: FindingMappings;
+  /** CAST (Capframe Agent Security Taxonomy) categories, e.g. ["CAST-01"]. */
+  cast_category?: string[];
 }
 
 export interface SeverityCounts {

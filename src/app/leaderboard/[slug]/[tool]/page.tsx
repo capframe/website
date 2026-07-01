@@ -219,22 +219,27 @@ export default async function ToolDetailPage({
                       {f.remediation}
                     </p>
                   )}
-                  {f.mappings &&
-                    (f.mappings.owasp_llm?.length ||
-                      f.mappings.nist_rmf?.length ||
-                      f.mappings.mitre_atlas?.length) && (
-                      <div className="mt-3 flex flex-wrap gap-2 mono text-[10.5px] uppercase tracking-[0.14em] text-[var(--color-fg-3)]">
-                        {f.mappings.owasp_llm?.map((m) => (
-                          <MappingChip key={`owasp-${m}`}>OWASP {m}</MappingChip>
-                        ))}
-                        {f.mappings.nist_rmf?.map((m) => (
-                          <MappingChip key={`nist-${m}`}>NIST {m}</MappingChip>
-                        ))}
-                        {f.mappings.mitre_atlas?.map((m) => (
-                          <MappingChip key={`atlas-${m}`}>ATLAS {m}</MappingChip>
-                        ))}
-                      </div>
-                    )}
+                  {(f.mappings?.owasp_llm?.length ||
+                    f.mappings?.nist_rmf?.length ||
+                    f.mappings?.mitre_atlas?.length ||
+                    f.cast_category?.length) && (
+                    <div className="mt-3 flex flex-wrap gap-2 mono text-[10.5px] uppercase tracking-[0.14em] text-[var(--color-fg-3)]">
+                      {f.mappings?.owasp_llm?.map((m) => (
+                        <MappingChip key={`owasp-${m}`}>OWASP {m}</MappingChip>
+                      ))}
+                      {f.mappings?.nist_rmf?.map((m) => (
+                        <MappingChip key={`nist-${m}`}>NIST {m}</MappingChip>
+                      ))}
+                      {f.mappings?.mitre_atlas?.map((m) => (
+                        <MappingChip key={`atlas-${m}`}>ATLAS {m}</MappingChip>
+                      ))}
+                      {f.cast_category?.map((c) => (
+                        <MappingChip key={`cast-${c}`} tone="cast">
+                          {c}
+                        </MappingChip>
+                      ))}
+                    </div>
+                  )}
                 </li>
               ))}
             </ol>
@@ -310,9 +315,21 @@ function SeverityCount({ severity, n }: { severity: Severity; n: number }) {
   );
 }
 
-function MappingChip({ children }: { children: React.ReactNode }) {
+function MappingChip({
+  children,
+  tone,
+}: {
+  children: React.ReactNode;
+  tone?: "cast";
+}) {
   return (
-    <span className="px-1.5 py-0.5 rounded border border-[var(--color-line)] text-[var(--color-fg-3)]">
+    <span
+      className={
+        tone === "cast"
+          ? "px-1.5 py-0.5 rounded border border-[var(--color-accent-3)]/40 text-[var(--color-accent-3)]"
+          : "px-1.5 py-0.5 rounded border border-[var(--color-line)] text-[var(--color-fg-3)]"
+      }
+    >
       {children}
     </span>
   );
