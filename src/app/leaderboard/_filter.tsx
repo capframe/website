@@ -35,12 +35,30 @@ export function FilterableTable({ rows = _board.rows }: { rows?: Row[] }) {
   const [tiers, setTiers] = useState<Set<Tier>>(() => new Set(ALL_TIERS));
   const [sortKey, setSortKey] = useState<SortKey>("score");
   const [sortDir, setSortDir] = useState<SortDir>("desc");
+  // CAST is an opt-in facet: empty = no CAST filter (all servers show), matching
+  // the default view. Selecting categories narrows to servers that carry them.
+  const [casts, setCasts] = useState<Set<string>>(() => new Set());
+
+  // Only surface CAST chips for categories that actually appear in the data.
+  const presentCasts = useMemo(() => {
+    const s = new Set<string>();
+    for (const r of rows)
+      for (const f of r.findings ?? [])
+        for (const c of f.cast_category ?? []) s.add(c);
+    return [...s].sort();
+  }, [rows]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     const filtered = rows.filter((r) => {
       if (!sources.has(r.source)) return false;
       if (!tiers.has(scoreTier(r.score, 100))) return false;
+      if (casts.size > 0) {
+        const hit = (r.findings ?? []).some((f) =>
+          (f.cast_category ?? []).some((c) => casts.has(c)),
+        );
+        if (!hit) return false;
+      }
       if (q) {
         const hay = `${r.name ?? ""} ${r.handle}`.toLowerCase();
         if (!hay.includes(q)) return false;
@@ -61,7 +79,7 @@ export function FilterableTable({ rows = _board.rows }: { rows?: Row[] }) {
     };
     const dir = sortDir === "asc" ? 1 : -1;
     return [...filtered].sort((a, b) => cmp(a, b) * dir);
-  }, [rows, query, sources, tiers, sortKey, sortDir]);
+  }, [rows, query, sources, tiers, casts, sortKey, sortDir]);
 
   const toggleSource = (s: ServerSource) => {
     setSources((prev) => {
@@ -79,10 +97,19 @@ export function FilterableTable({ rows = _board.rows }: { rows?: Row[] }) {
       return next;
     });
   };
+  const toggleCast = (c: string) => {
+    setCasts((prev) => {
+      const next = new Set(prev);
+      if (next.has(c)) next.delete(c);
+      else next.add(c);
+      return next;
+    });
+  };
   const reset = () => {
     setQuery("");
     setSources(new Set(ALL_SOURCES));
     setTiers(new Set(ALL_TIERS));
+    setCasts(new Set());
     setSortKey("score");
     setSortDir("desc");
   };
@@ -156,6 +183,32 @@ export function FilterableTable({ rows = _board.rows }: { rows?: Row[] }) {
           </button>
         </div>
 
+        {presentCasts.length > 0 && (
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="mono text-[10.5px] uppercase tracking-[0.14em] text-[var(--color-fg-3)] mr-1">
+              CAST
+            </span>
+            {presentCasts.map((c) => (
+              <Chip
+                key={c}
+                active={casts.has(c)}
+                onClick={() => toggleCast(c)}
+                label={c}
+                cast
+              />
+            ))}
+            {casts.size > 0 && (
+              <button
+                type="button"
+                onClick={() => setCasts(new Set())}
+                className="mono text-[10px] tracking-[0.1em] text-[var(--color-accent-3)] hover:text-[var(--color-fg)] ml-1"
+              >
+                clear
+              </button>
+            )}
+          </div>
+        )}
+
         <div className="mono text-[10.5px] uppercase tracking-[0.14em] text-[var(--color-fg-3)]">
           {filtered.length} of {rows.length} servers
         </div>
@@ -190,11 +243,13 @@ function Chip({
   onClick,
   label,
   tier,
+  cast,
 }: {
   active: boolean;
   onClick: () => void;
   label: string;
   tier?: Tier;
+  cast?: boolean;
 }) {
   const tierColor: Record<Tier, string> = {
     A: "text-[var(--color-accent)] border-[var(--color-accent)]/50",
@@ -202,11 +257,17 @@ function Chip({
     C: "text-amber-300 border-amber-300/50",
     D: "text-red-400 border-red-400/50",
   };
-  const base = active
-    ? tier
-      ? tierColor[tier]
-      : "text-[var(--color-fg)] border-[var(--color-accent-3)]/60 bg-[var(--color-bg-2)]"
-    : "text-[var(--color-fg-3)] border-[var(--color-line)] hover:border-[var(--color-line-hover)] line-through opacity-60";
+  // CAST is opt-in: inactive chips stay neutral (no strike-through) so the row
+  // reads as "click to add", not "click to exclude" like Source/Tier.
+  const base = cast
+    ? active
+      ? "text-[var(--color-accent-3)] border-[var(--color-accent-3)]/60 bg-[var(--color-bg-2)]"
+      : "text-[var(--color-fg-3)] border-[var(--color-line)] hover:border-[var(--color-line-hover)]"
+    : active
+      ? tier
+        ? tierColor[tier]
+        : "text-[var(--color-fg)] border-[var(--color-accent-3)]/60 bg-[var(--color-bg-2)]"
+      : "text-[var(--color-fg-3)] border-[var(--color-line)] hover:border-[var(--color-line-hover)] line-through opacity-60";
   return (
     <button
       type="button"
