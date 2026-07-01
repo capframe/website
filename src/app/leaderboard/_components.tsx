@@ -37,6 +37,7 @@ export type ActivePage =
   | "blog"
   | "leaderboard"
   | "quickstart"
+  | "cast"
   | "docs";
 
 export function Header({ activePage }: { activePage?: ActivePage }) {
@@ -66,6 +67,13 @@ export function Header({ activePage }: { activePage?: ActivePage }) {
             aria-current={aria("leaderboard")}
           >
             Leaderboard
+          </Link>
+          <Link
+            href="/cast"
+            className={cls("cast")}
+            aria-current={aria("cast")}
+          >
+            CAST
           </Link>
           <Link
             href="/docs/findings-v1"
