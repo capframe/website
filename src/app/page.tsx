@@ -5,6 +5,8 @@ import {
   CAPFRAME_INSTALL as INSTALL,
   CAPFRAME_VERSION,
 } from "@/lib/version";
+import { NAV_LINKS } from "./_nav-links";
+import { MobileNav } from "./_mobile-nav";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -75,19 +77,32 @@ function Header() {
           </span>
           <span className="mono text-[13px] tracking-[0.16em] uppercase">capframe</span>
         </Link>
-        <nav className="hidden md:flex items-center gap-7 mono text-[12px] tracking-[0.12em] uppercase text-[var(--color-fg-2)]">
-          <a href="#modules" className="hover:text-fg transition-colors">Modules</a>
-          <a href="#compliance" className="hover:text-fg transition-colors">Compliance</a>
-          <a href="#install" className="hover:text-fg transition-colors">Install</a>
-          <a href="#audit" className="text-[var(--color-accent)] hover:opacity-80 transition-opacity">Audit</a>
-          <a href="#pricing" className="hover:text-fg transition-colors">Pricing</a>
-          <Link href="/changelog" className="hover:text-fg transition-colors">Changelog</Link>
-          <Link href="/blog" className="hover:text-fg transition-colors">Blog</Link>
-          <a href={GH} className="hover:text-fg transition-colors">GitHub ↗</a>
+        <nav className="hidden lg:flex items-center gap-x-4 xl:gap-x-6 mono text-[12px] tracking-[0.12em] uppercase text-[var(--color-fg-2)]">
+          {NAV_LINKS.map((l) =>
+            l.href.startsWith("#") || l.external ? (
+              <a
+                key={l.label}
+                href={l.href}
+                className={
+                  l.accent
+                    ? "text-[var(--color-accent)] hover:opacity-80 transition-opacity whitespace-nowrap"
+                    : "hover:text-fg transition-colors whitespace-nowrap"
+                }
+              >
+                {l.label}
+              </a>
+            ) : (
+              <Link
+                key={l.label}
+                href={l.href}
+                className="hover:text-fg transition-colors whitespace-nowrap"
+              >
+                {l.label}
+              </Link>
+            ),
+          )}
         </nav>
-        <a href="#install" className="md:hidden mono text-[12px] tracking-[0.12em] uppercase text-[var(--color-accent)]">
-          Install ↗
-        </a>
+        <MobileNav />
       </div>
     </header>
   );

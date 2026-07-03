@@ -35,7 +35,13 @@
 
 /* ── Base ────────────────────────────────────────────────────────────────── */
 
-html { color-scheme: dark; }
+html {
+  color-scheme: dark;
+  /* Anchor targets (#modules, #install …) land BELOW the sticky h-14 header
+     instead of behind it, so the section title is visible on jump. */
+  scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: var(--font-sans);
