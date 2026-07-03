@@ -68,7 +68,13 @@ body::before {
   mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, black 40%, transparent 100%);
 }
 
-main, header, footer { position: relative; z-index: 1; }
+/* Lift content above the fixed dot-grid (body::before, z-0). Deliberately NOT
+   `header`: this unlayered element rule out-cascades Tailwind's @layer
+   utilities, so `header { position: relative }` silently overrode the
+   `.sticky` class on every page header site-wide — the nav scrolled away
+   instead of pinning. Headers carry their own positioning (`sticky top-0
+   z-30/40`), which also keeps them above the grid. */
+main, footer { position: relative; z-index: 1; }
 
 /* ── Typography ──────────────────────────────────────────────────────────── */
 
