@@ -7,6 +7,7 @@ import {
 } from "@/lib/version";
 import { NAV_LINKS } from "./_nav-links";
 import { MobileNav } from "./_mobile-nav";
+import { CopyEmail } from "./_copy-email";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -920,11 +921,12 @@ function Audit() {
           <div className="mono text-[11px] tracking-[0.14em] uppercase text-[var(--color-fg-3)] mt-2">
             standard $2,500 · 5 business days
           </div>
-          <a href="mailto:hello@capframe.ai?subject=Capframe%20Agent%20Security%20Audit%20(Founding)&body=Hi%20—%20I'd%20like%20a%20Capframe%20agent%20security%20audit.%20My%20agent%20framework%20%2F%20MCP%20servers%3A%20"
-             className="btn-primary mt-7 w-full justify-center">
-            Request an audit
-            <span aria-hidden>→</span>
-          </a>
+          <CopyEmail
+            email="hello@capframe.ai"
+            label={<>Request an audit — hello@capframe.ai <span aria-hidden>→</span></>}
+            className="btn-primary mt-7 w-full justify-center"
+            copiedClassName="btn-primary mt-7 w-full justify-center"
+          />
           <Link href="/blog/red-teaming-my-own-engine"
                 className="mt-3 text-center mono text-[10.5px] tracking-[0.14em] uppercase text-[var(--color-fg-3)] hover:text-fg transition-colors">
             See a sample teardown ↗
@@ -1035,13 +1037,25 @@ function Pricing() {
                 </li>
               ))}
             </ul>
-            <a href={t.ctaHref}
-               className={`mt-7 inline-flex items-center justify-center gap-2 px-5 py-3 mono text-[11px] tracking-[0.18em] uppercase rounded-md transition-all
-               ${t.featured
-                 ? "btn-primary"
-                 : "border border-[var(--color-line-2)] text-fg hover:bg-[var(--color-bg-3)] hover:border-[var(--color-fg-3)]"}`}>
-              {t.cta} →
-            </a>
+            {(() => {
+              const ctaCls = `mt-7 inline-flex items-center justify-center gap-2 px-5 py-3 mono text-[11px] tracking-[0.18em] uppercase rounded-md transition-all ${
+                t.featured
+                  ? "btn-primary"
+                  : "border border-[var(--color-line-2)] text-fg hover:bg-[var(--color-bg-3)] hover:border-[var(--color-fg-3)]"
+              }`;
+              return t.ctaHref.startsWith("mailto:") ? (
+                <CopyEmail
+                  email={t.ctaHref.slice("mailto:".length).split("?")[0]}
+                  label={<>{t.cta} →</>}
+                  className={ctaCls}
+                  copiedClassName={ctaCls}
+                />
+              ) : (
+                <a href={t.ctaHref} className={ctaCls}>
+                  {t.cta} →
+                </a>
+              );
+            })()}
           </div>
         ))}
       </div>
@@ -1125,7 +1139,7 @@ function Footer() {
             </div>
             <div className="mt-6 flex items-center gap-3">
               <a href={GH} className="btn-ghost"><GitHubMark /> Source</a>
-              <a href="mailto:hello@capframe.ai" className="btn-ghost">hello@capframe.ai</a>
+              <CopyEmail email="hello@capframe.ai" label="hello@capframe.ai" className="btn-ghost" copiedClassName="btn-ghost text-[var(--color-accent)]" />
             </div>
           </div>
 
@@ -1170,13 +1184,26 @@ function FooterCol({ heading, links }: { heading: string; links: { label: string
     <div>
       <p className="mono text-[10.5px] tracking-[0.18em] uppercase text-[var(--color-fg-3)] mb-4">{heading}</p>
       <ul className="space-y-2.5">
-        {links.map((l) => (
-          <li key={l.label}>
-            <a href={l.href} className="text-[14px] text-[var(--color-fg-2)] hover:text-[var(--color-accent-3)] transition-colors">
-              {l.label}
-            </a>
-          </li>
-        ))}
+        {links.map((l) => {
+          const cls =
+            "text-[14px] text-[var(--color-fg-2)] hover:text-[var(--color-accent-3)] transition-colors";
+          return (
+            <li key={l.label}>
+              {l.href.startsWith("mailto:") ? (
+                <CopyEmail
+                  email={l.href.slice("mailto:".length).split("?")[0]}
+                  label={l.label}
+                  className={cls}
+                  copiedClassName={`${cls} text-[var(--color-accent)]`}
+                />
+              ) : (
+                <a href={l.href} className={cls}>
+                  {l.label}
+                </a>
+              )}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
