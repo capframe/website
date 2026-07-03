@@ -1,6 +1,8 @@
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
+// NOTE: deliberately NOT `runtime = "edge"`. On the edge runtime this route
+// emitted an empty 0-byte PNG on Vercel (broken link-preview cards site-wide);
+// the default Node runtime renders ImageResponse reliably.
 export const alt = "Capframe — Capability security for AI agents";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -56,15 +58,18 @@ export default async function OpenGraphImage() {
         <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
           <div
             style={{
+              display: "flex",
+              flexDirection: "column",
               fontSize: 100,
               lineHeight: 1.02,
               fontWeight: 600,
               letterSpacing: "-0.03em",
             }}
           >
-            Capability security
-            <br />
-            for <span style={{ color: "#00f5a0" }}>AI agents</span>.
+            <div style={{ display: "flex" }}>Capability security</div>
+            <div style={{ display: "flex", alignItems: "baseline" }}>
+              for&nbsp;<span style={{ color: "#00f5a0" }}>AI&nbsp;agents</span>.
+            </div>
           </div>
           <div
             style={{
