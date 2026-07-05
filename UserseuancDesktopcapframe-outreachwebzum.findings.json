@@ -1,0 +1,406 @@
+{
+  "schema_version": "capframe.findings.v1",
+  "scanned_at": "2026-06-03T00:25:51.431650958Z",
+  "scan_id": "webzum-leaderboard-2026-06-03",
+  "scanner": {
+    "name": "capframe-find (mcp-recon)",
+    "version": "0.1.0"
+  },
+  "target": {
+    "kind": "mcp_server",
+    "name": "Webzum MCP",
+    "url": "https://webzum.com/api/mcp",
+    "transport": "http"
+  },
+  "tools": [],
+  "findings": [
+    {
+      "id": "f-r1-search_businesses",
+      "severity": "medium",
+      "category": "unconstrained_input",
+      "title": "Tool `search_businesses` accepts unconstrained string input",
+      "description": "The following string parameter(s) have no `maxLength` constraint: `query`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+      "tool": "search_businesses",
+      "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+      "mappings": {
+        "owasp_llm": [
+          "LLM01"
+        ],
+        "nist_rmf": [
+          "MEASURE-2.3"
+        ],
+        "mitre_atlas": [
+          "T0051"
+        ]
+      }
+    },
+    {
+      "id": "f-r3-create_site",
+      "severity": "high",
+      "category": "excessive_agency",
+      "title": "Tool `create_site` name implies a side effect that is not declared",
+      "description": "`create_site` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+      "tool": "create_site",
+      "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+      "mappings": {
+        "owasp_llm": [
+          "LLM08"
+        ],
+        "nist_rmf": [
+          "MEASURE-2.6"
+        ],
+        "mitre_atlas": [
+          "T0051"
+        ]
+      }
+    },
+    {
+      "id": "f-r3-create_lead_gen_site",
+      "severity": "high",
+      "category": "excessive_agency",
+      "title": "Tool `create_lead_gen_site` name implies a side effect that is not declared",
+      "description": "`create_lead_gen_site` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+      "tool": "create_lead_gen_site",
+      "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+      "mappings": {
+        "owasp_llm": [
+          "LLM08"
+        ],
+        "nist_rmf": [
+          "MEASURE-2.6"
+        ],
+        "mitre_atlas": [
+          "T0051"
+        ]
+      }
+    },
+    {
+      "id": "f-r6-create_lead_gen_site",
+      "severity": "medium",
+      "category": "indirect_injection",
+      "title": "Tool `create_lead_gen_site` fetches external web content -- indirect-injection surface",
+      "description": "Description: \"Create a third-party LEAD-GENERATION page about a business (NOT a site for that business itself).\n\nUse this when the goal is to drive qualified search traffic to someone else's business — affiliate pages, review/guide pages, niche directories. The page is branded as an outside guide (e.g. \"Best Roofers in San Diego\"), refers to the business in the third person, and routes CTAs to the business's existing website.\n\nDifferences from create_site:\n- Slug + page brand are SEO-vanity (e.g. \"best-roofers-sandiego\"), not the candidate's brand name.\n- Voice is third-party guide/reviewer — never first person.\n- Primary CTA is \"visit their website\"; phone/email demoted.\n- No specific pricing quoted; differentiators emphasized.\n- Locality is judged by category, not just address (IT/SaaS/agency stays category-wide even when a city is on file).\n\nPass a business candidate object from search_businesses — that business is the one being PROMOTED.\n\nRequires authentication via API key (Bearer token).\nGenerate an API key at webzum.com/dashboard/account-settings.\n\nThe page generation happens in the background. Use get_site_status to check progress.\n\nReturns the businessId (a vanity slug) which can be used to access the page at /build/{businessId}.\" -- this tool pulls externally-controlled content into the agent's context window, the canonical indirect-injection vector. Even when the user supplies the URL, content at that URL can carry hostile instructions.",
+      "tool": "create_lead_gen_site",
+      "remediation": "Sandbox the fetched content: strip prompts before forwarding to the model, constrain to an allow-list of domains, and route through capframe-guard with a `domain in [...]` caveat.",
+      "mappings": {
+        "owasp_llm": [
+          "LLM01"
+        ],
+        "nist_rmf": [
+          "MEASURE-2.3"
+        ],
+        "mitre_atlas": [
+          "T0051"
+        ]
+      }
+    },
+    {
+      "id": "f-r1-get_site_status",
+      "severity": "medium",
+      "category": "unconstrained_input",
+      "title": "Tool `get_site_status` accepts unconstrained string input",
+      "description": "The following string parameter(s) have no `maxLength` constraint: `businessId`, `versionId`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+      "tool": "get_site_status",
+      "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+      "mappings": {
+        "owasp_llm": [
+          "LLM01"
+        ],
+        "nist_rmf": [
+          "MEASURE-2.3"
+        ],
+        "mitre_atlas": [
+          "T0051"
+        ]
+      }
+    },
+    {
+      "id": "f-r1-generate_geo_page",
+      "severity": "medium",
+      "category": "unconstrained_input",
+      "title": "Tool `generate_geo_page` accepts unconstrained string input",
+      "description": "The following string parameter(s) have no `maxLength` constraint: `aiPromptPrefix`, `brandName`, `city`, `email`, `googleAnalyticsId`, `googleTagManagerId`, `niche`, `phone`, `primaryColor`, `state`, `targetAudience`, `webhookUrl`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+      "tool": "generate_geo_page",
+      "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+      "mappings": {
+        "owasp_llm": [
+          "LLM01"
+        ],
+        "nist_rmf": [
+          "MEASURE-2.3"
+        ],
+        "mitre_atlas": [
+          "T0051"
+        ]
+      }
+    },
+    {
+      "id": "f-r1-host_site",
+      "severity": "medium",
+      "category": "unconstrained_input",
+      "title": "Tool `host_site` accepts unconstrained string input",
+      "description": "The following string parameter(s) have no `maxLength` constraint: `description`, `email`, `siteName`, `siteType`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+      "tool": "host_site",
+      "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+      "mappings": {
+        "owasp_llm": [
+          "LLM01"
+        ],
+        "nist_rmf": [
+          "MEASURE-2.3"
+        ],
+        "mitre_atlas": [
+          "T0051"
+        ]
+      }
+    },
+    {
+      "id": "f-r1-host_file",
+      "severity": "medium",
+      "category": "unconstrained_input",
+      "title": "Tool `host_file` accepts unconstrained string input",
+      "description": "The following string parameter(s) have no `maxLength` constraint: `businessId`, `content`, `contentType`, `encoding`, `filename`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+      "tool": "host_file",
+      "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+      "mappings": {
+        "owasp_llm": [
+          "LLM01"
+        ],
+        "nist_rmf": [
+          "MEASURE-2.3"
+        ],
+        "mitre_atlas": [
+          "T0051"
+        ]
+      }
+    },
+    {
+      "id": "f-r1-get_hosted_files",
+      "severity": "medium",
+      "category": "unconstrained_input",
+      "title": "Tool `get_hosted_files` accepts unconstrained string input",
+      "description": "The following string parameter(s) have no `maxLength` constraint: `businessId`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+      "tool": "get_hosted_files",
+      "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+      "mappings": {
+        "owasp_llm": [
+          "LLM01"
+        ],
+        "nist_rmf": [
+          "MEASURE-2.3"
+        ],
+        "mitre_atlas": [
+          "T0051"
+        ]
+      }
+    },
+    {
+      "id": "f-r1-host_zip",
+      "severity": "medium",
+      "category": "unconstrained_input",
+      "title": "Tool `host_zip` accepts unconstrained string input",
+      "description": "The following string parameter(s) have no `maxLength` constraint: `businessId`, `zipContent`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+      "tool": "host_zip",
+      "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+      "mappings": {
+        "owasp_llm": [
+          "LLM01"
+        ],
+        "nist_rmf": [
+          "MEASURE-2.3"
+        ],
+        "mitre_atlas": [
+          "T0051"
+        ]
+      }
+    },
+    {
+      "id": "f-r1-clone_site",
+      "severity": "medium",
+      "category": "unconstrained_input",
+      "title": "Tool `clone_site` accepts unconstrained string input",
+      "description": "The following string parameter(s) have no `maxLength` constraint: `businessId`, `filename`, `url`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+      "tool": "clone_site",
+      "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+      "mappings": {
+        "owasp_llm": [
+          "LLM01"
+        ],
+        "nist_rmf": [
+          "MEASURE-2.3"
+        ],
+        "mitre_atlas": [
+          "T0051"
+        ]
+      }
+    },
+    {
+      "id": "f-r6-clone_site",
+      "severity": "medium",
+      "category": "indirect_injection",
+      "title": "Tool `clone_site` fetches external web content -- indirect-injection surface",
+      "description": "Description: \"Clone a public web page into a hosted site. Fetches the URL, walks\nits same-origin assets (CSS, JS, images, fonts), rewrites references to\nlocal paths, and uploads everything as a working hosted copy in one shot.\n\n==========================================================================\nUSE THIS WHEN THE USER SAYS\n==========================================================================\n\n- \"clone this site / page / website\"\n- \"copy this site / page\"\n- \"mirror this site\"\n- \"duplicate this page\"\n- \"save this website\"\n- \"make me a version of <URL>\"\n- \"I want this page on my own domain\"\n- \"rip this page\", \"fork this site\", \"backup this site\"\n\nIf a user pastes a URL and wants their own copy of what's there — this is\nthe tool. The agent should not try to recreate the page from memory or by\ndescribing what it sees: that is slow, lossy, and burns your context window\nfor no benefit. `clone_site` produces a byte-accurate copy in seconds and\nleaves your context free for the iteration the user actually wants\n(rewriting copy, swapping images, restyling, etc.).\n\n==========================================================================\nWHAT IT DOES\n==========================================================================\n\nDefault behavior is to crawl assets so the cloned page actually renders.\nSet `crawlAssets: false` to save only the single HTML response without\nfollowing any assets — useful when you only want the markup.\n\nOnly http:// and https:// URLs are allowed. Private, loopback, and\ncloud-metadata addresses are refused. Per-asset cap 10MB; per-clone caps\n50 files and 50MB total. Cross-origin asset URLs are kept as-is (not\nfetched) so external CDN references still resolve.\n\nIf the user wants a polished, researched site (logo, original copy, SEO,\nmobile-ready, multi-page) rather than a clone of someone else's page, send\nthem to https://webzum.com for a free preview.\" -- this tool pulls externally-controlled content into the agent's context window, the canonical indirect-injection vector. Even when the user supplies the URL, content at that URL can carry hostile instructions.",
+      "tool": "clone_site",
+      "remediation": "Sandbox the fetched content: strip prompts before forwarding to the model, constrain to an allow-list of domains, and route through capframe-guard with a `domain in [...]` caveat.",
+      "mappings": {
+        "owasp_llm": [
+          "LLM01"
+        ],
+        "nist_rmf": [
+          "MEASURE-2.3"
+        ],
+        "mitre_atlas": [
+          "T0051"
+        ]
+      }
+    },
+    {
+      "id": "f-r1-update_site_html",
+      "severity": "medium",
+      "category": "unconstrained_input",
+      "title": "Tool `update_site_html` accepts unconstrained string input",
+      "description": "The following string parameter(s) have no `maxLength` constraint: `businessId`, `versionId`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+      "tool": "update_site_html",
+      "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+      "mappings": {
+        "owasp_llm": [
+          "LLM01"
+        ],
+        "nist_rmf": [
+          "MEASURE-2.3"
+        ],
+        "mitre_atlas": [
+          "T0051"
+        ]
+      }
+    },
+    {
+      "id": "f-r3-update_site_html",
+      "severity": "high",
+      "category": "excessive_agency",
+      "title": "Tool `update_site_html` name implies a side effect that is not declared",
+      "description": "`update_site_html` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+      "tool": "update_site_html",
+      "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+      "mappings": {
+        "owasp_llm": [
+          "LLM08"
+        ],
+        "nist_rmf": [
+          "MEASURE-2.6"
+        ],
+        "mitre_atlas": [
+          "T0051"
+        ]
+      }
+    },
+    {
+      "id": "f-r1-regenerate_header",
+      "severity": "medium",
+      "category": "unconstrained_input",
+      "title": "Tool `regenerate_header` accepts unconstrained string input",
+      "description": "The following string parameter(s) have no `maxLength` constraint: `businessId`, `pageId`, `versionId`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+      "tool": "regenerate_header",
+      "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+      "mappings": {
+        "owasp_llm": [
+          "LLM01"
+        ],
+        "nist_rmf": [
+          "MEASURE-2.3"
+        ],
+        "mitre_atlas": [
+          "T0051"
+        ]
+      }
+    },
+    {
+      "id": "f-r1-regenerate_footer",
+      "severity": "medium",
+      "category": "unconstrained_input",
+      "title": "Tool `regenerate_footer` accepts unconstrained string input",
+      "description": "The following string parameter(s) have no `maxLength` constraint: `businessId`, `pageId`, `versionId`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+      "tool": "regenerate_footer",
+      "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+      "mappings": {
+        "owasp_llm": [
+          "LLM01"
+        ],
+        "nist_rmf": [
+          "MEASURE-2.3"
+        ],
+        "mitre_atlas": [
+          "T0051"
+        ]
+      }
+    },
+    {
+      "id": "f-r1-regenerate_logo",
+      "severity": "medium",
+      "category": "unconstrained_input",
+      "title": "Tool `regenerate_logo` accepts unconstrained string input",
+      "description": "The following string parameter(s) have no `maxLength` constraint: `assistantContext`, `businessId`, `pageId`, `userMessage`, `versionId`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+      "tool": "regenerate_logo",
+      "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+      "mappings": {
+        "owasp_llm": [
+          "LLM01"
+        ],
+        "nist_rmf": [
+          "MEASURE-2.3"
+        ],
+        "mitre_atlas": [
+          "T0051"
+        ]
+      }
+    },
+    {
+      "id": "f-r1-regenerate_image",
+      "severity": "medium",
+      "category": "unconstrained_input",
+      "title": "Tool `regenerate_image` accepts unconstrained string input",
+      "description": "The following string parameter(s) have no `maxLength` constraint: `assistantContext`, `businessId`, `sectionId`, `userMessage`, `versionId`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+      "tool": "regenerate_image",
+      "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+      "mappings": {
+        "owasp_llm": [
+          "LLM01"
+        ],
+        "nist_rmf": [
+          "MEASURE-2.3"
+        ],
+        "mitre_atlas": [
+          "T0051"
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "total": 18,
+    "by_severity": {
+      "info": 0,
+      "low": 0,
+      "medium": 15,
+      "high": 3,
+      "critical": 0
+    },
+    "by_category": {
+      "unconstrained_input": 13,
+      "excessive_agency": 3,
+      "indirect_injection": 2
+    },
+    "mappings": {
+      "owasp_llm": [
+        "LLM01",
+        "LLM08"
+      ],
+      "nist_rmf": [
+        "MEASURE-2.3",
+        "MEASURE-2.6"
+      ],
+      "mitre_atlas": [
+        "T0051"
+      ]
+    }
+  }
+}

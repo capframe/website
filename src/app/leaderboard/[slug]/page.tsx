@@ -8,6 +8,7 @@ import {
   FindingsList,
   Footer,
   Header,
+  isThinSurface,
   ScoreBadge,
   StatusBar,
   formatDate,
@@ -135,7 +136,11 @@ export default async function ServerDetailPage({
           {/* Score panel */}
           <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3">
             <Stat label="Score">
-              <ScoreBadge score={row.score} max={100} />
+              <ScoreBadge
+                score={row.score}
+                max={100}
+                insufficientSurface={isThinSurface(row)}
+              />
             </Stat>
             <Stat label="Findings">
               <span className="mono text-[14px] tabular-nums">
@@ -229,7 +234,7 @@ export default async function ServerDetailPage({
             </h2>
             {findingsCount === 0 ? (
               <p className="text-[var(--color-fg-2)] text-[0.95rem]">
-                The classifier found no rule violations on this server's
+                The classifier found no rule violations on this server&apos;s
                 advertised tool surface against the public capframe rules
                 (R1–R7). A clean score means the surface looks tight to the
                 rule engine — it does <em>not</em> mean the implementation is

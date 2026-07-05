@@ -6,10 +6,10 @@ import type { Leaderboard, Row } from "@/lib/leaderboard/types";
 import {
   Footer,
   Header,
+  isThinSurface,
   ScoreBadge,
   StatusBar,
   formatDate,
-  scoreTier,
   slugifyHandle,
 } from "../_components";
 
@@ -243,7 +243,11 @@ function MoversBody({
                       {m.previous.handle} → {m.current.handle}
                     </div>
                   </div>
-                  <ScoreBadge score={m.current.score} max={100} />
+                  <ScoreBadge
+                    score={m.current.score}
+                    max={100}
+                    insufficientSurface={isThinSurface(m.current)}
+                  />
                 </Link>
               </li>
             ))}
@@ -311,7 +315,11 @@ function MoverList({
                   <span className="mono text-[12px] text-[var(--color-fg-3)] tabular-nums">
                     {m.previous.score} →
                   </span>
-                  <ScoreBadge score={m.current.score} max={100} />
+                  <ScoreBadge
+                    score={m.current.score}
+                    max={100}
+                    insufficientSurface={isThinSurface(m.current)}
+                  />
                 </div>
                 <span
                   className={`mono text-[13px] tabular-nums px-2 py-0.5 rounded border ${
@@ -375,7 +383,11 @@ function RowList({
                     {r.handle}
                   </div>
                 </div>
-                <ScoreBadge score={r.score} max={100} />
+                <ScoreBadge
+                  score={r.score}
+                  max={100}
+                  insufficientSurface={isThinSurface(r)}
+                />
               </Link>
             </li>
           ))}
