@@ -2,7 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { loadLeaderboard } from "@/lib/leaderboard/load";
 import { CAPFRAME_GITHUB, CAPFRAME_VERSION } from "@/lib/version";
-import { Footer, Header, StatusBar, formatDate } from "./_components";
+import {
+  Footer,
+  Header,
+  MIN_MEANINGFUL_TOOLS,
+  StatusBar,
+  formatDate,
+} from "./_components";
 import { FilterableTable } from "./_filter";
 
 export const dynamic = "force-static";
@@ -83,6 +89,15 @@ export default async function LeaderboardPage() {
               <span className="text-[var(--color-fg)]">static manifest</span>{" "}
               are graded against the name/description rules (R3, R5, R6, R7)
               with parameter-schema rules deferred until a sandbox producer ships.
+            </p>
+            <p className="mt-3">
+              A server tagged{" "}
+              <span className="mono text-[var(--color-fg-3)]">thin</span> exposes
+              fewer than {MIN_MEANINGFUL_TOOLS} tools — too little surface for a
+              score to mean anything. A high number there just means there was
+              almost nothing to scan, not that the server is hardened, so thin
+              servers sort <span className="text-[var(--color-fg)]">below</span>{" "}
+              genuinely-scanned ones rather than topping the board.
             </p>
             <p className="mt-3">
               Want your server included or rescored?{" "}

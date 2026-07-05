@@ -12,6 +12,7 @@ import sampleData from "@/lib/leaderboard/sample.json";
 import {
   FindingsCell,
   FindingsList,
+  isThinSurface,
   ScoreBadge,
   formatDate,
   scoreTier,
@@ -78,7 +79,17 @@ export function FilterableTable({ rows = _board.rows }: { rows?: Row[] }) {
       }
     };
     const dir = sortDir === "asc" ? 1 : -1;
-    return [...filtered].sort((a, b) => cmp(a, b) * dir);
+    return [...filtered].sort((a, b) => {
+      // Thin-surface servers (too few tools to score meaningfully) always sort
+      // to the bottom of a score sort — a 1-tool false-clean should never rank
+      // at the top next to genuinely-scanned servers, in either direction.
+      if (sortKey === "score") {
+        const at = isThinSurface(a);
+        const bt = isThinSurface(b);
+        if (at !== bt) return at ? 1 : -1;
+      }
+      return cmp(a, b) * dir;
+    });
   }, [rows, query, sources, tiers, casts, sortKey, sortDir]);
 
   const toggleSource = (s: ServerSource) => {
@@ -296,7 +307,11 @@ function ServerRow({ row, index }: { row: Row; index: number }) {
         </span>
         <ServerCell row={row} />
         <span className="text-right">
-          <ScoreBadge score={row.score} max={100} />
+          <ScoreBadge
+            score={row.score}
+            max={100}
+            insufficientSurface={isThinSurface(row)}
+          />
         </span>
         <span className="text-right">
           <ToolsCell count={row.tool_count} />
@@ -325,7 +340,11 @@ function ServerRow({ row, index }: { row: Row; index: number }) {
         </span>
         <ServerCell row={row} expandable />
         <span className="text-right">
-          <ScoreBadge score={row.score} max={100} />
+          <ScoreBadge
+            score={row.score}
+            max={100}
+            insufficientSurface={isThinSurface(row)}
+          />
         </span>
         <span className="text-right">
           <ToolsCell count={row.tool_count} />

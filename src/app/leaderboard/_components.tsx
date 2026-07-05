@@ -150,7 +150,40 @@ export function scoreTier(score: number, max: number): ScoreTier {
   return "D";
 }
 
-export function ScoreBadge({ score, max }: { score: number; max: number }) {
+/** Minimum tools for a "clean" score to mean anything. Below this, a high
+ *  score just means there was almost nothing to scan — a false-clean, not a
+ *  verified-secure server. Keep in sync with the /leaderboard legend copy. */
+export const MIN_MEANINGFUL_TOOLS = 3;
+
+/** A server whose tool surface is too thin for its score to be trustworthy.
+ *  `tool_count` is optional on older boards; when absent we can't tell, so we
+ *  don't flag it. */
+export function isThinSurface(row: { tool_count?: number }): boolean {
+  return row.tool_count !== undefined && row.tool_count < MIN_MEANINGFUL_TOOLS;
+}
+
+export function ScoreBadge({
+  score,
+  max,
+  insufficientSurface,
+}: {
+  score: number;
+  max: number;
+  insufficientSurface?: boolean;
+}) {
+  // Thin surface: don't dress a false-clean up as a tier-A pass. A muted,
+  // dashed "thin" badge signals "not enough scanned to trust this score".
+  if (insufficientSurface) {
+    return (
+      <span
+        title="Too few tools to score meaningfully — a high score here means there was almost nothing to scan, not that the server is secure."
+        className="mono text-[12px] tabular-nums tracking-[0.05em] inline-flex items-baseline gap-1 px-2 py-1 rounded border border-dashed text-[var(--color-fg-3)] border-[var(--color-line)]"
+      >
+        <span className="text-[10px] uppercase opacity-70">thin</span>
+        {score}
+      </span>
+    );
+  }
   const tier = scoreTier(score, max);
   const colorClass = {
     A: "text-[var(--color-accent)] border-[var(--color-accent)]/40",
