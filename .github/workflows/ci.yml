@@ -37,6 +37,9 @@ jobs:
       - name: Install deps
         run: npm ci
 
+      - name: Unit tests (blog frontmatter + loader)
+        run: npm test
+
       - name: Typecheck
         run: npx tsc --noEmit
 
