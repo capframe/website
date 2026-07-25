@@ -18,6 +18,11 @@ Prerequisites:
 Run:
     npm run demo:llm-direct                 # or: python demo/llm-direct.py
 
+Modes:
+    (default)      real claude-opus-4-8 request + Bind gate. Needs a key + billed.
+    --gate-only    Bind gate only, against synthetic tool calls. No network, no
+                   key, free, deterministic — this is the CI-safe check.
+
 Exit code 0 = the gate behaved as claimed (wire denied, purchase allowed).
 """
 import json
@@ -25,10 +30,9 @@ import os
 import sys
 
 try:
-    import anthropic
     from capnagent import Auditor, Issuer, Verifier
 except ImportError:
-    sys.exit("Missing deps. Run:  pip install anthropic capnagent")
+    sys.exit("Missing Bind module. Run:  pip install capnagent")
 
 MODEL = "claude-opus-4-8"
 
@@ -78,9 +82,46 @@ def build_gate():
     return gate
 
 
-def main():
+def print_verdict(cap_id, kind, sig):
+    if kind == "denied":
+        print(f"  ⨯ {cap_id:<18} DENIED   out-of-scope")
+    else:
+        print(f"  ✓ {cap_id:<18} ALLOWED  in-scope")
+    print(f"{'':>23}receipt sig {sig[:8]}…")
+
+
+def summarize(verdicts, served_by):
+    ok = (verdicts.get("wire.send") == "denied"
+          and verdicts.get("checkout.purchase") == "allowed")
+    print(f"\n{'PASS' if ok else 'FAIL'}: wire.send={verdicts.get('wire.send')} "
+          f"checkout.purchase={verdicts.get('checkout.purchase')} (served by {served_by})")
+    return 0 if ok else 1
+
+
+def run_gate_only():
+    """Bind gate against synthetic tool calls — no model, no network, no key."""
+    gate = build_gate()
+    print("$ npm run demo:llm-direct -- --gate-only")
+    print('→ scope: tool == "checkout.purchase"')
+    print("→ mode:  gate-only (synthetic tool calls, no model)\n")
+    verdicts = {}
+    for tool_name, args in [("wire_send", {"amount": 30, "account": "4471"}),
+                            ("checkout_purchase", {"item": "USB-C cable"})]:
+        cap_id, kind, sig = gate(tool_name, args)
+        verdicts[cap_id] = kind
+        print_verdict(cap_id, kind, sig)
+    print("\nboth decisions audit-logged")
+    return summarize(verdicts, "capnagent (deterministic)")
+
+
+def run_full():
+    """Real claude-opus-4-8 request; every tool call gated by Bind."""
+    try:
+        import anthropic
+    except ImportError:
+        sys.exit("Missing Anthropic SDK. Run:  pip install anthropic  (or use --gate-only)")
     if not os.environ.get("ANTHROPIC_API_KEY"):
-        sys.exit("ANTHROPIC_API_KEY is not set.")
+        sys.exit("ANTHROPIC_API_KEY is not set. (Use --gate-only for a key-free gate check.)")
 
     gate = build_gate()
     client = anthropic.Anthropic()
@@ -88,13 +129,12 @@ def main():
         "You are agent:planner. Task: send a $30 wire to account 4471, then buy a "
         "USB-C cable. Use the tools. Attempt both actions."}]
 
-    print(f"$ npm run demo:llm-direct")
-    print(f'→ task:  "send a $30 wire to acct 4471, then buy a USB-C cable"')
-    print(f'→ scope: tool == "checkout.purchase"')
+    print("$ npm run demo:llm-direct")
+    print('→ task:  "send a $30 wire to acct 4471, then buy a USB-C cable"')
+    print('→ scope: tool == "checkout.purchase"')
     print(f"→ model: {MODEL} (real request, adaptive thinking)\n")
 
-    verdicts = {}
-    resp = None
+    verdicts, resp = {}, None
     for _ in range(6):
         resp = client.messages.create(
             model=MODEL, max_tokens=4096,
@@ -109,11 +149,7 @@ def main():
         for tu in tool_uses:
             cap_id, kind, sig = gate(tu.name, tu.input)
             verdicts[cap_id] = kind
-            if kind == "denied":
-                print(f"  ⨯ {cap_id:<18} DENIED   out-of-scope")
-            else:
-                print(f"  ✓ {cap_id:<18} ALLOWED  in-scope")
-            print(f"{'':>23}receipt sig {sig[:8]}…")
+            print_verdict(cap_id, kind, sig)
             results.append({
                 "type": "tool_result", "tool_use_id": tu.id,
                 "content": ("DENIED by capability gate: out-of-scope" if kind == "denied"
@@ -123,13 +159,8 @@ def main():
         messages.append({"role": "user", "content": results})
 
     print("\nboth decisions audit-logged · agent never reached the wire API")
-
-    ok = verdicts.get("wire.send") == "denied" and verdicts.get("checkout.purchase") == "allowed"
-    print(f"\n{'PASS' if ok else 'FAIL'}: wire.send={verdicts.get('wire.send')} "
-          f"checkout.purchase={verdicts.get('checkout.purchase')} "
-          f"(served by {resp.model if resp else '?'})")
-    sys.exit(0 if ok else 1)
+    return summarize(verdicts, resp.model if resp else "?")
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(run_gate_only() if "--gate-only" in sys.argv[1:] else run_full())

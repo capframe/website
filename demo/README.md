@@ -13,8 +13,26 @@ is **allowed**. No LLM sits in the decision path.
 ```sh
 pip install anthropic capnagent
 export ANTHROPIC_API_KEY=sk-ant-...     # PowerShell: $env:ANTHROPIC_API_KEY="sk-ant-..."
-npm run demo:llm-direct                 # or: python demo/llm-direct.py
+npm run demo:llm-direct
 ```
+
+`npm run demo:llm-direct` goes through `demo/run.mjs`, a small Node launcher that
+finds a working Python 3 interpreter (`python3` or `python`) so the command works
+the same on Windows, macOS, and Linux. To run the script directly, use whichever
+interpreter name your platform has: `python demo/llm-direct.py`.
+
+### Gate-only mode (no key, no billing)
+
+```sh
+pip install capnagent                    # anthropic not needed
+npm run demo:llm-direct -- --gate-only
+```
+
+This runs the **real** Bind gate against synthetic tool calls — no model request,
+no API key, free, deterministic. It's what CI runs (`bind-gate` job in
+`.github/workflows/ci.yml`) to keep the panel's claim honest on every push. The
+full command above (real `claude-opus-4-8`) is manual only, since it's billed and
+needs a secret.
 
 Expected output (receipt signatures vary per run — the audit key is random each
 time):

@@ -9,7 +9,7 @@
     "lint": "eslint",
     "test": "vitest run",
     "test:watch": "vitest",
-    "demo:llm-direct": "python demo/llm-direct.py"
+    "demo:llm-direct": "node demo/run.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

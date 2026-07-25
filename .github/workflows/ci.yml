@@ -122,3 +122,22 @@ jobs:
         if: always()
         run: |
           if [ -f /tmp/next.pid ]; then kill "$(cat /tmp/next.pid)" 2>/dev/null || true; fi
+
+  # Deterministic check that the Bind capability gate behaves as the
+  # homepage "Live · real model" panel claims: wire.send DENIED
+  # out-of-scope, checkout.purchase ALLOWED. Runs the REAL gate
+  # (capnagent, cp38-abi3 manylinux wheel) against synthetic tool
+  # calls — no model call, no API key, no billing. The full
+  # `npm run demo:llm-direct` (real claude-opus-4-8) is manual only.
+  bind-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Bind module
+        run: pip install capnagent
+      - name: Gate check (no model call, no key)
+        run: python demo/llm-direct.py --gate-only
