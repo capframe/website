@@ -575,7 +575,7 @@ function BindSpotlight() {
         <div className="lg:col-span-5 flex flex-col justify-center">
           <span className="label-accent">Live · real model</span>
           <h3 className="mt-3 text-[1.5rem] font-semibold tracking-[-0.02em] leading-tight">
-            A Claude Opus 4.7 agent, told to move money it isn&apos;t scoped for.
+            A Claude Opus 4.8 agent, told to move money it isn&apos;t scoped for.
           </h3>
           <p className="mt-4 text-[0.97rem] leading-[1.7] text-[var(--color-fg-2)]">
             No prompt engineering, no guardrail model, no second LLM judging the
@@ -602,9 +602,9 @@ function BindSpotlight() {
 `}<span className="text-[var(--color-fg-3)]">{`→ scope: tool == "checkout.purchase"`}</span>{`
 
   `}<span className="text-[var(--color-rose)]">{`⨯`}</span>{` wire.send          `}<span className="text-[var(--color-rose)]">{`DENIED`}</span>{`   out-of-scope
-                       `}<span className="text-[var(--color-fg-3)]">{`receipt cap_rcpt_3f9a…`}</span>{`
+                       `}<span className="text-[var(--color-fg-3)]">{`receipt sig a0a309a2…`}</span>{`
   `}<span className="text-[var(--color-accent)]">{`✓`}</span>{` checkout.purchase  `}<span className="text-[var(--color-accent)]">{`ALLOWED`}</span>{`  in-scope
-                       `}<span className="text-[var(--color-fg-3)]">{`receipt cap_rcpt_7c12…`}</span>{`
+                       `}<span className="text-[var(--color-fg-3)]">{`receipt sig 1eac72a6…`}</span>{`
 
 `}<span className="text-[var(--color-fg-2)]">{`both decisions audit-logged · agent never reached the wire API`}</span>
             </pre>
