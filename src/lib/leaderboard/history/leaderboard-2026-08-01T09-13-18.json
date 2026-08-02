@@ -1,6 +1,6 @@
 {
   "schema_version": "capframe.leaderboard.v1",
-  "generated_at": "2026-08-02T09:18:07.297649322Z",
+  "generated_at": "2026-08-01T09:13:18.161094373Z",
   "total_scanned": 90,
   "weights": {
     "critical": 10,
@@ -24,7 +24,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:45.200480139Z"
+      "last_scanned": "2026-08-01T08:59:56.885371145Z"
     },
     {
       "score": 100,
@@ -39,7 +39,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:44.731307739Z"
+      "last_scanned": "2026-08-01T08:59:56.104307534Z"
     },
     {
       "score": 100,
@@ -55,7 +55,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:49.938544405Z"
+      "last_scanned": "2026-08-01T09:00:02.04768447Z"
     },
     {
       "score": 100,
@@ -71,7 +71,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:47.185484744Z"
+      "last_scanned": "2026-08-01T08:59:59.12702637Z"
     },
     {
       "score": 100,
@@ -87,7 +87,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:46.196445076Z"
+      "last_scanned": "2026-08-01T08:59:57.726783079Z"
     },
     {
       "score": 100,
@@ -103,7 +103,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:43.926911619Z"
+      "last_scanned": "2026-08-01T08:59:54.741157648Z"
     },
     {
       "score": 100,
@@ -119,7 +119,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:47.712738029Z"
+      "last_scanned": "2026-08-01T09:00:00.085621175Z"
     },
     {
       "score": 100,
@@ -135,7 +135,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:47.348842403Z"
+      "last_scanned": "2026-08-01T08:59:59.489066933Z"
     },
     {
       "score": 100,
@@ -150,7 +150,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:43.134128229Z"
+      "last_scanned": "2026-08-01T08:59:53.747780819Z"
     },
     {
       "score": 100,
@@ -165,7 +165,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:43.248752146Z"
+      "last_scanned": "2026-08-01T08:59:54.080562667Z"
     },
     {
       "score": 100,
@@ -180,7 +180,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:42.605854585Z"
+      "last_scanned": "2026-08-01T08:59:52.996916645Z"
     },
     {
       "score": 100,
@@ -195,7 +195,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:43.749308915Z"
+      "last_scanned": "2026-08-01T08:59:54.356704276Z"
     },
     {
       "score": 100,
@@ -211,7 +211,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:44.224152999Z"
+      "last_scanned": "2026-08-01T08:59:55.286708683Z"
     },
     {
       "score": 100,
@@ -219,7 +219,7 @@
       "source": "registry",
       "name": "exa-mcp-server",
       "repo_url": "https://github.com/exa-labs/exa-mcp-server",
-      "tool_count": 4,
+      "tool_count": 3,
       "counts": {
         "info": 0,
         "low": 0,
@@ -227,7 +227,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:46.549999836Z"
+      "last_scanned": "2026-08-01T08:59:58.391160403Z"
     },
     {
       "score": 100,
@@ -243,7 +243,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:46.708529958Z"
+      "last_scanned": "2026-08-01T08:59:58.535795325Z"
     },
     {
       "score": 100,
@@ -259,7 +259,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:44.508810812Z"
+      "last_scanned": "2026-08-01T08:59:55.740500767Z"
     },
     {
       "score": 100,
@@ -275,7 +275,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:46.436029341Z"
+      "last_scanned": "2026-08-01T08:59:58.20722852Z"
     },
     {
       "score": 100,
@@ -290,7 +290,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:06:55.872488837Z"
+      "last_scanned": "2026-08-01T09:02:08.554285228Z"
     },
     {
       "score": 100,
@@ -306,7 +306,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:48.915885163Z"
+      "last_scanned": "2026-08-01T09:00:01.240311931Z"
     },
     {
       "score": 100,
@@ -321,7 +321,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:49.23147722Z"
+      "last_scanned": "2026-08-01T09:00:01.278439337Z"
     },
     {
       "score": 100,
@@ -336,7 +336,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:48.380826501Z"
+      "last_scanned": "2026-08-01T09:00:01.076789386Z"
     },
     {
       "score": 100,
@@ -352,7 +352,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:45.681258517Z"
+      "last_scanned": "2026-08-01T08:59:56.958173087Z"
     },
     {
       "score": 100,
@@ -367,7 +367,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:43.512512774Z"
+      "last_scanned": "2026-08-01T08:59:54.141520035Z"
     },
     {
       "score": 100,
@@ -383,7 +383,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:49.068809635Z"
+      "last_scanned": "2026-08-01T09:00:01.260335443Z"
     },
     {
       "score": 100,
@@ -398,7 +398,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:45.523637485Z"
+      "last_scanned": "2026-08-01T08:59:56.939669432Z"
     },
     {
       "score": 100,
@@ -413,7 +413,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:45.324105991Z"
+      "last_scanned": "2026-08-01T08:59:56.902879042Z"
     },
     {
       "score": 100,
@@ -428,7 +428,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:43.440162634Z"
+      "last_scanned": "2026-08-01T08:59:54.122971136Z"
     },
     {
       "score": 98,
@@ -443,7 +443,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:17:54.849695244Z",
+      "last_scanned": "2026-08-01T09:13:08.299460102Z",
       "findings": [
         {
           "id": "f-r1-check_domain",
@@ -483,7 +483,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:17:55.65427114Z",
+      "last_scanned": "2026-08-01T09:13:09.767230222Z",
       "findings": [
         {
           "id": "f-r1-search_astro_docs",
@@ -523,7 +523,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:17:55.991905708Z",
+      "last_scanned": "2026-08-01T09:13:10.504339639Z",
       "findings": [
         {
           "id": "f-r1-web_search_exa",
@@ -563,7 +563,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:18:05.84953914Z",
+      "last_scanned": "2026-08-01T09:13:16.789709187Z",
       "findings": [
         {
           "id": "f-r1-searchgithub",
@@ -603,7 +603,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:17:56.473597822Z",
+      "last_scanned": "2026-08-01T09:13:10.678657396Z",
       "findings": [
         {
           "id": "f-r1-listremotemcpservers",
@@ -643,7 +643,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:05:32.331889068Z",
+      "last_scanned": "2026-08-01T09:00:45.51408477Z",
       "findings": [
         {
           "id": "f-r1-query",
@@ -684,7 +684,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:05:20.821385604Z",
+      "last_scanned": "2026-08-01T09:00:33.504652505Z",
       "findings": [
         {
           "id": "f-r1-sequentialthinking",
@@ -724,7 +724,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:07:55.159196217Z",
+      "last_scanned": "2026-08-01T09:03:09.838777297Z",
       "findings": [
         {
           "id": "f-r1-download_figma_images",
@@ -765,7 +765,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:17:50.908796794Z",
+      "last_scanned": "2026-08-01T09:13:05.60379025Z",
       "findings": [
         {
           "id": "f-r1-search_cloudflare_documentation",
@@ -829,7 +829,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:17:52.978121941Z",
+      "last_scanned": "2026-08-01T09:13:06.835826882Z",
       "findings": [
         {
           "id": "f-r1-hub_repo_search",
@@ -893,7 +893,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:17:51.671943467Z",
+      "last_scanned": "2026-08-01T09:13:05.938513164Z",
       "findings": [
         {
           "id": "f-r1-resolve_library_id",
@@ -957,7 +957,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:17:46.895928735Z",
+      "last_scanned": "2026-08-01T09:13:03.572272492Z",
       "findings": [
         {
           "id": "f-r1-read_wiki_contents",
@@ -1020,7 +1020,7 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:17:58.888378982Z",
+      "last_scanned": "2026-08-01T09:13:11.658643774Z",
       "findings": [
         {
           "id": "f-r8-stellar_non_fungible",
@@ -1060,7 +1060,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:18:06.278358549Z",
+      "last_scanned": "2026-08-01T09:13:17.505724547Z",
       "findings": [
         {
           "id": "f-r1-find_awesome_section",
@@ -1124,7 +1124,7 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:47.477614831Z",
+      "last_scanned": "2026-08-01T08:59:59.667156385Z",
       "findings": [
         {
           "id": "f-r3-savepath",
@@ -1164,7 +1164,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:05:34.583614464Z",
+      "last_scanned": "2026-08-01T09:00:47.765799702Z",
       "findings": [
         {
           "id": "f-r1-brave_web_search",
@@ -1227,7 +1227,7 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:42.38012558Z",
+      "last_scanned": "2026-08-01T08:59:52.545677351Z",
       "findings": [
         {
           "id": "f-r3-slack_post_message",
@@ -1268,7 +1268,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:05:56.84456617Z",
+      "last_scanned": "2026-08-01T09:01:09.526163342Z",
       "findings": [
         {
           "id": "f-r1-resolve_library_id",
@@ -1331,7 +1331,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:18:01.952229814Z",
+      "last_scanned": "2026-08-01T09:13:13.317804772Z",
       "findings": [
         {
           "id": "f-r1-get_disruptions",
@@ -1417,7 +1417,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:17:59.593227255Z",
+      "last_scanned": "2026-08-01T09:13:11.962672816Z",
       "findings": [
         {
           "id": "f-r1-stylus_erc20",
@@ -1504,7 +1504,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:17:45.218507779Z",
+      "last_scanned": "2026-08-01T09:13:01.168768458Z",
       "findings": [
         {
           "id": "f-r1-listregistryitems",
@@ -1590,7 +1590,7 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:43.319820356Z",
+      "last_scanned": "2026-08-01T08:59:54.104641981Z",
       "findings": [
         {
           "id": "f-r3-git_create_branch",
@@ -1653,7 +1653,7 @@
         "high": 2,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:17:57.639679094Z",
+      "last_scanned": "2026-08-01T09:13:11.062020735Z",
       "findings": [
         {
           "id": "f-r8-solidity_erc721",
@@ -1716,7 +1716,7 @@
         "high": 2,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:45.984085975Z",
+      "last_scanned": "2026-08-01T08:59:57.361879001Z",
       "findings": [
         {
           "id": "f-r3-set",
@@ -1779,7 +1779,7 @@
         "high": 2,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:45.836224663Z",
+      "last_scanned": "2026-08-01T08:59:56.976569012Z",
       "findings": [
         {
           "id": "f-r3-set_value",
@@ -1842,7 +1842,7 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:17:53.066150128Z",
+      "last_scanned": "2026-08-01T09:13:07.139531927Z",
       "findings": [
         {
           "id": "f-r1-aws___search_documentation",
@@ -1951,7 +1951,7 @@
         "high": 0,
         "critical": 1
       },
-      "last_scanned": "2026-08-02T09:04:48.668358594Z",
+      "last_scanned": "2026-08-01T09:00:01.133037787Z",
       "findings": [
         {
           "id": "f-r7-query_execution",
@@ -1991,7 +1991,7 @@
         "high": 0,
         "critical": 1
       },
-      "last_scanned": "2026-08-02T09:04:43.580192455Z",
+      "last_scanned": "2026-08-01T08:59:54.159693791Z",
       "findings": [
         {
           "id": "f-r7-query_tools",
@@ -2031,7 +2031,7 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:18:07.279083159Z",
+      "last_scanned": "2026-08-01T09:13:18.138638278Z",
       "findings": [
         {
           "id": "f-r1-search_markets",
@@ -2163,7 +2163,7 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:18:05.416262724Z",
+      "last_scanned": "2026-08-01T09:13:16.072635325Z",
       "findings": [
         {
           "id": "f-r1-microsoft_docs_search",
@@ -2296,7 +2296,7 @@
         "high": 1,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:17:52.741414052Z",
+      "last_scanned": "2026-08-01T09:13:06.713787086Z",
       "findings": [
         {
           "id": "f-r1-match_common_libs_owner_repo_mapping",
@@ -2452,7 +2452,7 @@
         "high": 2,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:05:11.313196485Z",
+      "last_scanned": "2026-08-01T09:00:22.996796701Z",
       "findings": [
         {
           "id": "f-r1-echo",
@@ -2584,7 +2584,7 @@
         "high": 2,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:17:55.120361715Z",
+      "last_scanned": "2026-08-01T09:13:08.790097164Z",
       "findings": [
         {
           "id": "f-r1-experience_availability",
@@ -2762,7 +2762,7 @@
         "high": 3,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:18:03.318198522Z",
+      "last_scanned": "2026-08-01T09:13:14.911533024Z",
       "findings": [
         {
           "id": "f-r1-create_short_url",
@@ -2918,7 +2918,7 @@
         "high": 5,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:17:50.035136056Z",
+      "last_scanned": "2026-08-01T09:13:05.281412746Z",
       "findings": [
         {
           "id": "f-r4-get_quotes",
@@ -3050,7 +3050,7 @@
         "high": 2,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:18:05.27209366Z",
+      "last_scanned": "2026-08-01T09:13:15.871735405Z",
       "findings": [
         {
           "id": "f-r1-search_openai_docs",
@@ -3252,7 +3252,7 @@
         "high": 5,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:48.248249136Z",
+      "last_scanned": "2026-08-01T09:00:00.950482981Z",
       "findings": [
         {
           "id": "f-r3-create_note",
@@ -3384,7 +3384,7 @@
         "high": 2,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:17:58.327041054Z",
+      "last_scanned": "2026-08-01T09:13:11.41630724Z",
       "findings": [
         {
           "id": "f-r1-cairo_erc20",
@@ -3609,7 +3609,7 @@
         "high": 5,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:05:16.067039413Z",
+      "last_scanned": "2026-08-01T09:00:28.000540803Z",
       "findings": [
         {
           "id": "f-r3-create_entities",
@@ -3764,7 +3764,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:18:00.257053434Z",
+      "last_scanned": "2026-08-01T09:13:12.136660104Z",
       "findings": [
         {
           "id": "f-r1-get_latest_version",
@@ -4057,7 +4057,7 @@
         "high": 1,
         "critical": 1
       },
-      "last_scanned": "2026-08-02T09:05:51.09117995Z",
+      "last_scanned": "2026-08-01T09:01:03.272573236Z",
       "findings": [
         {
           "id": "f-r1-puppeteer_navigate",
@@ -4282,7 +4282,7 @@
         "high": 4,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:06:02.098224938Z",
+      "last_scanned": "2026-08-01T09:01:15.279206078Z",
       "findings": [
         {
           "id": "f-r1-tavily_search",
@@ -4529,7 +4529,7 @@
         "high": 4,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:18:04.722508876Z",
+      "last_scanned": "2026-08-01T09:13:15.641925402Z",
       "findings": [
         {
           "id": "f-r1-tweetsave_get_tweet",
@@ -4799,7 +4799,7 @@
         "high": 2,
         "critical": 1
       },
-      "last_scanned": "2026-08-02T09:07:29.390016595Z",
+      "last_scanned": "2026-08-01T09:02:42.572206714Z",
       "findings": [
         {
           "id": "f-r1-browserbase_session_create",
@@ -5047,7 +5047,7 @@
         "high": 3,
         "critical": 2
       },
-      "last_scanned": "2026-08-02T09:04:48.517427236Z",
+      "last_scanned": "2026-08-01T09:00:01.1142783Z",
       "findings": [
         {
           "id": "f-r7-execute_query",
@@ -5179,7 +5179,7 @@
         "high": 2,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:07:43.65041935Z",
+      "last_scanned": "2026-08-01T09:02:57.581375051Z",
       "findings": [
         {
           "id": "f-r1-search_actors",
@@ -5565,7 +5565,7 @@
         "high": 7,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:04:49.582834071Z",
+      "last_scanned": "2026-08-01T09:00:01.664625913Z",
       "findings": [
         {
           "id": "f-r5-wallet_balances",
@@ -5904,7 +5904,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:08:39.182254063Z",
+      "last_scanned": "2026-08-01T09:03:57.369489011Z",
       "findings": [
         {
           "id": "f-r1-generate_area_chart",
@@ -6450,7 +6450,7 @@
         "high": 0,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:18:02.626633361Z",
+      "last_scanned": "2026-08-01T09:13:13.965683739Z",
       "findings": [
         {
           "id": "f-r1-mta_get_arrivals",
@@ -7020,7 +7020,7 @@
         "high": 6,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:05:26.575347877Z",
+      "last_scanned": "2026-08-01T09:00:39.258795157Z",
       "findings": [
         {
           "id": "f-r1-read_file",
@@ -7451,7 +7451,7 @@
         "high": 7,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:17:48.278948529Z",
+      "last_scanned": "2026-08-01T09:13:04.363487776Z",
       "findings": [
         {
           "id": "f-r1-list_sessions",
@@ -7882,7 +7882,7 @@
         "high": 7,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:07:59.912256711Z",
+      "last_scanned": "2026-08-01T09:03:14.842643957Z",
       "findings": [
         {
           "id": "f-r1-hubspot_list_objects",
@@ -8405,7 +8405,7 @@
         "high": 12,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:12:56.319035168Z",
+      "last_scanned": "2026-08-01T09:08:15.505341775Z",
       "findings": [
         {
           "id": "f-r8-get_issue_tag_values",
@@ -8813,7 +8813,7 @@
         "high": 8,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:07:48.405353536Z",
+      "last_scanned": "2026-08-01T09:03:02.835043173Z",
       "findings": [
         {
           "id": "f-r1-list_records",
@@ -9359,7 +9359,7 @@
         "high": 3,
         "critical": 2
       },
-      "last_scanned": "2026-08-02T09:08:41.935352371Z",
+      "last_scanned": "2026-08-01T09:04:00.122506154Z",
       "findings": [
         {
           "id": "f-r1-browser_console_messages",
@@ -9905,7 +9905,7 @@
         "high": 11,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:17:55.576684026Z",
+      "last_scanned": "2026-08-01T09:13:09.617424829Z",
       "findings": [
         {
           "id": "f-r1-search_businesses",
@@ -10543,7 +10543,7 @@
         "high": 9,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:05:29.829574757Z",
+      "last_scanned": "2026-08-01T09:00:42.761495311Z",
       "findings": [
         {
           "id": "f-r1-create_or_update_file",
@@ -11365,7 +11365,7 @@
         "high": 5,
         "critical": 2
       },
-      "last_scanned": "2026-08-02T09:08:47.438891522Z",
+      "last_scanned": "2026-08-01T09:04:06.12649779Z",
       "findings": [
         {
           "id": "f-r1-search_docs",
@@ -12141,7 +12141,7 @@
         "high": 13,
         "critical": 0
       },
-      "last_scanned": "2026-08-02T09:13:29.588444471Z",
+      "last_scanned": "2026-08-01T09:08:43.772235273Z",
       "findings": [
         {
           "id": "f-r1-aggregate_db",
@@ -12963,8 +12963,146 @@
         "high": 79,
         "critical": 1
       },
-      "last_scanned": "2026-08-02T09:17:50.845301235Z",
+      "last_scanned": "2026-08-01T09:13:05.491756044Z",
       "findings": [
+        {
+          "id": "f-r1-get_empire_info",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "cast_category": [
+            "CAST-03"
+          ],
+          "title": "Tool `get_empire_info` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "get_empire_info",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r6-get_empire_info",
+          "severity": "medium",
+          "category": "indirect_injection",
+          "cast_category": [
+            "CAST-02"
+          ],
+          "title": "Tool `get_empire_info` fetches external web content -- indirect-injection surface",
+          "description": "Description: \"Get the live policy snapshot for one or all empires (Returns fees, tax rates, criminal-law parameters, reputation dynamics, citizenship requirements, and contraband lists for empires. Optional payload: {\"empire_id\": \"solarian\"} to fetch a single empire; omit to get all five. Valid empire_id values: solarian, voidborn, crimson, nebula, outerrim. No authentication required. Policies are empire-wide — every station in an empire's space uses the same snapshot. Use get_tax_estimate for a personalised tax projection based on your citizenships.)\" -- this tool pulls externally-controlled content into the agent's context window, the canonical indirect-injection vector. Even when the user supplies the URL, content at that URL can carry hostile instructions.",
+          "tool": "get_empire_info",
+          "remediation": "Sandbox the fetched content: strip prompts before forwarding to the model, constrain to an allow-list of domains, and route through capframe-guard with a `domain in [...]` caveat.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r1-estimate_purchase",
+          "severity": "medium",
+          "category": "unconstrained_input",
+          "cast_category": [
+            "CAST-03"
+          ],
+          "title": "Tool `estimate_purchase` accepts unconstrained string input",
+          "description": "The following string parameter(s) have no `maxLength` constraint: `item_id`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
+          "tool": "estimate_purchase",
+          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM01"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.3"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r3-estimate_purchase",
+          "severity": "high",
+          "category": "excessive_agency",
+          "cast_category": [
+            "CAST-01"
+          ],
+          "title": "Tool `estimate_purchase` name implies a side effect that is not declared",
+          "description": "`estimate_purchase` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
+          "tool": "estimate_purchase",
+          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
+          "mappings": {
+            "owasp_llm": [
+              "LLM08"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r4-estimate_purchase",
+          "severity": "high",
+          "category": "excessive_agency",
+          "cast_category": [
+            "CAST-01"
+          ],
+          "title": "Tool `estimate_purchase` accepts an unbounded monetary / quota value",
+          "description": "The numeric parameter(s) `quantity` have a money/quota-shaped name but no `maximum` constraint. An LLM tricked by indirect-injection can call the tool with arbitrarily large values.",
+          "tool": "estimate_purchase",
+          "remediation": "Add a `maximum` (and ideally `minimum`) to each money/quota numeric, OR enforce the cap via a capframe-bind `--limit` caveat at the agent boundary.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM08"
+            ],
+            "nist_rmf": [
+              "MANAGE-2.2"
+            ],
+            "mitre_atlas": [
+              "T0051"
+            ]
+          }
+        },
+        {
+          "id": "f-r5-estimate_purchase",
+          "severity": "medium",
+          "category": "excessive_agency",
+          "cast_category": [
+            "CAST-01"
+          ],
+          "title": "Tool `estimate_purchase` description mentions money but no `money` side-effect is declared",
+          "description": "Description: \"Preview what buying would cost without executing (Read-only. Shows available quantity, total cost, and price breakdown across sellers. Accepts item_id or item name (e.g. 'Iron Ore').)\" -- this references money/payment/refund/etc., but the declared side_effects ([]) don't include `money`. A capframe-bind policy that relies on declared side_effects to scope spend caveats will under-scope this tool.",
+          "tool": "estimate_purchase",
+          "remediation": "Add `money` to the tool's `side_effects` declaration, or rewrite the description to clarify that no actual money moves.",
+          "mappings": {
+            "owasp_llm": [
+              "LLM08"
+            ],
+            "nist_rmf": [
+              "MEASURE-2.6"
+            ],
+            "mitre_atlas": [
+              "T0040"
+            ]
+          }
+        },
         {
           "id": "f-r1-buy_insurance",
           "severity": "medium",
@@ -20717,144 +20855,6 @@
           }
         },
         {
-          "id": "f-r1-get_empire_info",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "cast_category": [
-            "CAST-03"
-          ],
-          "title": "Tool `get_empire_info` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "get_empire_info",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r6-get_empire_info",
-          "severity": "medium",
-          "category": "indirect_injection",
-          "cast_category": [
-            "CAST-02"
-          ],
-          "title": "Tool `get_empire_info` fetches external web content -- indirect-injection surface",
-          "description": "Description: \"Get the live policy snapshot for one or all empires (Returns fees, tax rates, criminal-law parameters, reputation dynamics, citizenship requirements, and contraband lists for empires. Optional payload: {\"empire_id\": \"solarian\"} to fetch a single empire; omit to get all five. Valid empire_id values: solarian, voidborn, crimson, nebula, outerrim. No authentication required. Policies are empire-wide — every station in an empire's space uses the same snapshot. Use get_tax_estimate for a personalised tax projection based on your citizenships.)\" -- this tool pulls externally-controlled content into the agent's context window, the canonical indirect-injection vector. Even when the user supplies the URL, content at that URL can carry hostile instructions.",
-          "tool": "get_empire_info",
-          "remediation": "Sandbox the fetched content: strip prompts before forwarding to the model, constrain to an allow-list of domains, and route through capframe-guard with a `domain in [...]` caveat.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r1-estimate_purchase",
-          "severity": "medium",
-          "category": "unconstrained_input",
-          "cast_category": [
-            "CAST-03"
-          ],
-          "title": "Tool `estimate_purchase` accepts unconstrained string input",
-          "description": "The following string parameter(s) have no `maxLength` constraint: `item_id`, `session_id`. Unbounded strings let an attacker stuff arbitrary payloads through the tool, including indirect-injection content.",
-          "tool": "estimate_purchase",
-          "remediation": "Add a `maxLength` to each string property, or constrain with an `enum` or `pattern`. Most legitimate tool inputs fit under a few hundred bytes.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM01"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.3"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r3-estimate_purchase",
-          "severity": "high",
-          "category": "excessive_agency",
-          "cast_category": [
-            "CAST-01"
-          ],
-          "title": "Tool `estimate_purchase` name implies a side effect that is not declared",
-          "description": "`estimate_purchase` looks like a side-effecting tool (its name contains a mutation verb), but its `side_effects` declaration is []. A policy synthesizer cannot produce safe rules for this tool because it cannot tell what it actually does.",
-          "tool": "estimate_purchase",
-          "remediation": "Declare the tool's true side effects explicitly. If the tool is genuinely read-only, rename it to match (e.g. `email.preview` rather than `email.send`).",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.6"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r4-estimate_purchase",
-          "severity": "high",
-          "category": "excessive_agency",
-          "cast_category": [
-            "CAST-01"
-          ],
-          "title": "Tool `estimate_purchase` accepts an unbounded monetary / quota value",
-          "description": "The numeric parameter(s) `quantity` have a money/quota-shaped name but no `maximum` constraint. An LLM tricked by indirect-injection can call the tool with arbitrarily large values.",
-          "tool": "estimate_purchase",
-          "remediation": "Add a `maximum` (and ideally `minimum`) to each money/quota numeric, OR enforce the cap via a capframe-bind `--limit` caveat at the agent boundary.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MANAGE-2.2"
-            ],
-            "mitre_atlas": [
-              "T0051"
-            ]
-          }
-        },
-        {
-          "id": "f-r5-estimate_purchase",
-          "severity": "medium",
-          "category": "excessive_agency",
-          "cast_category": [
-            "CAST-01"
-          ],
-          "title": "Tool `estimate_purchase` description mentions money but no `money` side-effect is declared",
-          "description": "Description: \"Preview what buying would cost without executing (Read-only. Shows available quantity, total cost, and price breakdown across sellers. Accepts item_id or item name (e.g. 'Iron Ore').)\" -- this references money/payment/refund/etc., but the declared side_effects ([]) don't include `money`. A capframe-bind policy that relies on declared side_effects to scope spend caveats will under-scope this tool.",
-          "tool": "estimate_purchase",
-          "remediation": "Add `money` to the tool's `side_effects` declaration, or rewrite the description to clarify that no actual money moves.",
-          "mappings": {
-            "owasp_llm": [
-              "LLM08"
-            ],
-            "nist_rmf": [
-              "MEASURE-2.6"
-            ],
-            "mitre_atlas": [
-              "T0040"
-            ]
-          }
-        },
-        {
           "id": "f-r1-get_notifications",
           "severity": "medium",
           "category": "unconstrained_input",
@@ -20892,7 +20892,7 @@
         "high": 5,
         "critical": 2
       },
-      "last_scanned": "2026-08-02T09:17:35.963503508Z",
+      "last_scanned": "2026-08-01T09:12:51.160872687Z",
       "findings": [
         {
           "id": "f-r1-list_apps",
@@ -21761,7 +21761,7 @@
         "high": 12,
         "critical": 4
       },
-      "last_scanned": "2026-08-02T09:08:34.178277659Z",
+      "last_scanned": "2026-08-01T09:03:52.113596392Z",
       "findings": [
         {
           "id": "f-r7-get_config",
@@ -22446,7 +22446,7 @@
         "high": 10,
         "critical": 1
       },
-      "last_scanned": "2026-08-02T09:07:03.627190863Z",
+      "last_scanned": "2026-08-01T09:02:16.809112137Z",
       "findings": [
         {
           "id": "f-r1-firecrawl_scrape",
