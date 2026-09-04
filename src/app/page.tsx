@@ -575,7 +575,7 @@ function BindSpotlight() {
         <div className="lg:col-span-5 flex flex-col justify-center">
           <span className="label-accent">Live · real model</span>
           <h3 className="mt-3 text-[1.5rem] font-semibold tracking-[-0.02em] leading-tight">
-            A Claude Opus 4.8 agent, told to move money it isn&apos;t scoped for.
+            A Claude Opus 5 agent, told to move money it isn&apos;t scoped for.
           </h3>
           <p className="mt-4 text-[0.97rem] leading-[1.7] text-[var(--color-fg-2)]">
             No prompt engineering, no guardrail model, no second LLM judging the

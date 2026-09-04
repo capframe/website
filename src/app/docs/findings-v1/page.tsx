@@ -380,7 +380,7 @@ export default function FindingsV1ReferencePage() {
           <P>
             Minimal but valid. Strip the <Code>tools</Code> and{" "}
             <Code>findings</Code> arrays empty and you have the empty-scan
-            shape that mcp-recon emits when its input can't be parsed.
+            shape that mcp-recon emits when its input can&apos;t be parsed.
           </P>
           <pre className="mt-4 p-4 rounded-md border border-[var(--color-line)] bg-[var(--color-bg-2)]/50 overflow-x-auto text-[12px] mono leading-relaxed">{`{
   "schema_version": "capframe.findings.v1",
@@ -427,7 +427,7 @@ export default function FindingsV1ReferencePage() {
             <p>
               Schema changes that add optional fields are{" "}
               <span className="text-[var(--color-fg)]">backwards-compatible</span>{" "}
-              and don't bump the version. Renaming, removing, or
+              and don&apos;t bump the version. Renaming, removing, or
               changing semantics of an existing field bumps the
               version (<Code>capframe.findings.v2</Code>, etc.).
               Consumers should accept unknown optional fields silently.

@@ -128,7 +128,7 @@ jobs:
   # out-of-scope, checkout.purchase ALLOWED. Runs the REAL gate
   # (capnagent, cp38-abi3 manylinux wheel) against synthetic tool
   # calls — no model call, no API key, no billing. The full
-  # `npm run demo:llm-direct` (real claude-opus-4-8) is manual only.
+  # `npm run demo:llm-direct` (real claude-opus-5) is manual only.
   bind-gate:
     runs-on: ubuntu-latest
     timeout-minutes: 5
