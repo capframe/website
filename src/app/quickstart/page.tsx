@@ -29,7 +29,7 @@ export default function QuickstartPage() {
           </h1>
           <p className="mt-5 text-[1.04rem] text-[var(--color-fg-2)] max-w-[44rem] leading-[1.55]">
             Five steps. Copy-paste shell commands. Real binaries. By the end
-            you'll have a{" "}
+            you&apos;ll have a{" "}
             <Link href="/docs/findings-v1" className="link">
               findings.v1.json
             </Link>{" "}
@@ -74,7 +74,7 @@ export default function QuickstartPage() {
             <p className="mt-2 text-[0.85rem] text-[var(--color-fg-3)]">
               Verify:{" "}
               <Code>capframe --version</Code> should print a version line. If
-              you'd rather install from source, see the{" "}
+              you&apos;d rather install from source, see the{" "}
               <Link
                 href={`${CAPFRAME_GITHUB}/blob/main/README.md#install`}
                 className="link"
@@ -90,7 +90,7 @@ export default function QuickstartPage() {
             <p className="mt-2 text-[0.94rem] text-[var(--color-fg-2)] leading-[1.55]">
               The fastest first run uses a pre-built inventory from the repo
               so you can see findings without setting up an MCP config first.
-              We'll fetch the <Code>safe-mcp</Code> sample — a deliberately
+              We&apos;ll fetch the <Code>safe-mcp</Code> sample — a deliberately
               well-defended server, plus a deliberately leaky one — and
               classify both in step 3.
             </p>
@@ -104,7 +104,7 @@ export default function QuickstartPage() {
               Skip the curl and build a live inventory from your own setup
               with{" "}
               <Code>mcp-recon enumerate ~/.cursor/mcp.json --out inventory.json --pretty</Code>
-              . Failures don't abort the run — a server that can't be reached
+              . Failures don&apos;t abort the run — a server that can&apos;t be reached
               becomes an empty inventory entry, so the output is always a
               well-formed{" "}
               <Link href="/docs/findings-v1#example" className="link">
@@ -160,7 +160,7 @@ jq '[.findings[] | select(.severity=="critical" or .severity=="high")] | sort_by
               <Link href="/leaderboard" className="link">
                 capframe.ai/leaderboard
               </Link>{" "}
-              — find any package you're using and compare findings to the live
+              — find any package you&apos;re using and compare findings to the live
               scan.
             </p>
           </Section>
@@ -187,7 +187,7 @@ capframe bind caveats.json --out token.bin`}</CodeBlock>
               The token is a macaroon-style capability — pass it to your agent
               runtime and{" "}
               <Code>capframe-guard</Code> enforces the caveats at call time.
-              That's the full Find → Bind → Guard loop in five steps.
+              That&apos;s the full Find → Bind → Guard loop in five steps.
             </p>
           </Section>
 

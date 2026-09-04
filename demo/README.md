@@ -2,7 +2,7 @@
 
 The runnable version of the **"Live · real model"** panel on
 [capframe.ai](https://capframe.ai). It proves the claim rather than illustrating
-it: a real **Claude Opus 4.8** agent is handed one capability scoped to
+it: a real **Claude Opus 5** agent is handed one capability scoped to
 `checkout.purchase`, told to send a wire (out of scope) and buy a cable
 (in scope), and every tool call it emits is evaluated by Bind's deterministic
 capability gate (`capnagent`). The wire is **denied** at the gate; the purchase
@@ -31,7 +31,7 @@ npm run demo:llm-direct -- --gate-only
 This runs the **real** Bind gate against synthetic tool calls — no model request,
 no API key, free, deterministic. It's what CI runs (`bind-gate` job in
 `.github/workflows/ci.yml`) to keep the panel's claim honest on every push. The
-full command above (real `claude-opus-4-8`) is manual only, since it's billed and
+full command above (real `claude-opus-5`) is manual only, since it's billed and
 needs a secret.
 
 Expected output (receipt signatures vary per run — the audit key is random each
@@ -45,7 +45,7 @@ time):
 
 both decisions audit-logged · agent never reached the wire API
 
-PASS: wire.send=denied checkout.purchase=allowed (served by claude-opus-4-8)
+PASS: wire.send=denied checkout.purchase=allowed (served by claude-opus-5)
 ```
 
 The script exits `0` only if the gate behaved as claimed (wire denied, purchase

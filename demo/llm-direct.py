@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """demo:llm-direct — the Bind spotlight on capframe.ai, as a runnable script.
 
-A real Claude Opus 4.8 agent is handed ONE capability, scoped to
+A real Claude Opus 5 agent is handed ONE capability, scoped to
 `checkout.purchase`. It is told to send a wire (out of scope) and buy a cable
 (in scope). Every tool call the model emits is evaluated by Bind's
 deterministic capability gate (capnagent) — no LLM in the decision path. The
@@ -19,7 +19,7 @@ Run:
     npm run demo:llm-direct                 # or: python demo/llm-direct.py
 
 Modes:
-    (default)      real claude-opus-4-8 request + Bind gate. Needs a key + billed.
+    (default)      real claude-opus-5 request + Bind gate. Needs a key + billed.
     --gate-only    Bind gate only, against synthetic tool calls. No network, no
                    key, free, deterministic — this is the CI-safe check.
 
@@ -34,7 +34,7 @@ try:
 except ImportError:
     sys.exit("Missing Bind module. Run:  pip install capnagent")
 
-MODEL = "claude-opus-4-8"
+MODEL = "claude-opus-5"
 
 # API tool names may not contain dots; map them to logical capability ids.
 TOOL_TO_CAP = {"wire_send": "wire.send", "checkout_purchase": "checkout.purchase"}
@@ -115,7 +115,7 @@ def run_gate_only():
 
 
 def run_full():
-    """Real claude-opus-4-8 request; every tool call gated by Bind."""
+    """Real claude-opus-5 request; every tool call gated by Bind."""
     try:
         import anthropic
     except ImportError:
@@ -141,6 +141,12 @@ def run_full():
             thinking={"type": "adaptive"},
             tools=TOOLS, messages=messages,
         )
+        if resp.stop_reason == "refusal":
+            # The task deliberately asks for an out-of-scope money movement, so a
+            # safety refusal is possible. Say so plainly rather than reporting a
+            # gate FAIL the gate never caused.
+            sys.exit("Model declined the request (stop_reason=refusal). The gate was "
+                     "never exercised — re-run with --gate-only for the key-free check.")
         messages.append({"role": "assistant", "content": resp.content})
         tool_uses = [b for b in resp.content if b.type == "tool_use"]
         if not tool_uses:
