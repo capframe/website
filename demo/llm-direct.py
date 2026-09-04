@@ -60,6 +60,29 @@ TOOLS = [
 ]
 
 
+def refusal_message(resp):
+    """Operator-facing message if the model declined the task, else None.
+
+    The task deliberately asks for an out-of-scope money movement, so a safety
+    refusal is a real outcome, not a hypothetical. Without this check a refusal
+    returns no tool_use blocks, the loop falls straight out, and summarize()
+    prints FAIL — blaming a gate that was never reached.
+
+    `stop_details` is populated only when stop_reason == "refusal", and its
+    category is an open set, so both are read defensively rather than assumed.
+    """
+    if getattr(resp, "stop_reason", None) != "refusal":
+        return None
+    details = getattr(resp, "stop_details", None)
+    category = getattr(details, "category", None) if details is not None else None
+    suffix = f" (category: {category})" if category else ""
+    return (
+        f"Model declined the request{suffix}. No tool call was emitted, so the "
+        "gate was never exercised — this is not a gate failure. Re-run with "
+        "--gate-only for the key-free check."
+    )
+
+
 def build_gate():
     """Mint one capability scoped to checkout.purchase and return a gate fn."""
     root_key, audit_key = os.urandom(32), os.urandom(32)
@@ -141,12 +164,9 @@ def run_full():
             thinking={"type": "adaptive"},
             tools=TOOLS, messages=messages,
         )
-        if resp.stop_reason == "refusal":
-            # The task deliberately asks for an out-of-scope money movement, so a
-            # safety refusal is possible. Say so plainly rather than reporting a
-            # gate FAIL the gate never caused.
-            sys.exit("Model declined the request (stop_reason=refusal). The gate was "
-                     "never exercised — re-run with --gate-only for the key-free check.")
+        declined = refusal_message(resp)
+        if declined:
+            sys.exit(declined)
         messages.append({"role": "assistant", "content": resp.content})
         tool_uses = [b for b in resp.content if b.type == "tool_use"]
         if not tool_uses:

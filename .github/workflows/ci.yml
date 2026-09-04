@@ -141,3 +141,8 @@ jobs:
         run: pip install capnagent
       - name: Gate check (no model call, no key)
         run: python demo/llm-direct.py --gate-only
+
+      # The refusal branch never fires on a compliant run, so the billed
+      # demo does not cover it. These synthetic cases do.
+      - name: Unit tests for the refusal guard
+        run: python demo/test_llm_direct.py

@@ -16,6 +16,7 @@ import {
   slugifyHandle,
   sortFindingsBySeverity,
 } from "../_components";
+import { NextStep } from "./_next-step";
 
 type Params = { slug: string };
 
@@ -250,51 +251,13 @@ export default async function ServerDetailPage({
               a maintainer arriving from a shared score had nothing to act on.
               The offer differs by result: a clean board entry has nothing to
               fix, and telling its owner otherwise is the false-clean pitch we
-              refuse to make. */}
-          <div className="mt-10 rounded-md border border-[var(--color-accent)]/25 bg-[var(--color-accent)]/[0.03] p-6">
-            <p className="mono text-[11px] uppercase tracking-[0.18em] text-[var(--color-accent)] mb-3">
-              {findingsCount === 0 ? "Go deeper" : "Reproduce this"}
-            </p>
-            <p className="text-[0.95rem] text-[var(--color-fg-2)] leading-[1.7]">
-              {findingsCount === 0 ? (
-                <>
-                  Nothing here needs fixing — this surface is clean against
-                  R1–R7. The limit is what the rules can see: a public scan
-                  reads the tool surface, not the implementation behind it.
-                  Everything below is optional.
-                </>
-              ) : (
-                <>
-                  Every finding above comes from a public, deterministic rule
-                  engine — no LLM in the decision path, same input always the
-                  same output. You can run it against this server yourself and
-                  get byte-identical results:
-                </>
-              )}
-            </p>
-            <pre className="mt-4 p-3 rounded border border-[var(--color-line)] bg-[var(--color-bg-2)]/60 overflow-x-auto mono text-[12px] text-[var(--color-fg)]">
-              {`curl -fsSL capframe.ai/install | sh\ncapframe find ./your-mcp-config.json --out findings.json`}
-            </pre>
-            <p className="mt-4 text-[0.92rem] text-[var(--color-fg-2)] leading-[1.7]">
-              <Link
-                href="/quickstart"
-                className="text-[var(--color-accent-3)] hover:text-[var(--color-accent)] underline decoration-[var(--color-accent-3)] underline-offset-2"
-              >
-                Five-step quickstart
-              </Link>{" "}
-              if you want the whole Find → Bind → Guard loop. If you&apos;d
-              rather have someone read your real tool definitions rather than
-              the advertised surface — including the ones this public scan
-              can&apos;t reach — that&apos;s the{" "}
-              <Link
-                href="/#audit"
-                className="text-[var(--color-accent-3)] hover:text-[var(--color-accent)] underline decoration-[var(--color-accent-3)] underline-offset-2"
-              >
-                Agent Security Audit
-              </Link>
-              .
-            </p>
-          </div>
+              refuse to make. Lives in a client component so the clicks are
+              measurable — an unmeasured funnel is a guess with a CTA on it. */}
+          <NextStep
+            slug={slug}
+            score={row.score}
+            findingsCount={findingsCount}
+          />
 
           {/* How this was scored */}
           <div className="mt-12 rounded-md border border-[var(--color-line)] bg-[var(--color-bg-2)]/40 p-5 text-[0.92rem] text-[var(--color-fg-2)]">
