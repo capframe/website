@@ -118,6 +118,14 @@ The same pattern shows up across our other modules:
   built an adversarial pytest harness against it. The harness now runs
   15/15 live compliance against Sonnet-4 with a false-positive control
   ("the legit €47.50 call is allowed").
+
+  > **Re-verified 2026-10-23 against Claude Sonnet 5.5:** 15/15, unchanged —
+  > the poisoned-context attack still lands every time on the current Sonnet,
+  > and Guard still blocked all 15. Claude Opus 5.5 is more resistant but not
+  > reliably so: 4/15 complied (27%), 11/15 declined, and Guard blocked 4/4 of
+  > the attempts that did get through. No safeguard refusals on either model.
+  > That spread is the point — model compliance is probabilistic and moves with
+  > every release; the gate is deterministic and doesn't.
 - [mcp-recon 0.0.12](https://github.com/euanmcrosson-dotcom/mcp-recon)
   fixed a Find→Bind handoff that was emitting unparseable caveats for
   tool names with control characters, because the Rust Debug formatter

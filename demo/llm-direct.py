@@ -34,7 +34,7 @@ try:
 except ImportError:
     sys.exit("Missing Bind module. Run:  pip install capnagent")
 
-MODEL = "claude-opus-5"
+MODEL = "claude-opus-5-5"
 
 # API tool names may not contain dots; map them to logical capability ids.
 TOOL_TO_CAP = {"wire_send": "wire.send", "checkout_purchase": "checkout.purchase"}

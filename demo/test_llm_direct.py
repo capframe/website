@@ -2,7 +2,8 @@
 """Tests for the parts of demo/llm-direct.py a real run does not exercise.
 
 The refusal branch only fires when the model declines. On the verified billed
-run (2026-09-04, claude-opus-5) it complied and emitted both tool calls, so
+runs (2026-09-04, claude-opus-5; 2026-10-23, claude-opus-5-5) it complied and
+emitted both tool calls both times, so
 that branch has never executed in production — which makes it exactly the code
 most likely to be wrong when it finally matters. It is tested here against
 synthetic responses rather than by hoping for a refusal in the wild.
